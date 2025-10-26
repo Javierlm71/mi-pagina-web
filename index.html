@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J. LÓPEZ M. - Escritor Nicaragüense</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+        
+        body {
+            background-color: #f9f7f1;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        .author-name {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-top: 5px;
+            color: #e74c3c;
+        }
+        
+        .nicaragua-flag {
+            display: inline-flex;
+            align-items: center;
+            margin-left: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .flag-stripe {
+            width: 8px;
+            height: 16px;
+            display: inline-block;
+            margin: 0 1px;
+        }
+        
+        .blue-stripe {
+            background-color: #0067C3;
+        }
+        
+        .white-stripe {
+            background-color: white;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 1.1rem;
+        }
+        
+        nav ul li a:hover {
+            color: #e74c3c;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1598981460751-2e17aa1c9b39?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px 20px;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            letter-spacing: 1px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin: 0 auto 30px;
+            max-width: 600px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: 2px solid #e74c3c;
+        }
+        
+        .btn:hover {
+            background-color: transparent;
+            color: #e74c3c;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.2rem;
+            color: #2c3e50;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #e74c3c;
+            margin: 15px auto;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-img {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .about-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0,103,195,0.2), rgba(227,23,10,0.2));
+            z-index: 1;
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+        
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-text {
+            flex: 2;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .nicaragua-reference {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #0067C3;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-top: 20px;
+            text-align: right;
+        }
+        
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .book-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+        
+        .book-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .book-img {
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .book-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7));
+        }
+        
+        .book-img span {
+            z-index: 1;
+            text-align: center;
+            padding: 0 20px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+            font-weight: bold;
+        }
+        
+        .nacan-img {
+            background: url('https://images.unsplash.com/photo-1589994965851-a8f479c573a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        }
+        
+        .amor-img {
+            background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        }
+        
+        .book-info {
+            padding: 25px;
+        }
+        
+        .book-title {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .book-quote {
+            font-style: italic;
+            margin: 15px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 3px solid #e74c3c;
+        }
+        
+        .characters {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .coming-soon {
+            background-color: #f39c12;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .contact-content {
+            display: flex;
+            gap: 40px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-form {
+            flex: 2;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #e74c3c;
+            outline: none;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .info-item {
+            margin-bottom: 25px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .info-item i {
+            color: #e74c3c;
+            font-size: 1.2rem;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        .location {
+            color: #0067C3;
+            font-weight: bold;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-links {
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 15px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #e74c3c;
+        }
+        
+        .copyright {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .nicaragua-proud {
+            margin-top: 10px;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .contact-content {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div>
+                    <div class="logo">Nacen Los Hermanos
+                        <span class="nicaragua-flag" title="Nicaragüense">
+                            <span class="flag-stripe blue-stripe"></span>
+                            <span class="flag-stripe white-stripe"></span>
+                            <span class="flag-stripe blue-stripe"></span>
+                        </span>
+                    </div>
+                    <div class="author-name">J. LÓPEZ M.</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#sobre-mi">Sobre Mí</a></li>
+                        <li><a href="#libros">Libros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>J. LÓPEZ M.</h1>
+                <div class="hero-subtitle">Escritor Nicaragüense</div>
+                <p>Autor de "Nacen Los Hermanos" y próximamente "Amor Prohibido en Pueblo Tradicional"</p>
+                <a href="#libros" class="btn">Descubre mis libros</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-mi">
+        <div class="container">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="about-content fade-in">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1580301762386-9c8b8b8b8b8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="J. LÓPEZ M. - Escritor Nicaragüense">
+                </div>
+                <div class="about-text">
+                    <p>Soy J. López M., un escritor nicaragüense apasionado por contar historias que reflejan la riqueza cultural de nuestra tierra. Mi trabajo se centra en explorar las relaciones humanas, los conflictos familiares y los desafíos del amor en entornos tradicionales, con la vibrante esencia de Nicaragua como telón de fondo.</p>
+                    
+                    <div class="nicaragua-reference">
+                        "Mi Nicaragua, tierra de lagos y volcanes, inspira cada una de mis historias con su mágica mezcla de tradición y modernidad."
+                    </div>
+                    
+                    <p>Mi primer libro, "Nacen Los Hermanos", narra la historia de tres hermanos que deben enfrentar sus diferencias para salvar el legado familiar en el contexto de nuestras tradiciones centroamericanas. Actualmente, estoy trabajando en mi próxima novela, "Amor Prohibido en Pueblo Tradicional", que explorará los límites del amor en una comunidad donde las costumbres ancestrales dictan el destino de sus habitantes.</p>
+                    <p>Mi objetivo como escritor es crear personajes auténticos y situaciones que resuenen con los lectores, invitándolos a reflexionar sobre sus propias experiencias y conexiones familiares, siempre con el sello indeleble de nuestra identidad nicaragüense.</p>
+                    <div class="signature">J. López M.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="libros">
+        <div class="container">
+            <h2 class="section-title">Mis Libros</h2>
+            <div class="books-grid">
+                <div class="book-card fade-in">
+                    <div class="book-img nacan-img">
+                        <span>Nacen Los Hermanos</span>
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">Nacen Los Hermanos</h3>
+                        
+                        <div class="book-quote">
+                            "En un rincón del mundo donde las heridas del pasado siguen marcando el presente, tres hermanos descubren que los lazos de sangre no siempre bastan para sostener una familia."
+                        </div>
+                        
+                        <p>Una historia profundamente humana, entretejida por emociones que todos llevamos dentro: el anhelo de pertenecer, el miedo a repetir el pasado y la valentía de amar incluso cuando todo parece perdido.</p>
+                        
+                        <p>A través de páginas llenas de fuerza, ternura y verdad, esta novela nos recordará que los hermanos no solo nacen de la misma sangre: también nacen en el alma, echan raíces en el amor y se fortalecen en la adversidad.</p>
+                        
+                        <div class="characters">
+                            <strong>Personajes principales:</strong> Sebastián, Valeria y Elián
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card fade-in">
+                    <div class="book-img amor-img">
+                        <span>Amor Prohibido en Pueblo Tradicional</span>
+                    </div>
+                    <div class="book-info">
+                        <span class="coming-soon">Próximamente</span>
+                        <h3 class="book-title">Amor Prohibido en Pueblo Tradicional</h3>
+                        <p>Una historia de amor que desafía las convenciones en un pueblo nicaragüense donde las tradiciones dictan el destino de sus habitantes. ¿Podrá el amor vencer los prejuicios? Una exploración emocional de los límites del corazón humano en el contexto de nuestras costumbres centroamericanas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-content fade-in">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <h3>J. LÓPEZ M.</h3>
+                            <p>Escritor Nicaragüense</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Ubicación</h3>
+                            <p class="location">Nicaragua, Centroamérica</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-book"></i>
+                        <div>
+                            <h3>Obras Publicadas</h3>
+                            <p>Nacen Los Hermanos</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-pen-fancy"></i>
+                        <div>
+                            <h3>Próximo Lanzamiento</h3>
+                            <p>Amor Prohibido en Pueblo Tradicional</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">Nacen Los Hermanos</div>
+                <div class="author-name">J. LÓPEZ M.</div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-goodreads"></i></a>
+                </div>
+                <div class="nicaragua-proud">
+                    <span>Orgullosamente Nicaragüense</span>
+                    <span class="nicaragua-flag" style="margin-left: 10px;">
+                        <span class="flag-stripe blue-stripe"></span>
+                        <span class="flag-stripe white-stripe"></span>
+                        <span class="flag-stripe blue-stripe"></span>
+                    </span>
+                </div>
+                <div class="copyright">
+                    &copy; 2023 J. LÓPEZ M. - Todos los derechos reservados
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeInOnScroll = function() {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.classList.add('active');
+                    }
+                });
+            };
+            
+            fadeInOnScroll();
+            window.addEventListener('scroll', fadeInOnScroll);
+        });
+    </script>
+</body>
+</html>
