@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>J. LÓPEZ M. - Escritor Nicaragüense</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
         * {
             margin: 0;
             padding: 0;
@@ -226,17 +226,18 @@
         
         .signature {
             font-family: 'Dancing Script', cursive;
-            font-size: 2rem;
+            font-size: 2.5rem;
+            font-weight: 700;
             color: #2c3e50;
             margin-top: 20px;
             text-align: right;
         }
         
         .books-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-}
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
         
         .book-card {
             background-color: white;
@@ -282,13 +283,18 @@
             font-weight: bold;
         }
         
-     .nacan-img {
-    background: url('https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/PORTADA%202.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color: transparent; /* Quitamos el fondo gris */
-}
+        .nacan-img {
+            background: url('https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/PORTADA%202.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: transparent;
+        }
+        
+        .nacan-img::after {
+            display: none;
+        }
+        
         .amor-img {
             background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
         }
@@ -485,7 +491,7 @@
                             <span class="flag-stripe blue-stripe"></span>
                         </span>
                     </div>
-                    <div class="author-name">J. LÓPEZ M.</div>
+                    <div class="author-name"><em>J. LÓPEZ M.</em></div>
                 </div>
                 <nav>
                     <ul>
@@ -502,7 +508,7 @@
     <section id="inicio" class="hero">
         <div class="container">
             <div class="hero-content fade-in">
-                <h1 style="font-family: 'Dancing Script', cursive; font-weight: 700; font-size: 4rem;">J. López M.</h1>
+                <h1 style="font-family: 'Dancing Script', cursive; font-weight: 700; font-size: 4rem;"><em>J. López M.</em></h1>
                 <div class="hero-subtitle">Escritor Nicaragüense</div>
                 <p>Autor de "Nacen Los Hermanos" y próximamente "Amor Prohibido en Pueblo Tradicional"</p>
                 <a href="#libros" class="btn">Descubre mis libros</a>
@@ -526,7 +532,9 @@
                     
                     <p>Mi primer libro, "Nacen Los Hermanos", narra la historia de tres hermanos que deben enfrentar sus diferencias para salvar el legado familiar en el contexto de nuestras tradiciones centroamericanas. Actualmente, estoy trabajando en mi próxima novela, "Amor Prohibido en Pueblo Tradicional", que explorará los límites del amor en una comunidad donde las costumbres ancestrales dictan el destino de sus habitantes.</p>
                     <p>Mi objetivo como escritor es crear personajes auténticos y situaciones que resuenen con los lectores, invitándolos a reflexionar sobre sus propias experiencias y conexiones familiares, siempre con el sello indeleble de nuestra identidad nicaragüense.</p>
-                   <div class="signature" style="font-family: 'Dancing Script', cursive; font-size: 2.8rem; font-weight: 700; color: #2c3e50; line-height: 1.2; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">J. López M.</div>
+                    <div class="signature"><em>J. López M.</em></div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -534,11 +542,10 @@
         <div class="container">
             <h2 class="section-title">Mis Libros</h2>
             <div class="books-grid">
+                <!-- LIBRO 1 - NACEN LOS HERMANOS -->
                 <div class="book-card fade-in">
                     <div class="book-img nacan-img">
-    <!-- Texto removido -->
-</div>
-                        
+                        <!-- PORTADA SOLA - SIN TEXTO -->
                     </div>
                     <div class="book-info">
                         <h3 class="book-title">Nacen Los Hermanos</h3>
@@ -557,6 +564,7 @@
                     </div>
                 </div>
                 
+                <!-- LIBRO 2 - AMOR PROHIBIDO -->
                 <div class="book-card fade-in">
                     <div class="book-img amor-img">
                         <span>Amor Prohibido en Pueblo Tradicional</span>
@@ -630,7 +638,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="logo">Nacen Los Hermanos</div>
-                <div class="author-name">J. LÓPEZ M.</div>
+                <div class="author-name"><em>J. LÓPEZ M.</em></div>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
