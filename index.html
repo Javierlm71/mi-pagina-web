@@ -556,46 +556,65 @@
 </section>
 
 
-    <section id="libros">
-        <div class="container">
-            <h2 class="section-title">Mis Libros</h2>
-            <div class="books-grid">
-                <!-- LIBRO 1 - NACEN LOS HERMANOS -->
-                <div class="book-card fade-in">
-                    <div class="book-img nacan-img">
-                        <!-- PORTADA SOLA - SIN TEXTO -->
-                    </div>
-                    <div class="book-info">
-                        <h3 class="book-title">Nacen Los Hermanos</h3>
-                        
-                        <div class="book-quote">
-                            "En un rincón del mundo donde las heridas del pasado siguen marcando el presente, tres hermanos descubren que los lazos de sangre no siempre bastan para sostener una familia."
-                        </div>
-                        
-                        <p>Una historia profundamente humana, entretejida por emociones que todos llevamos dentro: el anhelo de pertenecer, el miedo a repetir el pasado y la valentía de amar incluso cuando todo parece perdido.</p>
-                        
-                        <p>A través de páginas llenas de fuerza, ternura y verdad, esta novela nos recordará que los hermanos no solo nacen de la misma sangre: también nacen en el alma, echan raíces en el amor y se fortalecen en la adversidad.</p>
-                        
-                        <div class="characters">
-                            <strong>Personajes principales:</strong> Sebastián, Valeria y Elián
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- LIBRO 2 - AMOR PROHIBIDO -->
-                <div class="book-card fade-in">
-                    <div class="book-img amor-img">
-                        <span>Amor Prohibido en Pueblo Tradicional</span>
-                    </div>
-                    <div class="book-info">
-                        <span class="coming-soon">Próximamente</span>
-                        <h3 class="book-title">Amor Prohibido en Pueblo Tradicional</h3>
-                        <p>Una historia de amor que desafía las convenciones en un pueblo nicaragüense donde las tradiciones dictan el destino de sus habitantes. ¿Podrá el amor vencer los prejuicios? Una exploración emocional de los límites del corazón humano en el contexto de nuestras costumbres centroamericanas.</p>
-                    </div>
-                </div>
-            </div>
+    <section id="libros" style="background-color:#fdf6f0; padding:80px 20px; font-family:'Georgia',serif; text-align:center;">
+  <div class="container">
+    <h2 style="color:#8b0000; font-size:2.5em; margin-bottom:50px; position: relative; display: inline-block;">
+      Mis Libros
+      <div style="width: 80px; height: 3px; background-color: #e74c3c; margin: 15px auto 0;"></div>
+    </h2>
+
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:40px;">
+
+      <!-- Libro 1 - NACEN LOS HERMANOS -->
+      <div class="libro" style="background-color:#ffffff; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.1); padding:25px; max-width:320px; transition:transform 0.3s, box-shadow 0.3s;">
+        <div style="height: 250px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+          <div style="width: 200px; height: 300px; background: url('https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/PORTADA%202.png') center/contain no-repeat;"></div>
         </div>
-    </section>
+        <h3 style="color:#2c3e50; margin-top:15px; font-size:1.4em;">Nacen los Hermanos</h3>
+        <p style="font-size:1em; color:#333; line-height:1.6; text-align:justify; margin: 15px 0;">
+          Una historia de familia, justicia y esperanza.  
+          Una novela que explora la fuerza del perdón y los lazos que el destino entreteje, recordándonos que todo amor verdadero nace del alma.
+        </p>
+        <a href="https://www.amazon.com/dp/B0CGRDLBFX" target="_blank"
+           style="display:inline-block; background-color:#e74c3c; color:white; padding:12px 24px; border-radius:8px; text-decoration:none; margin-top:10px; font-weight:bold; border: 2px solid #e74c3c; transition: all 0.3s;">
+           Ver en Amazon
+        </a>
+      </div>
+
+      <!-- Libro 2 - AMOR PROHIBIDO -->
+      <div class="libro" style="background-color:#ffffff; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.1); padding:25px; max-width:320px; transition:transform 0.3s, box-shadow 0.3s;">
+        <div style="height: 250px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; background: linear-gradient(135deg, #f8f9fa, #e9ecef); border-radius: 8px;">
+          <span style="color: #6c757d; font-style: italic; padding: 20px;">Portada próximamente</span>
+        </div>
+        <div style="background-color: #f39c12; color: white; padding: 5px 10px; border-radius: 3px; font-size: 0.8rem; display: inline-block; margin-bottom: 10px;">
+          Próximamente
+        </div>
+        <h3 style="color:#2c3e50; margin-top:15px; font-size:1.4em;">Amor Prohibido en Pueblo Tradicional</h3>
+        <p style="font-size:1em; color:#333; line-height:1.6; text-align:justify; margin: 15px 0;">
+          En un pueblo donde las miradas juzgan y el amor es pecado, Ángel y Clara desafían el tiempo, la culpa y el miedo.
+          Una historia intensa sobre el perdón, la redención y la fe en el amor verdadero.
+        </p>
+        <a href="#contacto"
+           style="display:inline-block; background-color:#95a5a6; color:white; padding:12px 24px; border-radius:8px; text-decoration:none; margin-top:10px; font-weight:bold; border: 2px solid #95a5a6; transition: all 0.3s; cursor: not-allowed;">
+           Próximamente
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Estilo animado -->
+  <style>
+    .libro:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    a:hover {
+      background-color: #c0392b !important;
+      border-color: #c0392b !important;
+    }
+  </style>
+</section>
 
     <section id="contacto">
         <div class="container">
