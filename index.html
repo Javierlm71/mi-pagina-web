@@ -1,145 +1,177 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amor Prohibido en Pueblo Tradicional | J. LÓPEZ M.</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sitio oficial del escritor nicaragüense J. LÓPEZ M., autor de 'Amor Prohibido en Pueblo Tradicional' y 'Nacen los Hermanos'. Historias sobre el amor, el perdón y la fe." />
+  <title>J. LÓPEZ M. | Escritor Nicaragüense</title>
   <style>
     body {
+      font-family: 'Georgia', serif;
       margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom right, #fff8e7, #f8e1ba);
-      font-family: "Georgia", serif;
-      color: #3b2f2f;
-      line-height: 1.7;
+      background-color: #fffaf2;
+      color: #2f1b0c;
+      line-height: 1.6;
     }
 
     header {
+      background: linear-gradient(to right, #b8860b, #cfa14a);
+      color: white;
       text-align: center;
-      padding: 40px 20px 10px 20px;
+      padding: 40px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
 
-    h1 {
-      font-size: 2.6em;
-      color: #b8860b;
-      letter-spacing: 1px;
-      margin-bottom: 5px;
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      margin: 0 12px;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
     }
 
     h2 {
-      color: #5a4633;
-      margin-top: -5px;
-      font-size: 1.2em;
-      font-style: italic;
+      color: #6b4226;
+      font-size: 1.8em;
+      margin-bottom: 20px;
     }
 
-    .portada {
-      display: block;
-      margin: 30px auto;
-      max-width: 340px;
-      border-radius: 15px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-      border: 4px solid #d4af37;
+    #libros div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
     }
 
-    .descripcion {
-      max-width: 700px;
-      margin: 40px auto;
-      text-align: center;
-      font-size: 1.15em;
+    #libros div > div {
+      width: 250px;
     }
 
-    .boton-musica, .boton-amazon {
-      background: linear-gradient(45deg, #FFD700, #E6BE8A);
-      color: white;
-      border: none;
-      padding: 12px 28px;
-      border-radius: 35px;
-      font-size: 18px;
-      cursor: pointer;
-      font-family: "Georgia", serif;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-      transition: all 0.3s ease;
-      text-decoration: none;
+    img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    a.boton {
       display: inline-block;
-      margin: 10px;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #b8860b;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s;
     }
 
-    .boton-musica:hover, .boton-amazon:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    a.boton:hover {
+      background-color: #8c6c10;
     }
 
     footer {
+      background-color: #2f1b0c;
+      color: #f5deb3;
       text-align: center;
-      padding: 40px 10px;
+      padding: 25px;
       font-size: 0.9em;
-      color: #6b5a3e;
-      border-top: 1px solid #d1b679;
-      margin-top: 60px;
+    }
+
+    footer a {
+      color: #f5deb3;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 
 <body>
+
+  <!-- Encabezado -->
   <header>
-    <h1>Amor Prohibido en Pueblo Tradicional</h1>
-    <h2>por J. LÓPEZ M.</h2>
+    <h1>J. LÓPEZ M.</h1>
+    <p>Escritor Nicaragüense • Amor, Perdón y Redención</p>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#libros">Libros</a>
+      <a href="#autor">Sobre el Autor</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
   </header>
 
-  <!-- Imagen de portada -->
-  <img class="portada" src="https://m.media-amazon.com/images/I/51zOqUt3Q0L._SY466_.jpg" alt="Portada de Amor Prohibido en Pueblo Tradicional">
-
-  <div class="descripcion">
-    <p>
-      En un pequeño pueblo donde los murmullos son sentencia y el amor está prohibido,
-      dos almas se reconocen en medio del juicio.  
-      <br><br>
-      <strong>Ángel</strong>, un joven soñador que desafía la tradición,  
-      y <strong>Clara</strong>, una mujer marcada por la pérdida y el silencio,  
-      descubren que amar también puede ser un acto de fe.  
-      <br><br>
-      Una historia que nos recuerda que incluso en los lugares más cerrados,  
-      el amor siempre encuentra la manera de florecer.
+  <!-- Sección de inicio -->
+  <section id="inicio">
+    <h2>Bienvenido</h2>
+    <p style="max-width:700px; margin:auto;">
+      Bienvenido al sitio oficial de <strong>J. LÓPEZ M.</strong>, un autor que escribe con el alma sobre las emociones más profundas del ser humano.
+      Aquí encontrarás sus obras más recientes, noticias y pensamientos sobre el amor, la fe y la esperanza.
     </p>
+  </section>
 
-    <!-- BOTONES -->
-    <div style="text-align:center; margin-top:40px;">
-      <!-- Botón musical -->
-      <audio id="musicaFondo" loop>
-        <source src="https://cdn.pixabay.com/download/audio/2023/03/02/audio_6ce99de2b7.mp3?filename=piano-ambience-140990.mp3" type="audio/mpeg">
-        Tu navegador no soporta audio HTML5.
-      </audio>
+  <!-- Sección de libros -->
+  <section id="libros">
+    <h2>Mis Obras Publicadas</h2>
+    <div>
+      <!-- Amor Prohibido -->
+      <div>
+        <img src="images/amor-prohibido.png" alt="Amor Prohibido en Pueblo Tradicional">
+        <h3>Amor Prohibido en Pueblo Tradicional</h3>
+        <p>Una historia de amor, fe y redención que desafía las normas de un pueblo dominado por el juicio.</p>
+        <a href="https://www.amazon.com/dp/B0FKYRM3ZS" target="_blank" class="boton">Ver en Amazon</a>
+      </div>
 
-      <button class="boton-musica" onclick="toggleMusica()">
-        🎶 Escuchar melodía del libro
-      </button>
-
-      <!-- Botón de Amazon -->
-      <a class="boton-amazon" href="https://www.amazon.com/dp/B0FY9K8JLZ" target="_blank">
-        📖 Ver en Amazon
-      </a>
+      <!-- Nacen los Hermanos -->
+      <div>
+        <img src="images/nacen-hermanos.png" alt="Nacen los Hermanos">
+        <h3>Nacen los Hermanos</h3>
+        <p>Una novela sobre el destino, la familia y el perdón, donde la fe y la esperanza se entrelazan con el amor.</p>
+        <a href="https://www.amazon.com/dp/B0FY9K8JLZ" target="_blank" class="boton">Ver en Amazon</a>
+      </div>
     </div>
-  </div>
+  </section>
 
+  <!-- Sobre el autor -->
+  <section id="autor">
+    <h2>Sobre el Autor</h2>
+    <img src="images/autor.png" alt="Foto del autor J. LÓPEZ M." style="width:200px; border-radius:50%; margin:20px auto;">
+    <p style="max-width:650px; margin:auto;">
+      <strong>J. LÓPEZ M.</strong> es un escritor y óptometrista nicaragüense cuya pluma se distingue por su profundidad emocional y su mirada de fe.
+      A través de sus obras explora el amor, el perdón y la redención, invitando al lector a encontrar la luz incluso en medio del dolor.
+    </p>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Deseas ponerte en contacto con el autor o solicitar colaboraciones?</p>
+    <p>Escríbenos al correo: <a href="mailto:jlopezmoficial@gmail.com">jlopezmoficial@gmail.com</a></p>
+  </section>
+
+  <!-- Pie de página -->
   <footer>
-    <p>© 2025 J. LÓPEZ M. — Escritor nicaragüense y óptometrista |  
-    Diseño y edición: ChatGPT (Editor Literario)</p>
+    <p>© 2025 J. LÓPEZ M. | Sitio oficial del autor</p>
+    <p>Diseño editorial y desarrollo: <strong>J. LÓPEZ M.</strong></p>
   </footer>
 
-  <script>
-    function toggleMusica() {
-      const musica = document.getElementById("musicaFondo");
-      const boton = document.querySelector(".boton-musica");
-      if (musica.paused) {
-        musica.play();
-        boton.innerHTML = "⏸️ Pausar melodía";
-      } else {
-        musica.pause();
-        boton.innerHTML = "🎶 Escuchar melodía del libro";
-      }
-    }
-  </script>
 </body>
 </html>
+
+
