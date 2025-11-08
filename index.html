@@ -156,10 +156,21 @@
     <p><strong>El regreso que desenterrará verdades enterradas</strong></p>
     <p>Veinte años después de huir de San Isidro, Elena vuelve al pueblo donde el tiempo se detuvo. Un hermano enfermo la llama con una carta urgente, pero el verdadero viaje será enfrentar el silencio que destrozó a su familia.</p>
     
-    <!-- BOTÓN MEJORADO - ENVÍA EMAIL DIRECTO -->
-    <a href="mailto:jlopezmoficial@gmail.com?subject=Notificación de lanzamiento: 'El Amor que nos Une'&body=Hola J. López,%0D%0A%0D%0AMe interesa tu próximo libro 'El Amor que nos Une'. Por favor, notifícame cuando esté disponible.%0D%0A%0D%0ANombre:%0D%0AEmail:%0D%0A%0D%0ASaludos," class="boton">
-        Notificarme al lanzar
-    </a>
+    <!-- FORMULARIO DE NOTIFICACIÓN - REEMPLAZA EL BOTÓN ANTIGUO -->
+<div style="margin-top: 15px;">
+  <p style="font-size: 0.9em; margin-bottom: 8px; color: #6b4226;"><strong>¿Quieres que te avise cuando lance el libro?</strong></p>
+  <form action="https://formsubmit.co/jlopezmoficial@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="Notificación: El Amor que nos Une">
+    <input type="hidden" name="_template" value="basic">
+    <input type="email" name="email" placeholder="Ingresa tu email aquí" required 
+           style="padding: 10px; border: 1px solid #b8860b; border-radius: 6px; width: 100%; margin-bottom: 8px;">
+    <button type="submit" class="boton" style="width: 100%;">
+      ✅ Notificarme al lanzar
+    </button>
+  </form>
+  <p style="font-size: 0.8em; color: #666; margin-top: 8px;">
+    Te enviaré un email cuando el libro esté disponible
+  </p>
 </div>
   </section>
 
