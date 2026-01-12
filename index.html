@@ -67,16 +67,16 @@
       width: 250px;
     }
 
-    /* PORTADAS UNIFICADAS */
+   /* PORTADAS AJUSTADAS PARA LLENAR EL ESPACIO */
     .portada-completa {
       width: 100%;
-      height: 350px; 
-      object-fit: contain;
+      height: 380px; /* Aumentamos un poco la altura */
+      object-fit: cover; /* Esto hace que la imagen llene todo el cuadro sin dejar bordes de fondo */
+      object-position: top; /* Asegura que se vea la parte de arriba (el título del libro) */
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      background-color: #f5f5f5;
+      background-color: transparent; /* Quitamos el gris de fondo */
       margin-bottom: 15px;
-      padding: 5px;
       display: block;
     }
 
