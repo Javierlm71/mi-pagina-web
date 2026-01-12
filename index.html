@@ -56,27 +56,28 @@
       margin-bottom: 20px;
     }
 
-    #libros div {
+    #libros div.contenedor-libros {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 40px;
     }
 
-    #libros div > div {
+    #libros .tarjeta-libro {
       width: 250px;
     }
 
-    /* PORTADAS OPTIMIZADAS - MOSTRAR MÁS CONTENIDO */
+    /* PORTADAS OPTIMIZADAS - UNIFICADAS */
     .portada-completa {
       width: 100%;
-      max-height: 350px;
+      height: 350px; /* Altura fija para que todas se vean iguales */
       object-fit: contain;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
       background-color: #f5f5f5;
       margin-bottom: 15px;
       padding: 5px;
+      display: block;
     }
 
     a.boton {
@@ -112,7 +113,6 @@
 
 <body>
 
-  <!-- Encabezado -->
   <header>
     <h1>J. LÓPEZ M.</h1>
     <p>Escritor Nicaragüense • Amor, Perdón y Redención</p>
@@ -124,7 +124,6 @@
     </nav>
   </header>
 
-  <!-- Sección de inicio -->
   <section id="inicio">
     <h2>Bienvenido</h2>
     <p style="max-width:700px; margin:auto;">
@@ -133,10 +132,10 @@
     </p>
   </section>
 
-<section id="libros">
+  <section id="libros">
     <h2>Mis Obras Publicadas</h2>
-    <div>
-      <div>
+    <div class="contenedor-libros">
+      <div class="tarjeta-libro">
         <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/amor-prohibido.png" 
              alt="Portada Amor Prohibido en Pueblo Tradicional"
              class="portada-completa">
@@ -145,7 +144,7 @@
         <a href="amor-prohibido.html" class="boton">Conoce la historia →</a>
       </div>
 
-      <div>
+      <div class="tarjeta-libro">
         <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/nacen-hermanos.png" 
              alt="Portada Nacen los Hermanos"
              class="portada-completa">
@@ -154,10 +153,11 @@
         <a href="nacen-hermanos.html" class="boton">Conoce la historia →</a>
       </div>
 
-      <div>
-        <img src="https://i.imgur.com/7Qh2jZP.png" 
+      <div class="tarjeta-libro">
+        <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/donde%20el%20amor%20nos%20ense%C3%B1%C3%B3%20a%20volver.png" 
              alt="Portada Donde el Amor nos Enseñó a Volver"
-             class="portada-completa"> <h3>Donde el Amor nos Enseñó a Volver</h3>
+             class="portada-completa">
+        <h3>Donde el Amor nos Enseñó a Volver</h3>
         <div style="background-color: #27ae60; color: white; padding: 5px 10px; border-radius: 3px; display: inline-block; margin-bottom: 10px; font-size: 0.9em;">
           ¡Nuevo!
         </div>
@@ -179,7 +179,7 @@
       </div>
     </div>
   </section>
-  <!-- Sobre el autor -->
+
   <section id="autor">
     <h2>Sobre el Autor</h2>
     <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/autor.png" 
@@ -191,14 +191,12 @@
     </p>
   </section>
 
-  <!-- Contacto -->
   <section id="contacto">
     <h2>Contacto</h2>
     <p>¿Deseas ponerte en contacto con el autor o solicitar colaboraciones?</p>
     <p>Escríbenos al correo: <a href="mailto:jlopezmoficial@gmail.com">jlopezmoficial@gmail.com</a></p>
   </section>
 
-  <!-- Pie de página -->
   <footer>
     <p>© 2025 J. LÓPEZ M. | Sitio oficial del autor</p>
     <p>Diseño editorial y desarrollo: <strong>J. LÓPEZ M.</strong></p>
