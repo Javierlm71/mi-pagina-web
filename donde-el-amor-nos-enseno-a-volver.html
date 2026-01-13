@@ -3,206 +3,565 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sitio oficial del escritor nicaragüense J. LÓPEZ M., autor de 'Amor Prohibido en Pueblo Tradicional' y 'Nacen los Hermanos'. Historias sobre el amor, el perdón y la fe." />
-  <title>J. LÓPEZ M. | Escritor Nicaragüense</title>
+  <meta name="description" content="Donde el Amor nos Enseñó a Volver por J. LÓPEZ M. — Una novela sobre memoria, dignidad y la verdad que libera después de veinte años de silencio." />
+  <meta name="keywords" content="Donde el Amor nos Enseñó a Volver, J. López M., novela nicaragüense, memoria, justicia, amor, sanación, ASIN: B0GFT68SL2" />
+  <meta name="author" content="J. LÓPEZ M." />
+  <title>Donde el Amor nos Enseñó a Volver | J. LÓPEZ M.</title>
+  
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  
   <style>
+    /* Variables y estilos base */
+    :root {
+      --color-primario: #b8860b;
+      --color-primario-oscuro: #8c6c10;
+      --color-secundario: #2f1b0c;
+      --color-terciario: #6b4226;
+      --color-fondo: #fffaf2;
+      --color-texto: #2f1b0c;
+      --color-blanco: #ffffff;
+      --color-sombra: rgba(0, 0, 0, 0.1);
+      --transicion-rapida: all 0.3s ease;
+      --borde-redondeado: 8px;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     body {
-      font-family: 'Georgia', serif;
-      margin: 0;
-      background-color: #fffaf2;
-      color: #2f1b0c;
-      line-height: 1.6;
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
+      line-height: 1.7;
     }
-
-    header {
-      background: linear-gradient(to right, #b8860b, #cfa14a);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    
+    h1, h2, h3 {
+      font-family: 'Crimson Text', serif;
+      font-weight: 700;
+      line-height: 1.3;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-      letter-spacing: 2px;
-    }
-
-    nav {
-      margin-top: 15px;
-    }
-
-    nav a {
+    
+    a {
       text-decoration: none;
-      color: white;
-      font-weight: bold;
-      margin: 0 12px;
-      transition: opacity 0.3s;
+      color: inherit;
+      transition: var(--transicion-rapida);
     }
-
-    nav a:hover {
-      opacity: 0.8;
-    }
-
-    section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    h2 {
-      color: #6b4226;
-      font-size: 1.8em;
-      margin-bottom: 20px;
-    }
-
-    .contenedor-libros {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-    }
-
-    .tarjeta-libro {
-      width: 250px;
-    }
-
-    /* PORTADAS UNIFICADAS */
-    .portada-completa {
-      width: 100%;
-      height: 330px;
-      object-fit: contain;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      background-color: #f5f5f5;
-      margin-bottom: 15px;
+    
+    img {
+      max-width: 100%;
+      height: auto;
       display: block;
     }
-
-    a.boton {
+    
+    /* Header específico para página de libro */
+    .header-libro {
+      background: linear-gradient(135deg, var(--color-primario), var(--color-primario-oscuro));
+      color: var(--color-blanco);
+      padding: 40px 20px 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+    
+    .header-libro h1 {
+      font-size: 2.2em;
+      margin-bottom: 5px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    
+    .header-libro p {
+      font-size: 1.1em;
+      opacity: 0.95;
+      margin-bottom: 25px;
+    }
+    
+    .navegacion-libro {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .navegacion-libro a {
+      padding: 8px 18px;
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95em;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .navegacion-libro a:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-2px);
+    }
+    
+    /* Contenedor principal */
+    .contenedor {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    
+    /* Sección superior con portada e información */
+    .seccion-superior {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+      margin-bottom: 50px;
+      align-items: start;
+    }
+    
+    @media (max-width: 768px) {
+      .seccion-superior {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+    
+    /* Portada del libro */
+    .portada-libro {
+      text-align: center;
+    }
+    
+    .portada-img {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto 20px;
+      border-radius: var(--borde-redondeado);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      background-color: #8B4513; /* Color de fondo específico para esta portada */
+      padding: 10px;
+    }
+    
+    .etiqueta-nuevo {
+      background-color: #27ae60;
+      color: var(--color-blanco);
+      padding: 5px 15px;
+      border-radius: 50px;
+      font-size: 0.9em;
+      font-weight: 600;
       display: inline-block;
+      margin-bottom: 10px;
+    }
+    
+    /* Información del libro */
+    .info-libro h2 {
+      color: var(--color-terciario);
+      font-size: 2.2em;
+      margin-bottom: 15px;
+    }
+    
+    .detalles-libro {
+      background-color: rgba(184, 134, 11, 0.05);
+      padding: 20px;
+      border-radius: var(--borde-redondeado);
+      margin-bottom: 25px;
+      border-left: 4px solid var(--color-primario);
+    }
+    
+    .detalles-libro p {
+      margin-bottom: 8px;
+      font-size: 1.05em;
+    }
+    
+    .asin-info {
+      background-color: rgba(39, 174, 96, 0.1);
+      padding: 10px 15px;
+      border-radius: var(--borde-redondeado);
       margin-top: 10px;
-      padding: 8px 16px;
-      background-color: #b8860b;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background-color 0.3s;
+      font-size: 0.95em;
+      border-left: 3px solid #27ae60;
     }
-
-    a.boton:hover {
-      background-color: #8c6c10;
+    
+    /* Botones de acción */
+    .botones-accion {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 25px;
     }
-
-    footer {
-      background-color: #2f1b0c;
+    
+    .boton {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 25px;
+      background-color: var(--color-primario);
+      color: var(--color-blanco);
+      border-radius: var(--borde-redondeado);
+      font-weight: 600;
+      transition: var(--transicion-rapida);
+      border: none;
+      cursor: pointer;
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+    }
+    
+    .boton:hover {
+      background-color: var(--color-primario-oscuro);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(184, 134, 11, 0.3);
+    }
+    
+    .boton-volver {
+      background-color: #6c757d;
+    }
+    
+    .boton-volver:hover {
+      background-color: #545b62;
+      box-shadow: 0 5px 15px rgba(108, 117, 125, 0.3);
+    }
+    
+    .boton-amazon {
+      background-color: #ff9900;
+    }
+    
+    .boton-amazon:hover {
+      background-color: #e68a00;
+      box-shadow: 0 5px 15px rgba(255, 153, 0, 0.3);
+    }
+    
+    /* Sección de sinopsis */
+    .seccion-sinopsis {
+      margin-bottom: 50px;
+    }
+    
+    .seccion-sinopsis h3 {
+      color: var(--color-terciario);
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid rgba(184, 134, 11, 0.2);
+    }
+    
+    .resaltado {
+      font-style: italic;
+      font-size: 1.2em;
+      color: var(--color-primario-oscuro);
+      margin: 20px 0;
+      padding-left: 20px;
+      border-left: 3px solid var(--color-primario);
+      line-height: 1.6;
+    }
+    
+    .contenido-sinopsis p {
+      margin-bottom: 20px;
+      font-size: 1.1em;
+      line-height: 1.8;
+    }
+    
+    /* Citas destacadas */
+    .cita-destacada {
+      background-color: rgba(184, 134, 11, 0.08);
+      padding: 30px;
+      border-radius: var(--borde-redondeado);
+      margin: 40px 0;
+      border-left: 5px solid var(--color-primario);
+      font-style: italic;
+      font-size: 1.2em;
+      line-height: 1.7;
+      text-align: center;
+      color: var(--color-terciario);
+    }
+    
+    .cita-destacada p {
+      margin-bottom: 10px;
+    }
+    
+    .cita-inicio {
+      font-size: 1.4em;
+      font-weight: 600;
+      text-align: center;
+      color: var(--color-terciario);
+      margin: 30px 0;
+      line-height: 1.6;
+    }
+    
+    /* Nota del autor */
+    .nota-autor {
+      background-color: rgba(107, 66, 38, 0.05);
+      padding: 25px;
+      border-radius: var(--borde-redondeado);
+      margin-top: 40px;
+      border-top: 1px solid rgba(107, 66, 38, 0.1);
+    }
+    
+    .nota-autor h4 {
+      color: var(--color-terciario);
+      margin-bottom: 15px;
+      font-size: 1.3em;
+    }
+    
+    .nota-autor p {
+      font-style: italic;
+      line-height: 1.7;
+    }
+    
+    .firma-autor {
+      margin-top: 15px;
+      font-weight: 600;
+      color: var(--color-primario-oscuro);
+      text-align: right;
+    }
+    
+    /* Sección temática */
+    .seccion-tematica {
+      background-color: rgba(184, 134, 11, 0.03);
+      padding: 30px;
+      border-radius: var(--borde-redondeado);
+      margin: 40px 0;
+      border: 1px solid rgba(184, 134, 11, 0.1);
+    }
+    
+    .seccion-tematica h4 {
+      color: var(--color-terciario);
+      margin-bottom: 20px;
+      font-size: 1.4em;
+      text-align: center;
+    }
+    
+    .temas-lista {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .tema-item {
+      background-color: var(--color-blanco);
+      padding: 15px;
+      border-radius: var(--borde-redondeado);
+      box-shadow: 0 3px 10px var(--color-sombra);
+      text-align: center;
+      font-weight: 600;
+      color: var(--color-primario-oscuro);
+    }
+    
+    /* Footer */
+    .footer-libro {
+      background-color: var(--color-secundario);
       color: #f5deb3;
       text-align: center;
-      padding: 25px;
-      font-size: 0.9em;
+      padding: 30px 20px;
+      margin-top: 60px;
     }
-
-    footer a {
+    
+    .footer-libro p {
+      margin-bottom: 15px;
+    }
+    
+    .enlace-footer {
       color: #f5deb3;
-      text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      border-bottom: 1px dotted #f5deb3;
+    }
+    
+    .enlace-footer:hover {
+      opacity: 0.8;
+    }
+    
+    /* Responsividad adicional */
+    @media (max-width: 480px) {
+      .header-libro h1 {
+        font-size: 1.8em;
+      }
+      
+      .info-libro h2 {
+        font-size: 1.8em;
+      }
+      
+      .botones-accion {
+        flex-direction: column;
+      }
+      
+      .boton {
+        width: 100%;
+      }
+      
+      .cita-inicio {
+        font-size: 1.2em;
+      }
     }
   </style>
 </head>
 
 <body>
-
-  <header>
-    <h1>J. LÓPEZ M.</h1>
-    <p>Escritor Nicaragüense • Amor, Perdón y Redención</p>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#libros">Libros</a>
-      <a href="#autor">Sobre el Autor</a>
-      <a href="#contacto">Contacto</a>
+  <!-- Header específico de la página del libro -->
+  <header class="header-libro">
+    <h1>Donde el Amor nos Enseñó a Volver</h1>
+    <p>por J. LÓPEZ M. — Una novela sobre memoria, dignidad y la verdad que libera</p>
+    
+    <nav class="navegacion-libro" aria-label="Navegación del libro">
+      <a href="index.html">Inicio</a>
+      <a href="#sinopsis">Esta obra</a>
+      <a href="amor-prohibido.html">Amor Prohibido</a>
+      <a href="nacen-hermanos.html">Nacen los Hermanos</a>
+      <a href="index.html#autor">Sobre el autor</a>
     </nav>
   </header>
 
-  <section id="inicio">
-    <h2>Bienvenido</h2>
-    <p style="max-width:700px; margin:auto;">
-      Bienvenido al sitio oficial de <strong>J. LÓPEZ M.</strong>, un autor que escribe con el alma sobre las emociones más profundas del ser humano.
-    </p>
-  </section>
-
-  <section id="libros">
-    <h2>Mis Obras Publicadas</h2>
-    <div class="contenedor-libros">
-      
-      <div class="tarjeta-libro">
-        <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/amor-prohibido.png" 
-             alt="Portada Amor Prohibido"
-             class="portada-completa">
-        <h3>Amor Prohibido en Pueblo Tradicional</h3>
-        <p>Una historia de amor y fe que desafía las normas de un pueblo.</p>
-        <a href="amor-prohibido.html" class="boton">Conoce la historia →</a>
-      </div>
-
-      <div class="tarjeta-libro">
-        <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/nacen-hermanos.png" 
-             alt="Portada Nacen los Hermanos"
-             class="portada-completa">
-        <h3>Nacen los Hermanos</h3>
-        <p>Una novela sobre el destino, la familia y el perdón.</p>
-        <a href="nacen-hermanos.html" class="boton">Conoce la historia →</a>
-      </div>
-
-      <div class="tarjeta-libro">
+  <main class="contenedor">
+    <!-- Sección superior con portada e información -->
+    <section class="seccion-superior">
+      <div class="portada-libro">
+        <span class="etiqueta-nuevo">¡NUEVA PUBLICACIÓN!</span>
         <img src="https://i.imgur.com/7Qh2jZP.png" 
-             alt="Portada Donde el Amor nos Enseñó a Volver"
-             class="portada-completa"
-             style="background-color: #8B4513;">
-        <h3>Donde el Amor nos Enseñó a Volver</h3>
-        <div style="background-color: #27ae60; color: white; padding: 5px 10px; border-radius: 3px; display: inline-block; margin-bottom: 10px; font-size: 0.9em;">
-         ¡nuevo!
+             alt="Portada Donde el Amor nos Enseñó a Volver" 
+             class="portada-img">
+        <p><em>Portada Donde el Amor nos Enseñó a Volver</em></p>
+      </div>
+      
+      <div class="info-libro">
+        <h2>Donde el Amor nos Enseñó a Volver</h2>
+        
+        <div class="detalles-libro">
+          <p><strong>Formato:</strong> eBook / Tapa blanda</p>
+          <p><strong>Año de publicación:</strong> 2025</p>
+          <p><strong>Número de páginas:</strong> ~650 páginas</p>
+          <div class="asin-info">
+            <p><strong>ASIN:</strong> B0GFT68SL2</p>
+            <p><em>Identificador único en Amazon</em></p>
+          </div>
         </div>
-        <p><strong>El amor que nos une cuando el silencio se rompe</strong></p>
-        <p>Después de veinte años, Elena regresa a San Isidro para enfrentar secretos familiares y una verdad que cambiará todo lo que creía saber.</p>
         
-        <!-- BOTÓN "CONOCE LA HISTORIA" AGREGADO -->
-        <a href="donde-el-amor-nos-enseno-a-volver.html" class="boton" style="margin-top: 10px;">
-          Conoce la historia →
-        </a>
-        
-        <!-- FORMULARIO DE NOTIFICACIÓN -->
-        <div style="margin-top: 15px;">
-          <form action="https://formsubmit.co/jlopezmoficial@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="Notificación Amazon: Donde el Amor nos Enseñó a Volver">
-            <input type="email" name="email" placeholder="Tu email para notificaciones" required 
-                   style="padding: 10px; border: 1px solid #b8860b; border-radius: 6px; width: 100%; margin-bottom: 8px; box-sizing: border-box;">
-            <button type="submit" class="boton" style="width: 100%; cursor: pointer; border: none;">
-              ✅ Notificarme en Amazon
-            </button>
-          </form>
+        <div class="botones-accion">
+          <!-- Enlace a Amazon con tu ASIN real -->
+          <a href="https://www.amazon.com/dp/B0GFT68SL2" target="_blank" class="boton boton-amazon">
+            📖 Comprar en Amazon
+          </a>
+          <a href="index.html#libros" class="boton boton-volver">
+            ← Volver a la biblioteca
+          </a>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- Sección de sinopsis -->
+    <section id="sinopsis" class="seccion-sinopsis">
+      <h3>Sinopsis</h3>
+      
+      <div class="contenido-sinopsis">
+        <div class="cita-inicio">
+          <p>Hay silencios que se heredan.<br>
+          Y verdades que, cuando no se nombran, terminan marcando generaciones enteras.</p>
+        </div>
+        
+        <p>Después de veinte años de ausencia, Elena regresa a San Isidro, el pueblo que la vio nacer y del que huyó cargando más preguntas que certezas. Una carta breve —y una enfermedad— la obligan a volver al lugar donde el miedo, la culpa y el poder aprendieron a convivir bajo la apariencia de normalidad.</p>
+        
+        <p>Lo que Elena encuentra no es solo un pueblo detenido en el tiempo, sino una historia sostenida por el abuso de poder, los nombres innombrables, los amores prohibidos y un silencio colectivo que protegió a los culpables mientras condenaba a los inocentes. En su búsqueda por entender su origen, irá desenterrando secretos familiares, sacrificios invisibles y una verdad que muchos preferirían mantener en el olvido.</p>
+        
+        <div class="cita-destacada">
+          <p>"Pero Donde el amor nos enseñó a volver no es una novela de venganza.<br>
+          Es una historia de memoria, dignidad y justicia del alma."</p>
+        </div>
+        
+        <p>Con una prosa profunda, sensible y cargada de humanidad, J. López M. nos conduce por un viaje íntimo donde el amor se enfrenta al poder, donde la verdad quema pero libera, y donde nombrar lo que fue negado se convierte en el primer acto de libertad.</p>
+        
+        <p class="resaltado">Esta novela es un homenaje a quienes sobrevivieron en silencio, a quienes amaron aun cuando todo estaba en contra y a quienes descubren que el amor verdadero —cuando es real— siempre termina enseñándonos a volver… hacia la luz.</p>
+        
+        <!-- Sección temática -->
+        <div class="seccion-tematica">
+          <h4>Temas centrales de la obra:</h4>
+          <div class="temas-lista">
+            <div class="tema-item">Memoria histórica</div>
+            <div class="tema-item">Sanación familiar</div>
+            <div class="tema-item">Justicia reparadora</div>
+            <div class="tema-item">Amor redentor</div>
+            <div class="tema-item">Verdad liberadora</div>
+            <div class="tema-item">Dignidad humana</div>
+          </div>
+        </div>
+        
+        <div class="nota-autor">
+          <h4>Un mensaje del autor:</h4>
+          <p>Esta novela surgió de la necesidad de nombrar lo innombrable, de dar voz a quienes vivieron en el silencio impuesto. Es una invitación a creer que, incluso en las historias más dolorosas, el amor puede ser el camino de regreso a nuestra propia luz. Escribir estas páginas fue un acto de fe en el poder sanador de la verdad y en la capacidad del amor para transformar lo que el tiempo parecía haber condenado.</p>
+          <p class="firma-autor">— J. LÓPEZ M.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <section id="autor">
-    <h2>Sobre el Autor</h2>
-    <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/autor.png" 
-         alt="J. LÓPEZ M." 
-         style="width:200px; height:200px; object-fit: cover; border-radius:50%; box-shadow:0 0 10px rgba(0,0,0,0.3); margin-bottom:20px;">
-    <p style="max-width:700px; margin:auto;">
-      <strong>J. LÓPEZ M.</strong> es un escritor y óptometrista nicaragüense cuya pluma se distingue por su profundidad emocional y su mirada de fe. A través de sus obras explora el amor, el perdón y la redención, invitando al lector a encontrar la luz incluso en medio del dolor.
+  <!-- Footer -->
+  <footer class="footer-libro">
+    <p>© 2025 J. LÓPEZ M. | <a href="index.html#libros" class="enlace-footer">Volver a la biblioteca</a></p>
+    <p><a href="index.html" class="enlace-footer">← Regresar al inicio</a></p>
+    <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.8;">
+      ASIN: B0GFT68SL2 • Disponible en Amazon Kindle y tapa blanda
     </p>
-  </section>
-
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>¿Deseas ponerte en contacto con el autor o solicitar colaboraciones?</p>
-    <p>Escríbenos al correo: <a href="mailto:jlopezmoficial@gmail.com">jlopezmoficial@gmail.com</a></p>
-  </section>
-
-  <footer>
-    <p>© 2025 J. LÓPEZ M. | Sitio oficial del autor</p>
   </footer>
 
+  <script>
+    // Script para funcionalidad básica
+    document.addEventListener('DOMContentLoaded', function() {
+      // Suavizar desplazamiento a los anclajes
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          
+          // Solo para anclajes internos, no para enlaces externos
+          if (href !== '#' && !href.startsWith('http')) {
+            e.preventDefault();
+            
+            const targetId = href;
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 100,
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
+      });
+      
+      // Animación para la portada al cargar
+      const portada = document.querySelector('.portada-img');
+      if (portada) {
+        portada.style.opacity = '0';
+        portada.style.transform = 'translateY(20px)';
+        portada.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        
+        setTimeout(() => {
+          portada.style.opacity = '1';
+          portada.style.transform = 'translateY(0)';
+        }, 300);
+      }
+      
+      // Animación para los temas
+      const temas = document.querySelectorAll('.tema-item');
+      temas.forEach((tema, index) => {
+        tema.style.opacity = '0';
+        tema.style.transform = 'translateY(10px)';
+        
+        setTimeout(() => {
+          tema.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+          tema.style.opacity = '1';
+          tema.style.transform = 'translateY(0)';
+        }, 500 + (index * 100));
+      });
+      
+      // Confirmación para enlace de Amazon
+      const enlaceAmazon = document.querySelector('.boton-amazon');
+      if (enlaceAmazon) {
+        enlaceAmazon.addEventListener('click', function(e) {
+          // En producción, esto abriría el enlace normalmente
+          // Para demostración, mostramos mensaje si no es el enlace real
+          if (!this.href.includes('amazon.com/dp/B0GFT68SL2')) {
+            e.preventDefault();
+            alert('¡Este botón te llevaría directamente a la página de Amazon para comprar "Donde el Amor nos Enseñó a Volver" con tu ASIN: B0GFT68SL2!');
+          } else {
+            // Opcional: agregar tracking o analytics aquí
+            console.log('Redirigiendo a Amazon con ASIN: B0GFT68SL2');
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
