@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,18 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Sitio oficial de J. LÓPEZ M., escritor nicaragüense. Autor de 'Donde el Amor nos Enseñó a Volver', 'Amor Prohibido en Pueblo Tradicional' y 'Nacen los Hermanos'." />
   
-  <!-- NUEVO: Cache Control -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   
   <title>J. LÓPEZ M. | Escritor Nicaragüense</title>
   
-  <!-- Fuentes actualizadas -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
   
   <style>
-    /* RESET COMPLETO Y NUEVOS ESTILOS */
     * {
       margin: 0;
       padding: 0;
@@ -41,7 +37,6 @@
       min-height: 100vh;
     }
     
-    /* HEADER REDISEÑADO */
     .header-principal {
       background: linear-gradient(rgba(62, 39, 35, 0.95), rgba(62, 39, 35, 0.98)), 
                   url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
@@ -69,7 +64,6 @@
       font-weight: 300;
     }
     
-    /* MENÚ NUEVO */
     .menu-principal {
       display: flex;
       justify-content: center;
@@ -95,7 +89,6 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
     
-    /* CONTENIDO PRINCIPAL */
     .contenido-principal {
       max-width: 1200px;
       margin: -3rem auto 0;
@@ -104,7 +97,6 @@
       z-index: 1;
     }
     
-    /* LIBROS - DISEÑO NUEVO */
     .seccion-libros {
       padding: 4rem 0;
     }
@@ -180,17 +172,48 @@
       align-items: center;
       justify-content: center;
       padding: 1rem;
+      position: relative;
     }
+    
+    /* COLOR DE FONDO ESPECÍFICO PARA CADA PORTADA */
+    .portada-1 { background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); }
+    .portada-2 { background: linear-gradient(135deg, #2C3E50 0%, #4A6572 100%); }
+    .portada-3 { background: linear-gradient(135deg, #8B4513 0%, #B8860B 100%); }
     
     .portada-libro {
       max-height: 100%;
       max-width: 100%;
       object-fit: contain;
       transition: transform 0.5s ease;
+      filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
     }
     
     .tarjeta-libro:hover .portada-libro {
       transform: scale(1.05);
+    }
+    
+    /* ESTILO PARA CUANDO LA IMAGEN NO SE CARGA */
+    .portada-fallback {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .portada-fallback h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .portada-fallback p {
+      font-size: 0.9rem;
+      opacity: 0.9;
     }
     
     .info-libro {
@@ -211,7 +234,6 @@
       line-height: 1.6;
     }
     
-    /* BOTONES NUEVOS */
     .botones-accion {
       display: flex;
       gap: 1rem;
@@ -257,7 +279,6 @@
       color: var(--blanco);
     }
     
-    /* FORMULARIO NUEVO */
     .formulario-suscripcion {
       background: linear-gradient(135deg, var(--marron) 0%, var(--marron-claro) 100%);
       padding: 2.5rem;
@@ -302,7 +323,6 @@
       background: var(--dorado-oscuro);
     }
     
-    /* AUTOR - DISEÑO NUEVO */
     .seccion-autor {
       padding: 5rem 0;
       background: linear-gradient(135deg, #f9f5e7 0%, #f0e6d6 100%);
@@ -323,6 +343,27 @@
       .contenedor-autor {
         grid-template-columns: 1fr;
         text-align: center;
+      }
+      
+      .grid-libros {
+        grid-template-columns: 1fr;
+      }
+      
+      .menu-principal {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .menu-principal a {
+        width: 80%;
+      }
+      
+      .grupo-input {
+        flex-direction: column;
+      }
+      
+      .header-principal h1 {
+        font-size: 2.5rem;
       }
     }
     
@@ -347,7 +388,6 @@
       color: #555;
     }
     
-    /* FOOTER NUEVO */
     .footer-principal {
       background: var(--marron);
       color: var(--crema);
@@ -380,35 +420,10 @@
       font-size: 0.9rem;
       opacity: 0.8;
     }
-    
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .header-principal h1 {
-        font-size: 2.5rem;
-      }
-      
-      .grid-libros {
-        grid-template-columns: 1fr;
-      }
-      
-      .menu-principal {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      .menu-principal a {
-        width: 80%;
-      }
-      
-      .grupo-input {
-        flex-direction: column;
-      }
-    }
   </style>
 </head>
 
 <body>
-  <!-- HEADER COMPLETAMENTE NUEVO -->
   <header class="header-principal">
     <h1>J. LÓPEZ M.</h1>
     <p class="subtitulo">Escritor Nicaragüense • Novelas de Amor, Perdón y Redención</p>
@@ -422,7 +437,6 @@
   </header>
 
   <main class="contenido-principal">
-    <!-- SECCIÓN INICIO -->
     <section id="inicio" style="padding: 3rem 0; text-align: center;">
       <h2 class="titulo-seccion">Bienvenido a Mi Mundo Literario</h2>
       <div style="max-width: 800px; margin: 0 auto; font-size: 1.2rem;">
@@ -433,18 +447,22 @@
       </div>
     </section>
 
-    <!-- SECCIÓN LIBROS - DISEÑO COMPLETAMENTE NUEVO -->
     <section id="libros" class="seccion-libros">
       <h2 class="titulo-seccion">Mis Obras Publicadas</h2>
       
       <div class="grid-libros">
         
-        <!-- LIBRO 1 - NUEVO DISEÑO -->
+        <!-- LIBRO 1 -->
         <article class="tarjeta-libro">
-          <div class="portada-contenedor">
+          <div class="portada-contenedor portada-1">
             <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/amor-prohibido.png" 
                  alt="Amor Prohibido en Pueblo Tradicional"
-                 class="portada-libro">
+                 class="portada-libro"
+                 onerror="this.style.display='none'; document.getElementById('fallback-1').style.display='flex';">
+            <div id="fallback-1" class="portada-fallback" style="display: none;">
+              <h4>Amor Prohibido</h4>
+              <p>en Pueblo Tradicional</p>
+            </div>
           </div>
           <div class="info-libro">
             <h3>Amor Prohibido en Pueblo Tradicional</h3>
@@ -456,12 +474,17 @@
           </div>
         </article>
 
-        <!-- LIBRO 2 - NUEVO DISEÑO -->
+        <!-- LIBRO 2 -->
         <article class="tarjeta-libro">
-          <div class="portada-contenedor">
+          <div class="portada-contenedor portada-2">
             <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/nacen-hermanos.png" 
                  alt="Nacen los Hermanos"
-                 class="portada-libro">
+                 class="portada-libro"
+                 onerror="this.style.display='none'; document.getElementById('fallback-2').style.display='flex';">
+            <div id="fallback-2" class="portada-fallback" style="display: none;">
+              <h4>Nacen</h4>
+              <p>los Hermanos</p>
+            </div>
           </div>
           <div class="info-libro">
             <h3>Nacen los Hermanos</h3>
@@ -473,14 +496,34 @@
           </div>
         </article>
 
-        <!-- LIBRO 3 - NUEVO Y DESTACADO -->
+        <!-- LIBRO 3 - CON MÚLTIPLES OPCIONES DE IMAGEN -->
         <article class="tarjeta-libro destacado">
           <div class="badge-nuevo">¡NUEVO!</div>
-          <div class="portada-contenedor">
-            <img src="https://i.imgur.com/7Qh2jZP.png" 
+          <div class="portada-contenedor portada-3">
+            
+            <!-- OPCIÓN 1: Imagen desde tu GitHub (si la subes) -->
+            <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/donde-el-amor.png" 
                  alt="Donde el Amor nos Enseñó a Volver"
                  class="portada-libro"
-                 style="background-color: #8B4513;">
+                 onerror="this.style.display='none'; document.getElementById('img-option2').style.display='block';">
+            
+            <!-- OPCIÓN 2: Imagen alternativa desde otro servidor -->
+            <img id="img-option2" 
+                 src="https://i.ibb.co/7Qh2jZP/donde-el-amor.png" 
+                 alt="Donde el Amor nos Enseñó a Volver"
+                 class="portada-libro"
+                 style="display: none;"
+                 onerror="this.style.display='none'; document.getElementById('img-option3').style.display='block';">
+            
+            <!-- OPCIÓN 3: Imagen de respaldo con texto -->
+            <div id="img-option3" class="portada-fallback" style="display: none;">
+              <h4>Donde el Amor</h4>
+              <p>nos Enseñó a Volver</p>
+              <p style="font-size: 0.8rem; margin-top: 1rem; opacity: 0.8;">
+                ASIN: B0GFT68SL2
+              </p>
+            </div>
+            
           </div>
           <div class="info-libro">
             <h3>Donde el Amor nos Enseñó a Volver</h3>
@@ -493,23 +536,22 @@
               </a>
             </div>
             
-            <!-- FORMULARIO ACTUALIZADO -->
             <div class="formulario-suscripcion">
-              <h4>📢 ¡Próximamente en Amazon!</h4>
-              <p style="margin-bottom: 1.5rem;">Recibe notificación cuando esté disponible:</p>
+              <h4>📢 Disponible en Amazon</h4>
+              <p style="margin-bottom: 1.5rem;">ASIN: <strong>B0GFT68SL2</strong></p>
               
-              <form action="https://formsubmit.co/jlopezmoficial@gmail.com" method="POST">
-                <input type="hidden" name="_subject" value="Notificación Amazon: Donde el Amor nos Enseñó a Volver">
-                
-                <div class="grupo-input">
-                  <input type="email" name="email" placeholder="Tu correo electrónico" required>
-                  <button type="submit">Notificarme</button>
-                </div>
-                
-                <p style="font-size: 0.9rem; opacity: 0.9; margin-top: 1rem;">
-                  ASIN: B0GFT68SL2 • Solo te contactaré para esta notificación
-                </p>
-              </form>
+              <div class="grupo-input">
+                <a href="https://www.amazon.com/dp/B0GFT68SL2" 
+                   target="_blank" 
+                   class="btn-primario"
+                   style="text-align: center; text-decoration: none;">
+                  Comprar en Amazon
+                </a>
+              </div>
+              
+              <p style="font-size: 0.9rem; opacity: 0.9; margin-top: 1rem;">
+                eBook y tapa blanda disponibles
+              </p>
             </div>
           </div>
         </article>
@@ -517,12 +559,12 @@
       </div>
     </section>
 
-    <!-- SECCIÓN AUTOR - NUEVO DISEÑO -->
     <section id="autor" class="seccion-autor">
       <div class="contenedor-autor">
         <div class="foto-autor">
           <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/autor.png" 
-               alt="J. LÓPEZ M. - Escritor nicaragüense">
+               alt="J. LÓPEZ M. - Escritor nicaragüense"
+               onerror="this.src='https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'">
         </div>
         
         <div class="bio-autor">
@@ -540,7 +582,6 @@
       </div>
     </section>
 
-    <!-- SECCIÓN CONTACTO -->
     <section id="contacto" style="padding: 4rem 0; text-align: center;">
       <h2 class="titulo-seccion">Contacto</h2>
       <div style="max-width: 600px; margin: 0 auto;">
@@ -562,7 +603,6 @@
     </section>
   </main>
 
-  <!-- FOOTER NUEVO -->
   <footer class="footer-principal">
     <div class="enlaces-footer">
       <a href="#inicio">Inicio</a>
@@ -578,16 +618,20 @@
   </footer>
 
   <script>
-    // SCRIPT COMPLETAMENTE NUEVO
     document.addEventListener('DOMContentLoaded', function() {
-      console.log('✅ Sitio cargado - Versión completamente renovada');
+      console.log('✅ Sitio cargado - Versión con imágenes corregidas');
       
-      // Forzar recarga sin caché
-      if (performance.navigation.type === 1) {
-        console.log('Página recargada - Limpiando caché');
-      }
+      // Forzar recarga sin caché para imágenes
+      const imagenes = document.querySelectorAll('img');
+      imagenes.forEach(img => {
+        if (img.src.includes('?')) {
+          img.src = img.src.split('?')[0] + '?t=' + new Date().getTime();
+        } else {
+          img.src = img.src + '?t=' + new Date().getTime();
+        }
+      });
       
-      // Animación para las tarjetas de libros
+      // Animación para las tarjetas
       const tarjetas = document.querySelectorAll('.tarjeta-libro');
       tarjetas.forEach((tarjeta, index) => {
         tarjeta.style.opacity = '0';
@@ -600,7 +644,28 @@
         }, 300 + (index * 200));
       });
       
-      // Navegación suave mejorada
+      // Verificar si las imágenes se cargaron
+      setTimeout(() => {
+        const imagenesTercerLibro = document.querySelectorAll('.portada-3 img');
+        let algunaCargada = false;
+        
+        imagenesTercerLibro.forEach(img => {
+          if (img.complete && img.naturalHeight !== 0) {
+            algunaCargada = true;
+            console.log('✅ Imagen cargada:', img.src);
+          }
+        });
+        
+        if (!algunaCargada) {
+          console.log('⚠️ Ninguna imagen cargó, mostrando fallback');
+          const fallback = document.getElementById('img-option3');
+          if (fallback) {
+            fallback.style.display = 'flex';
+          }
+        }
+      }, 2000);
+      
+      // Navegación suave
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
           const href = this.getAttribute('href');
@@ -614,52 +679,52 @@
                 top: targetElement.offsetTop - 100,
                 behavior: 'smooth'
               });
-              
-              // Actualizar URL sin recargar
-              history.pushState(null, null, href);
             }
           }
         });
       });
       
-      // Efecto especial para el formulario
-      const formulario = document.querySelector('.formulario-suscripcion form');
-      if (formulario) {
-        formulario.addEventListener('submit', function(e) {
+      // Detectar tecla F5 para recarga forzada
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'F5') {
           e.preventDefault();
-          
-          // Mostrar mensaje de confirmación
-          const boton = this.querySelector('button');
-          const textoOriginal = boton.textContent;
-          
-          boton.textContent = '¡Solicitud Enviada!';
-          boton.style.background = '#27ae60';
-          
-          setTimeout(() => {
-            // En entorno real, aquí se enviaría el formulario
-            // this.submit();
-            
-            // Solo para demostración
-            boton.textContent = textoOriginal;
-            boton.style.background = '';
-            
-            alert('¡Gracias por tu interés! En una implementación real, tu email sería enviado.');
-          }, 2000);
-        });
-      }
-      
-      // Detectar si es la primera visita
-      if (!sessionStorage.getItem('visitado')) {
-        sessionStorage.setItem('visitado', 'true');
-        console.log('👋 ¡Bienvenido por primera vez!');
-      }
+          location.reload(true);
+        }
+      });
     });
     
-    // Forzar recarga completa con Ctrl+F5
-    document.addEventListener('keydown', function(e) {
-      if (e.ctrlKey && e.key === 'F5') {
-        location.reload(true);
-      }
+    // Función para probar URLs de imágenes
+    function probarImagen(url, callback) {
+      const img = new Image();
+      img.onload = function() {
+        callback(true, url);
+      };
+      img.onerror = function() {
+        callback(false, url);
+      };
+      img.src = url;
+    }
+    
+    // Probar todas las posibles URLs para el tercer libro
+    window.addEventListener('load', function() {
+      const posiblesUrls = [
+        'https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/donde-el-amor.png',
+        'https://i.imgur.com/7Qh2jZP.png',
+        'https://i.ibb.co/7Qh2jZP/donde-el-amor.png',
+        'https://via.placeholder.com/300x400/8B4513/FFFFFF?text=Donde+el+Amor'
+      ];
+      
+      console.log('🔍 Probando URLs de imágenes...');
+      
+      posiblesUrls.forEach((url, index) => {
+        probarImagen(url, function(cargada, urlProbada) {
+          if (cargada) {
+            console.log(`✅ URL ${index + 1} funciona:`, urlProbada);
+          } else {
+            console.log(`❌ URL ${index + 1} no funciona:`, urlProbada);
+          }
+        });
+      });
     });
   </script>
 </body>
