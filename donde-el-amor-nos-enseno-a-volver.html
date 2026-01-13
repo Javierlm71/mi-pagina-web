@@ -44,8 +44,9 @@
     .quote{margin-top:18px;text-align:center;font-size:1.05rem;color:#A0522D;font-style:italic;padding:12px;background:#fdf8f3;border-radius:8px}
 
     .acciones{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px;align-items:center}
-    .btn{background:linear-gradient(45deg,var(--marron),var(--dorado));color:white;text-decoration:none;padding:12px 18px;border-radius:30px;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,0.12)}
+    .btn{background:linear-gradient(45deg,var(--marron),var(--dorado));color:white;text-decoration:none;padding:12px 18px;border-radius:30px;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,0.12);transition:all 0.3s}
     .btn.alt{background:transparent;border:2px solid var(--marron);color:var(--marron);padding:10px 16px}
+    .btn.amazon{background:linear-gradient(45deg,#FF9900,#FFAD33);color:white}
     .btn:hover{transform:translateY(-3px)}
 
     .nota-autor{margin-top:26px;padding:18px;background:#fdfaf6;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
@@ -57,6 +58,11 @@
     .badge-nuevo{display:inline-block;background:#27ae60;color:white;padding:6px 12px;border-radius:20px;font-size:0.85rem;font-weight:bold;margin-bottom:10px;}
     
     .intro-text{font-size:1.1rem;font-style:italic;color:#5C4033;margin-bottom:20px;text-align:center;padding:12px;background:#fdf8f3;border-radius:8px;}
+    
+    .disponible-badge{display:inline-block;background:#FF9900;color:white;padding:6px 12px;border-radius:20px;font-size:0.85rem;font-weight:bold;margin-bottom:10px;}
+    
+    .detalles-libro {margin-top: 10px; font-size: 13px; color: #8B5A2B;}
+    .detalles-libro span {display: block; margin-bottom: 3px;}
   </style>
 </head>
 <body>
@@ -78,18 +84,39 @@
         <img src="https://i.imgur.com/7Qh2jZP.png" alt="Portada Donde el Amor nos Enseñó a Volver">
         <div style="margin-top:12px">
           <div class="badge-nuevo">¡NUEVA OBRA!</div>
-          <div style="font-weight:700;color:#5C4033">Donde el Amor nos Enseñó a Volver</div>
-          <div style="font-size:13px;color:#8B5A2B;margin-top:6px">Formato: eBook / Tapa blanda • 2024 • Próximamente</div>
+          <div class="disponible-badge">✅ DISPONIBLE EN AMAZON</div>
+          <div style="font-weight:700;color:#5C4033; margin-top: 8px;">Donde el Amor nos Enseñó a Volver</div>
+          
+          <div class="detalles-libro">
+            <span><strong>Formato:</strong> eBook / Tapa blanda</span>
+            <span><strong>Año:</strong> 2024</span>
+            <span><strong>Páginas:</strong> 290 páginas</span>
+            <span><strong>ISBN:</strong> B0GFT68SL2</span>
+            <span><strong>Género:</strong> Drama familiar / Ficción literaria</span>
+          </div>
         </div>
-        <div class="acciones" style="margin-top:14px">
-          <a class="btn" href="mailto:jlopezmoficial@gmail.com?subject=Información sobre 'Donde el Amor nos Enseñó a Volver'&body=Hola J. López,%0D%0A%0D%0AMe interesa tu nuevo libro 'Donde el Amor nos Enseñó a Volver'. Por favor, envíame información sobre disponibilidad y precios.%0D%0A%0D%0ANombre:%0D%0AEmail:%0D%0A%0D%0ASaludos,">📧 Consultar disponibilidad</a>
-          <a class="btn alt" href="index.html">← Volver a la biblioteca</a>
+        
+        <div class="acciones" style="margin-top:14px; flex-direction: column; gap: 10px;">
+          <!-- BOTÓN PRINCIPAL - COMPRAR EN AMAZON -->
+          <a class="btn amazon" href="https://www.amazon.com/dp/B0GFT68SL2" target="_blank" rel="noopener">
+            🛒 Comprar en Amazon
+          </a>
+          
+          <!-- BOTÓN SECUNDARIO - VER SINOPSIS -->
+          <a class="btn alt" href="#sinopsis">
+            📖 Leer sinopsis completa
+          </a>
+          
+          <!-- BOTÓN VOLVER -->
+          <a class="btn alt" href="index.html" style="margin-top: 5px;">
+            ← Volver a la biblioteca
+          </a>
         </div>
       </div>
 
       <div>
         <div class="meta">
-          <h2>Sinopsis</h2>
+          <h2 id="sinopsis">Sinopsis</h2>
           <div class="subtitle">"El amor que nos une cuando el silencio se rompe."</div>
         </div>
 
@@ -133,6 +160,13 @@
               y la redención desde distintas perspectivas, pero con una misma convicción: que la verdad, aunque duela, siempre libera.
             </p>
             <p>— <em>J. LÓPEZ M.</em></p>
+          </div>
+          
+          <!-- BOTÓN FINAL PARA AMAZON -->
+          <div class="acciones" style="margin-top: 30px; justify-content: center;">
+            <a class="btn amazon" href="https://www.amazon.com/dp/B0GFT68SL2" target="_blank" rel="noopener" style="font-size: 1.1rem; padding: 15px 25px;">
+              🛍️ Comprar "Donde el Amor nos Enseñó a Volver" en Amazon
+            </a>
           </div>
         </article>
       </div>
