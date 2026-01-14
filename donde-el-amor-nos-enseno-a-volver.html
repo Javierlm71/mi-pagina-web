@@ -237,7 +237,7 @@
       box-shadow: 0 5px 15px rgba(255, 153, 0, 0.3);
     }
     
-    /* Sección de sinopsis */
+    /* Sección de sinopsis - MODIFICADO: fuente más pequeña */
     .seccion-sinopsis {
       margin-bottom: 50px;
     }
@@ -260,10 +260,14 @@
       line-height: 1.6;
     }
     
+    /* MODIFICACIÓN PRINCIPAL: Texto de sinopsis más pequeño */
+    .contenido-sinopsis {
+      font-size: 0.95rem; /* Reducido de 1.1em a 0.95rem (unos 15px) */
+      line-height: 1.6; /* Reducido de 1.8 a 1.6 para más compacto */
+    }
+    
     .contenido-sinopsis p {
-      margin-bottom: 20px;
-      font-size: 1.1em;
-      line-height: 1.8;
+      margin-bottom: 18px; /* Reducido de 20px */
     }
     
     /* Citas destacadas */
@@ -400,6 +404,12 @@
       
       .portada-img {
         min-height: 300px;
+      }
+      
+      /* Ajuste para móviles: sinopsis ligeramente más grande */
+      .contenido-sinopsis {
+        font-size: 1rem;
+        line-height: 1.65;
       }
     }
   </style>
