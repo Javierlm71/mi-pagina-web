@@ -123,7 +123,7 @@
       }
     }
     
-    /* Portada del libro */
+    /* Portada del libro - MISMA QUE EN LA PÁGINA PRINCIPAL */
     .portada-libro {
       text-align: center;
     }
@@ -134,8 +134,19 @@
       margin: 0 auto 20px;
       border-radius: var(--borde-redondeado);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      background-color: #8B4513; /* Color de fondo específico para esta portada */
-      padding: 10px;
+      background: linear-gradient(135deg, #8B4513 0%, #B8860B 100%);
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 380px;
+    }
+    
+    .portada-img img {
+      max-height: 350px;
+      max-width: 100%;
+      object-fit: contain;
+      border-radius: 5px;
     }
     
     .etiqueta-nuevo {
@@ -386,6 +397,10 @@
       .cita-inicio {
         font-size: 1.2em;
       }
+      
+      .portada-img {
+        min-height: 300px;
+      }
     }
   </style>
 </head>
@@ -410,9 +425,13 @@
     <section class="seccion-superior">
       <div class="portada-libro">
         <span class="etiqueta-nuevo">¡NUEVA PUBLICACIÓN!</span>
-        <img src="https://i.imgur.com/7Qh2jZP.png"  
-             alt="Portada Donde el Amor nos Enseñó a Volver" 
-             class="portada-img">
+        <div class="portada-img">
+          <!-- MISMA IMAGEN QUE EN LA PÁGINA PRINCIPAL -->
+          <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/portada3.png" 
+               alt="Portada Donde el Amor nos Enseñó a Volver"
+               id="portada-principal"
+               onerror="cargarRespaldo(this)">
+        </div>
         <p><em>Portada Donde el Amor nos Enseñó a Volver</em></p>
       </div>
       
@@ -421,8 +440,8 @@
         
         <div class="detalles-libro">
           <p><strong>Formato:</strong> eBook / Tapa blanda</p>
-          <p><strong>Año de publicación:</strong> 2026</p>
-          <p><strong>Número de páginas:</strong> ~290 páginas</p>
+          <p><strong>Año de publicación:</strong> 2025</p>
+          <p><strong>Número de páginas:</strong> ~650 páginas</p>
           <div class="asin-info">
             <p><strong>ASIN:</strong> B0GFT68SL2</p>
             <p><em>Identificador único en Amazon</em></p>
@@ -496,20 +515,33 @@
   </footer>
 
   <script>
-    // Script para funcionalidad básica
+    // SISTEMA DE RESPALDO PARA LA IMAGEN
+    function cargarRespaldo(imagen) {
+      console.log('⚠️ Imagen de GitHub no cargó en página del libro');
+      
+      // Intentar con ImgBB (tu enlace)
+      imagen.src = 'https://i.ibb.co/B2cbVbTx/portada3.png?t=' + new Date().getTime();
+      
+      // Si también falla, intentar con Imgur
+      imagen.onerror = function() {
+        console.log('🔄 Intentando con Imgur...');
+        this.src = 'https://i.imgur.com/7Qh2jZP.png?t=' + new Date().getTime();
+        this.onerror = null; // Prevenir loop infinito
+      };
+    }
+    
     document.addEventListener('DOMContentLoaded', function() {
+      console.log('✅ Página del libro cargada');
+      
       // Suavizar desplazamiento a los anclajes
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
           const href = this.getAttribute('href');
           
-          // Solo para anclajes internos, no para enlaces externos
           if (href !== '#' && !href.startsWith('http')) {
             e.preventDefault();
             
-            const targetId = href;
-            const targetElement = document.querySelector(targetId);
-            
+            const targetElement = document.querySelector(href);
             if (targetElement) {
               window.scrollTo({
                 top: targetElement.offsetTop - 100,
@@ -520,46 +552,24 @@
         });
       });
       
-      // Animación para la portada al cargar
-      const portada = document.querySelector('.portada-img');
+      // Animación para la portada
+      const portada = document.querySelector('.portada-img img');
       if (portada) {
         portada.style.opacity = '0';
-        portada.style.transform = 'translateY(20px)';
+        portada.style.transform = 'scale(0.9)';
         portada.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
         
         setTimeout(() => {
           portada.style.opacity = '1';
-          portada.style.transform = 'translateY(0)';
+          portada.style.transform = 'scale(1)';
         }, 300);
       }
       
-      // Animación para los temas
-      const temas = document.querySelectorAll('.tema-item');
-      temas.forEach((tema, index) => {
-        tema.style.opacity = '0';
-        tema.style.transform = 'translateY(10px)';
-        
-        setTimeout(() => {
-          tema.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-          tema.style.opacity = '1';
-          tema.style.transform = 'translateY(0)';
-        }, 500 + (index * 100));
-      });
-      
-      // Confirmación para enlace de Amazon
-      const enlaceAmazon = document.querySelector('.boton-amazon');
-      if (enlaceAmazon) {
-        enlaceAmazon.addEventListener('click', function(e) {
-          // En producción, esto abriría el enlace normalmente
-          // Para demostración, mostramos mensaje si no es el enlace real
-          if (!this.href.includes('amazon.com/dp/B0GFT68SL2')) {
-            e.preventDefault();
-            alert('¡Este botón te llevaría directamente a la página de Amazon para comprar "Donde el Amor nos Enseñó a Volver" con tu ASIN: B0GFT68SL2!');
-          } else {
-            // Opcional: agregar tracking o analytics aquí
-            console.log('Redirigiendo a Amazon con ASIN: B0GFT68SL2');
-          }
-        });
+      // Añadir timestamp para evitar caché
+      const timestamp = new Date().getTime();
+      const imagenPrincipal = document.getElementById('portada-principal');
+      if (imagenPrincipal && !imagenPrincipal.src.includes('?t=')) {
+        imagenPrincipal.src = imagenPrincipal.src + '?t=' + timestamp;
       }
     });
   </script>
