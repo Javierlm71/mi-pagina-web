@@ -37,16 +37,30 @@
       min-height: 100vh;
     }
     
+    /* HEADER CORREGIDO - SIN CLIP-PATH PROBLEMÁTICO */
     .header-principal {
       background: linear-gradient(rgba(62, 39, 35, 0.95), rgba(62, 39, 35, 0.98)), 
                   url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
       background-size: cover;
       background-position: center;
       color: var(--blanco);
-      padding: 4rem 2rem;
+      padding: 4rem 2rem 3rem; /* Más padding abajo */
       text-align: center;
       position: relative;
-      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+      margin-bottom: 2rem; /* Espacio adicional debajo */
+    }
+    
+    /* EFECTO DE BORDE INFERIOR ONDULADO (OPCIONAL) */
+    .header-principal::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+      height: 20px;
+      background: var(--blanco);
+      border-radius: 50% 50% 0 0;
+      z-index: 1;
     }
     
     .header-principal h1 {
@@ -70,17 +84,21 @@
       gap: 2rem;
       flex-wrap: wrap;
       margin-top: 2rem;
+      position: relative;
+      z-index: 2; /* Para que esté sobre el pseudo-elemento */
     }
     
     .menu-principal a {
       color: var(--blanco);
       text-decoration: none;
       padding: 0.8rem 1.5rem;
+      background: rgba(201, 162, 39, 0.2);
       border: 2px solid var(--dorado);
       border-radius: 30px;
       transition: all 0.3s ease;
       font-weight: 600;
       letter-spacing: 1px;
+      backdrop-filter: blur(5px);
     }
     
     .menu-principal a:hover {
@@ -89,12 +107,20 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
     
+    /* CONTENIDO PRINCIPAL CON MÁRGEN ADECUADO */
     .contenido-principal {
       max-width: 1200px;
-      margin: -3rem auto 0;
+      margin: 0 auto;
       padding: 0 2rem;
       position: relative;
       z-index: 1;
+    }
+    
+    /* SECCIÓN INICIO CON ESPACIO ADECUADO */
+    #inicio {
+      padding: 3rem 0 4rem;
+      text-align: center;
+      margin-top: 1rem; /* Espacio extra desde el header */
     }
     
     .seccion-libros {
@@ -196,11 +222,6 @@
     
     .tarjeta-libro:hover .portada-libro {
       transform: scale(1.05);
-    }
-    
-    /* ELIMINAMOS EL TEXTO DE PORTADA - SOLO IMÁGENES */
-    .texto-portada {
-      display: none !important; /* ¡OCULTO SIEMPRE! */
     }
     
     .info-libro {
@@ -314,7 +335,7 @@
       padding: 5rem 0;
       background: linear-gradient(135deg, #f9f5e7 0%, #f0e6d6 100%);
       margin-top: 3rem;
-      clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+      border-radius: 20px;
     }
     
     .contenedor-autor {
@@ -343,6 +364,7 @@
       
       .menu-principal a {
         width: 80%;
+        margin-bottom: 0.5rem;
       }
       
       .grupo-input {
@@ -351,6 +373,15 @@
       
       .header-principal h1 {
         font-size: 2.5rem;
+      }
+      
+      .header-principal {
+        padding: 3rem 1.5rem 2.5rem;
+      }
+      
+      #inicio {
+        padding: 2rem 0 3rem;
+        margin-top: 0.5rem;
       }
     }
     
@@ -380,6 +411,7 @@
       color: var(--crema);
       padding: 4rem 2rem 2rem;
       text-align: center;
+      margin-top: 4rem;
     }
     
     .enlaces-footer {
@@ -424,6 +456,7 @@
   </header>
 
   <main class="contenido-principal">
+    <!-- SECCIÓN INICIO CON ID CORRECTO PARA LA NAVEGACIÓN -->
     <section id="inicio">
       <h2 class="titulo-seccion">Bienvenido a Mi Mundo Literario</h2>
       <div style="max-width: 800px; margin: 0 auto; font-size: 1.2rem; text-align: center;">
@@ -439,7 +472,7 @@
       
       <div class="grid-libros">
         
-        <!-- LIBRO 1: Amor Prohibido - SOLO IMAGEN -->
+        <!-- LIBRO 1: Amor Prohibido -->
         <article class="tarjeta-libro">
           <div class="portada-contenedor portada-1">
             <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/amor-prohibido.png" 
@@ -456,7 +489,7 @@
           </div>
         </article>
 
-        <!-- LIBRO 2: Nacen los Hermanos - SOLO IMAGEN -->
+        <!-- LIBRO 2: Nacen los Hermanos -->
         <article class="tarjeta-libro">
           <div class="portada-contenedor portada-2">
             <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/nacen-hermanos.png" 
@@ -473,11 +506,11 @@
           </div>
         </article>
 
-        <!-- LIBRO 3: Donde el Amor nos Enseñó a Volver - SOLO IMAGEN -->
+        <!-- LIBRO 3: Donde el Amor nos Enseñó a Volver -->
         <article class="tarjeta-libro destacado">
           <div class="badge-nuevo">¡NUEVO!</div>
           <div class="portada-contenedor portada-3">
-            <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/portada3.png" 
+            <img src="https://i.imgur.com/7Qh2jZP.png" 
                  alt="Donde el Amor nos Enseñó a Volver"
                  class="portada-libro">
           </div>
@@ -576,12 +609,28 @@
   </footer>
 
   <script>
-    // JAVASCRIPT SIMPLE Y SIN PROBLEMAS
+    // JAVASCRIPT SIMPLE
     
     document.addEventListener('DOMContentLoaded', function() {
-      console.log('✅ Sitio cargado - Solo imágenes, sin texto de respaldo');
+      console.log('✅ Sitio cargado - Espaciado corregido');
       
-      // Animación simple para las tarjetas
+      // Asegurar que la sección Inicio tenga suficiente margen superior
+      const seccionInicio = document.getElementById('inicio');
+      if (seccionInicio) {
+        // Verificar posición después de cargar
+        setTimeout(() => {
+          const rect = seccionInicio.getBoundingClientRect();
+          console.log('📏 Posición de Inicio:', rect.top, 'px desde el top');
+          
+          // Si está muy cerca del top, añadir más margen
+          if (rect.top < 100) {
+            seccionInicio.style.paddingTop = '4rem';
+            console.log('➕ Añadiendo padding adicional a la sección Inicio');
+          }
+        }, 500);
+      }
+      
+      // Animación para las tarjetas
       const tarjetas = document.querySelectorAll('.tarjeta-libro');
       tarjetas.forEach((tarjeta, index) => {
         tarjeta.style.opacity = '0';
@@ -594,7 +643,7 @@
         }, 300 + (index * 200));
       });
       
-      // Navegación suave
+      // Navegación suave CON OFFSET PARA EL HEADER FIJO
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
           const href = this.getAttribute('href');
@@ -604,8 +653,12 @@
             
             const targetElement = document.querySelector(href);
             if (targetElement) {
+              // Calcular posición con offset para el header
+              const headerHeight = document.querySelector('.header-principal').offsetHeight;
+              const targetPosition = targetElement.offsetTop - headerHeight - 20;
+              
               window.scrollTo({
-                top: targetElement.offsetTop - 100,
+                top: targetPosition,
                 behavior: 'smooth'
               });
             }
@@ -613,33 +666,31 @@
         });
       });
       
-      // Añadir timestamp a las imágenes para evitar caché (pero solo una vez)
+      // Añadir timestamp a las imágenes para evitar caché
+      const timestamp = new Date().getTime();
       const imagenes = document.querySelectorAll('.portada-libro, .foto-autor img');
       imagenes.forEach(img => {
-        // Solo añadir timestamp si no lo tiene ya
         if (!img.src.includes('?t=')) {
-          const timestamp = new Date().getTime();
           img.src = img.src + '?t=' + timestamp;
         }
       });
     });
     
-    // Función para forzar recarga si es necesario
-    function forzarRecargaImagenes() {
-      const imagenes = document.querySelectorAll('img');
-      imagenes.forEach(img => {
-        const srcOriginal = img.src.split('?')[0];
-        img.src = srcOriginal + '?t=' + new Date().getTime();
-      });
-      console.log('🔄 Imágenes recargadas');
-    }
-    
-    // Atajo Ctrl+Shift+R para recargar imágenes manualmente
-    document.addEventListener('keydown', function(e) {
-      if (e.ctrlKey && e.shiftKey && e.key === 'R') {
-        e.preventDefault();
-        forzarRecargaImagenes();
-        alert('Imágenes recargadas. Refresca la página si es necesario.');
+    // Ajustar scroll al cargar si hay hash en la URL
+    window.addEventListener('load', function() {
+      if (window.location.hash) {
+        const targetElement = document.querySelector(window.location.hash);
+        if (targetElement) {
+          const headerHeight = document.querySelector('.header-principal').offsetHeight;
+          const targetPosition = targetElement.offsetTop - headerHeight - 20;
+          
+          setTimeout(() => {
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }, 100);
+        }
       }
     });
   </script>
