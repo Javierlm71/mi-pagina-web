@@ -535,16 +535,15 @@
           </div>
         </article>
 
-        <!-- LIBRO 3: Donde el Amor nos Enseñó a Volver - IMAGEN FUNCIONAL -->
+        <!-- LIBRO 3: Donde el Amor nos Enseñó a Volver - CON IMAGEN QUE SÍ FUNCIONA -->
         <article class="tarjeta-libro destacado">
           <div class="badge-nuevo">¡NUEVO!</div>
           <div class="portada-contenedor portada-3">
-            <!-- IMAGEN CON SISTEMA DE RESPALDO -->
-            <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/portada3.png" 
+            <!-- IMAGEN QUE SÍ SE VE - USANDO IMGUR -->
+            <img src="https://i.imgur.com/7Qh2jZP.png" 
                  alt="Donde el Amor nos Enseñó a Volver"
                  class="portada-libro"
-                 id="imagen-portada3"
-                 onerror="cargarImagenRespaldo()">
+                 id="imagen-portada3">
           </div>
           <div class="info-libro">
             <h3>Donde el Amor nos Enseñó a Volver</h3>
@@ -642,36 +641,8 @@
   </footer>
 
   <script>
-    // SISTEMA DE RESPALDO PARA IMÁGENES
-    function cargarImagenRespaldo() {
-      const imagen = document.getElementById('imagen-portada3');
-      if (imagen) {
-        console.log('⚠️ Imagen principal no cargó. Cargando respaldo...');
-        // Cambiar a imagen de respaldo (Imgur)
-        imagen.src = 'https://i.imgur.com/7Qh2jZP.png?t=' + new Date().getTime();
-        imagen.onerror = null; // Eliminar el error handler para evitar loops
-      }
-    }
-    
-    // FUNCIÓN PARA VERIFICAR IMÁGENES
-    function verificarImagen(url, callback) {
-      const img = new Image();
-      img.onload = () => callback(true);
-      img.onerror = () => callback(false);
-      img.src = url;
-    }
-    
     document.addEventListener('DOMContentLoaded', function() {
-      console.log('✅ Sitio cargado - Todas las correcciones aplicadas');
-      
-      // Verificar si la imagen portada3.png existe
-      verificarImagen('https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/portada3.png', function(existe) {
-        if (!existe) {
-          console.log('ℹ️ portada3.png no encontrada en GitHub');
-        } else {
-          console.log('✅ portada3.png encontrada en GitHub');
-        }
-      });
+      console.log('✅ Sitio cargado - Imagen del libro 3 CORREGIDA');
       
       // Añadir timestamp a las imágenes para evitar caché
       const timestamp = new Date().getTime();
@@ -681,6 +652,19 @@
           img.src = img.src + '?t=' + timestamp;
         }
       });
+      
+      // Verificar que la imagen del libro 3 se cargue
+      const imagenLibro3 = document.getElementById('imagen-portada3');
+      if (imagenLibro3) {
+        imagenLibro3.onload = function() {
+          console.log('✅ Imagen del libro 3 cargada correctamente');
+        };
+        imagenLibro3.onerror = function() {
+          console.log('❌ Error cargando imagen del libro 3');
+          // Intentar con URL alternativa
+          this.src = 'https://via.placeholder.com/300x400/8B4513/FFFFFF?text=Donde+el+Amor+nos+Ense%C3%B1%C3%B3+a+Volver&t=' + timestamp;
+        };
+      }
       
       // Animación para las tarjetas
       const tarjetas = document.querySelectorAll('.tarjeta-libro');
@@ -705,35 +689,20 @@
             
             const targetElement = document.querySelector(href);
             if (targetElement) {
-              const headerHeight = 100; // Altura aproximada del header
+              const headerHeight = 100;
               const targetPosition = targetElement.offsetTop - headerHeight;
               
               window.scrollTo({
                 top: targetPosition,
                 behavior: 'smooth'
               });
-              
-              // Actualizar URL
-              history.pushState(null, null, href);
             }
           }
         });
       });
-      
-      // Ajustar scroll si hay hash en la URL
-      if (window.location.hash) {
-        setTimeout(() => {
-          const targetElement = document.querySelector(window.location.hash);
-          if (targetElement) {
-            const headerHeight = 100;
-            const targetPosition = targetElement.offsetTop - headerHeight;
-            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-          }
-        }, 300);
-      }
     });
     
-    // Atajo para recargar imágenes: Ctrl + Shift + R
+    // Forzar recarga de imágenes con Ctrl+Shift+R
     document.addEventListener('keydown', function(e) {
       if (e.ctrlKey && e.shiftKey && e.key === 'R') {
         e.preventDefault();
@@ -743,7 +712,6 @@
           img.src = srcOriginal + '?t=' + new Date().getTime();
         });
         console.log('🔄 Todas las imágenes recargadas');
-        alert('Imágenes recargadas. Refresca si es necesario.');
       }
     });
   </script>
