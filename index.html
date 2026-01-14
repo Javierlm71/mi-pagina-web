@@ -37,7 +37,7 @@
       min-height: 100vh;
     }
     
-    /* HEADER CORREGIDO */
+    /* HEADER */
     .header-principal {
       background: linear-gradient(rgba(62, 39, 35, 0.95), rgba(62, 39, 35, 0.98)), 
                   url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
@@ -535,15 +535,16 @@
           </div>
         </article>
 
-        <!-- LIBRO 3: Donde el Amor nos Enseñó a Volver - CON IMAGEN QUE SÍ FUNCIONA -->
+        <!-- LIBRO 3: Donde el Amor nos Enseñó a Volver - CON TU IMAGEN DE GITHUB -->
         <article class="tarjeta-libro destacado">
-          <div class="badge-nuevo">¡NUEVO!</div>
+          <div class="badge-nuevo">¡NUEVA PUBLICACIÓN!</div>
           <div class="portada-contenedor portada-3">
-            <!-- IMAGEN QUE SÍ SE VE - USANDO IMGUR -->
-            <img src="https://i.imgur.com/7Qh2jZP.png" 
+            <!-- TU IMAGEN DE TU REPOSITORIO GITHUB -->
+            <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/portada3.png" 
                  alt="Donde el Amor nos Enseñó a Volver"
                  class="portada-libro"
-                 id="imagen-portada3">
+                 id="imagen-portada3"
+                 onerror="cargarImagenRespaldo(this)">
           </div>
           <div class="info-libro">
             <h3>Donde el Amor nos Enseñó a Volver</h3>
@@ -641,10 +642,47 @@
   </footer>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      console.log('✅ Sitio cargado - Imagen del libro 3 CORREGIDA');
+    // SISTEMA DE RESPALDO INTELIGENTE
+    function cargarImagenRespaldo(imagen) {
+      console.log('⚠️ Imagen de GitHub no cargó. Probando alternativas...');
       
-      // Añadir timestamp a las imágenes para evitar caché
+      // Lista de URLs alternativas en orden de prioridad
+      const urlsAlternativas = [
+        'https://i.ibb.co/B2cbVbTx/portada3.png',  // Tu ImgBB
+        'https://i.imgur.com/7Qh2jZP.png',         // Imgur genérico
+        'https://via.placeholder.com/300x400/8B4513/FFFFFF?text=Donde+el+Amor+nos+Ense%C3%B1%C3%B3+a+Volver'
+      ];
+      
+      // Buscar la imagen actual en la lista
+      const indexActual = urlsAlternativas.findIndex(url => 
+        imagen.src.includes(url.split('/')[2]) // Comparar dominio
+      );
+      
+      // Intentar siguiente URL
+      const siguienteIndex = indexActual === -1 ? 0 : indexActual + 1;
+      
+      if (siguienteIndex < urlsAlternativas.length) {
+        console.log(`🔄 Intentando URL alternativa ${siguienteIndex + 1}`);
+        imagen.src = urlsAlternativas[siguienteIndex] + '?t=' + new Date().getTime();
+      }
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('✅ Sitio cargado - Usando TU repositorio GitHub');
+      
+      // Verificar si la imagen de GitHub existe
+      const testImg = new Image();
+      testImg.onload = function() {
+        console.log('✅ portada3.png EXISTE en tu GitHub');
+        console.log('📏 Dimensiones:', this.width, 'x', this.height);
+      };
+      testImg.onerror = function() {
+        console.log('❌ portada3.png NO existe o no es accesible en GitHub');
+        console.log('💡 Verifica que el archivo esté en la raíz del repositorio');
+      };
+      testImg.src = 'https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/portada3.png?t=' + new Date().getTime();
+      
+      // Añadir timestamp a todas las imágenes
       const timestamp = new Date().getTime();
       const imagenes = document.querySelectorAll('img');
       imagenes.forEach(img => {
@@ -652,19 +690,6 @@
           img.src = img.src + '?t=' + timestamp;
         }
       });
-      
-      // Verificar que la imagen del libro 3 se cargue
-      const imagenLibro3 = document.getElementById('imagen-portada3');
-      if (imagenLibro3) {
-        imagenLibro3.onload = function() {
-          console.log('✅ Imagen del libro 3 cargada correctamente');
-        };
-        imagenLibro3.onerror = function() {
-          console.log('❌ Error cargando imagen del libro 3');
-          // Intentar con URL alternativa
-          this.src = 'https://via.placeholder.com/300x400/8B4513/FFFFFF?text=Donde+el+Amor+nos+Ense%C3%B1%C3%B3+a+Volver&t=' + timestamp;
-        };
-      }
       
       // Animación para las tarjetas
       const tarjetas = document.querySelectorAll('.tarjeta-libro');
@@ -679,7 +704,7 @@
         }, 200 + (index * 150));
       });
       
-      // Navegación suave con offset para el header
+      // Navegación suave
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
           const href = this.getAttribute('href');
@@ -700,19 +725,6 @@
           }
         });
       });
-    });
-    
-    // Forzar recarga de imágenes con Ctrl+Shift+R
-    document.addEventListener('keydown', function(e) {
-      if (e.ctrlKey && e.shiftKey && e.key === 'R') {
-        e.preventDefault();
-        const imagenes = document.querySelectorAll('img');
-        imagenes.forEach(img => {
-          const srcOriginal = img.src.split('?')[0];
-          img.src = srcOriginal + '?t=' + new Date().getTime();
-        });
-        console.log('🔄 Todas las imágenes recargadas');
-      }
     });
   </script>
 </body>
