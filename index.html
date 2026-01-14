@@ -37,109 +37,91 @@
       min-height: 100vh;
     }
     
-    /* HEADER CORREGIDO - SIN CLIP-PATH PROBLEMÁTICO */
+    /* HEADER CORREGIDO */
     .header-principal {
       background: linear-gradient(rgba(62, 39, 35, 0.95), rgba(62, 39, 35, 0.98)), 
                   url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
       background-size: cover;
       background-position: center;
       color: var(--blanco);
-      padding: 4rem 2rem 3rem; /* Más padding abajo */
+      padding: 3rem 2rem 2rem;
       text-align: center;
       position: relative;
-      margin-bottom: 2rem; /* Espacio adicional debajo */
-    }
-    
-    /* EFECTO DE BORDE INFERIOR ONDULADO (OPCIONAL) */
-    .header-principal::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      right: 0;
-      height: 20px;
-      background: var(--blanco);
-      border-radius: 50% 50% 0 0;
-      z-index: 1;
     }
     
     .header-principal h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-      letter-spacing: 3px;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 2px;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
     
     .header-principal .subtitulo {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       opacity: 0.9;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       font-weight: 300;
     }
     
     .menu-principal {
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      gap: 1rem;
       flex-wrap: wrap;
-      margin-top: 2rem;
+      margin-top: 1.5rem;
       position: relative;
-      z-index: 2; /* Para que esté sobre el pseudo-elemento */
     }
     
     .menu-principal a {
       color: var(--blanco);
       text-decoration: none;
-      padding: 0.8rem 1.5rem;
-      background: rgba(201, 162, 39, 0.2);
+      padding: 0.7rem 1.3rem;
+      background: rgba(201, 162, 39, 0.3);
       border: 2px solid var(--dorado);
-      border-radius: 30px;
+      border-radius: 25px;
       transition: all 0.3s ease;
       font-weight: 600;
       letter-spacing: 1px;
-      backdrop-filter: blur(5px);
+      font-size: 0.95rem;
     }
     
     .menu-principal a:hover {
       background: var(--dorado);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.2);
     }
     
-    /* CONTENIDO PRINCIPAL CON MÁRGEN ADECUADO */
+    /* CONTENIDO PRINCIPAL */
     .contenido-principal {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 2rem;
-      position: relative;
-      z-index: 1;
+      padding: 1rem 2rem 0;
     }
     
-    /* SECCIÓN INICIO CON ESPACIO ADECUADO */
+    /* SECCIÓN INICIO */
     #inicio {
-      padding: 3rem 0 4rem;
+      padding: 2rem 0 3rem;
       text-align: center;
-      margin-top: 1rem; /* Espacio extra desde el header */
     }
     
     .seccion-libros {
-      padding: 4rem 0;
+      padding: 3rem 0;
     }
     
     .titulo-seccion {
       text-align: center;
       font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       color: var(--marron);
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
       position: relative;
     }
     
     .titulo-seccion::after {
       content: '';
       display: block;
-      width: 100px;
+      width: 80px;
       height: 3px;
       background: var(--dorado);
       margin: 1rem auto;
@@ -147,40 +129,40 @@
     
     .grid-libros {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 3rem;
-      margin-top: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+      margin-top: 1.5rem;
     }
     
     .tarjeta-libro {
       background: var(--blanco);
-      border-radius: 15px;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
       transition: all 0.4s ease;
       position: relative;
     }
     
     .tarjeta-libro:hover {
-      transform: translateY(-15px);
-      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
     }
     
     .tarjeta-libro.destacado {
-      border: 3px solid var(--dorado);
-      position: relative;
+      border: 2px solid var(--dorado);
     }
     
     .badge-nuevo {
       position: absolute;
-      top: 15px;
-      right: 15px;
+      top: 12px;
+      right: 12px;
       background: #27ae60;
       color: white;
-      padding: 8px 15px;
-      border-radius: 20px;
+      padding: 6px 12px;
+      border-radius: 15px;
       font-weight: bold;
       z-index: 2;
+      font-size: 0.85rem;
       animation: pulse 2s infinite;
     }
     
@@ -191,7 +173,7 @@
     }
     
     .portada-contenedor {
-      height: 280px;
+      height: 260px;
       overflow: hidden;
       display: flex;
       align-items: center;
@@ -217,42 +199,43 @@
       max-width: 100%;
       object-fit: contain;
       transition: transform 0.5s ease;
-      filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));
     }
     
     .tarjeta-libro:hover .portada-libro {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
     
     .info-libro {
-      padding: 2rem;
+      padding: 1.8rem;
     }
     
     .info-libro h3 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       color: var(--marron);
-      margin-bottom: 1rem;
-      min-height: 3.5rem;
+      margin-bottom: 0.8rem;
+      line-height: 1.3;
     }
     
     .info-libro p {
       color: #666;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
       line-height: 1.6;
+      font-size: 0.95rem;
     }
     
     .botones-accion {
       display: flex;
-      gap: 1rem;
+      gap: 0.8rem;
       flex-wrap: wrap;
     }
     
     .btn-primario {
       background: var(--dorado);
       color: var(--blanco);
-      padding: 12px 25px;
-      border-radius: 8px;
+      padding: 10px 20px;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
       transition: all 0.3s ease;
@@ -260,19 +243,20 @@
       cursor: pointer;
       flex: 1;
       text-align: center;
+      font-size: 0.95rem;
     }
     
     .btn-primario:hover {
       background: var(--dorado-oscuro);
       transform: translateY(-2px);
-      box-shadow: 0 8px 15px rgba(169, 132, 31, 0.3);
+      box-shadow: 0 6px 12px rgba(169, 132, 31, 0.25);
     }
     
     .btn-secundario {
       background: transparent;
       color: var(--marron);
-      padding: 12px 25px;
-      border-radius: 8px;
+      padding: 10px 20px;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
       transition: all 0.3s ease;
@@ -280,6 +264,7 @@
       cursor: pointer;
       flex: 1;
       text-align: center;
+      font-size: 0.95rem;
     }
     
     .btn-secundario:hover {
@@ -289,42 +274,44 @@
     
     .formulario-suscripcion {
       background: linear-gradient(135deg, var(--marron) 0%, var(--marron-claro) 100%);
-      padding: 2.5rem;
-      border-radius: 15px;
-      margin-top: 2rem;
+      padding: 2rem;
+      border-radius: 12px;
+      margin-top: 1.5rem;
       color: var(--blanco);
     }
     
     .formulario-suscripcion h4 {
       font-family: 'Playfair Display', serif;
-      margin-bottom: 1.5rem;
-      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+      font-size: 1.3rem;
     }
     
     .grupo-input {
       display: flex;
-      gap: 1rem;
+      gap: 0.8rem;
       margin-bottom: 1rem;
     }
     
     .grupo-input input {
       flex: 1;
-      padding: 15px;
+      padding: 12px;
       border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      background: rgba(255,255,255,0.9);
+      border-radius: 6px;
+      font-size: 0.95rem;
+      background: rgba(255,255,255,0.95);
     }
     
     .grupo-input button {
       background: var(--dorado);
       color: white;
       border: none;
-      padding: 0 2rem;
-      border-radius: 8px;
+      padding: 0 1.5rem;
+      border-radius: 6px;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.3s ease;
+      font-size: 0.95rem;
+      min-width: 120px;
     }
     
     .grupo-input button:hover {
@@ -332,18 +319,18 @@
     }
     
     .seccion-autor {
-      padding: 5rem 0;
+      padding: 4rem 0;
       background: linear-gradient(135deg, #f9f5e7 0%, #f0e6d6 100%);
-      margin-top: 3rem;
-      border-radius: 20px;
+      margin-top: 2rem;
+      border-radius: 15px;
     }
     
     .contenedor-autor {
       max-width: 1000px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 300px 1fr;
-      gap: 4rem;
+      grid-template-columns: 280px 1fr;
+      gap: 3rem;
       align-items: center;
     }
     
@@ -351,20 +338,24 @@
       .contenedor-autor {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 2rem;
       }
       
       .grid-libros {
         grid-template-columns: 1fr;
+        gap: 2rem;
       }
       
       .menu-principal {
         flex-direction: column;
         align-items: center;
+        gap: 0.8rem;
       }
       
       .menu-principal a {
-        width: 80%;
-        margin-bottom: 0.5rem;
+        width: 90%;
+        max-width: 250px;
+        margin-bottom: 0.3rem;
       }
       
       .grupo-input {
@@ -372,53 +363,91 @@
       }
       
       .header-principal h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
       }
       
       .header-principal {
-        padding: 3rem 1.5rem 2.5rem;
+        padding: 2rem 1.5rem 1.5rem;
+      }
+      
+      .titulo-seccion {
+        font-size: 1.8rem;
       }
       
       #inicio {
-        padding: 2rem 0 3rem;
-        margin-top: 0.5rem;
+        padding: 1.5rem 0 2.5rem;
+      }
+      
+      .seccion-libros {
+        padding: 2rem 0;
+      }
+      
+      .portada-contenedor {
+        height: 240px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .contenido-principal {
+        padding: 1rem 1rem 0;
+      }
+      
+      .header-principal h1 {
+        font-size: 1.8rem;
+      }
+      
+      .menu-principal a {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+      }
+      
+      .titulo-seccion {
+        font-size: 1.6rem;
+      }
+      
+      .info-libro {
+        padding: 1.5rem;
+      }
+      
+      .info-libro h3 {
+        font-size: 1.3rem;
       }
     }
     
     .foto-autor img {
       width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-      border: 5px solid var(--blanco);
+      border-radius: 15px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      border: 4px solid var(--blanco);
     }
     
     .bio-autor h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
+      font-size: 2rem;
       color: var(--marron);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
     }
     
     .bio-autor p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
       color: #555;
     }
     
     .footer-principal {
       background: var(--marron);
       color: var(--crema);
-      padding: 4rem 2rem 2rem;
+      padding: 3rem 2rem 2rem;
       text-align: center;
-      margin-top: 4rem;
+      margin-top: 3rem;
     }
     
     .enlaces-footer {
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      margin-bottom: 2rem;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
       flex-wrap: wrap;
     }
     
@@ -426,6 +455,7 @@
       color: var(--crema);
       text-decoration: none;
       transition: color 0.3s ease;
+      font-size: 0.95rem;
     }
     
     .enlaces-footer a:hover {
@@ -433,10 +463,10 @@
     }
     
     .derechos {
-      margin-top: 2rem;
-      padding-top: 2rem;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
       border-top: 1px solid rgba(255,248,225,0.1);
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       opacity: 0.8;
     }
   </style>
@@ -456,12 +486,11 @@
   </header>
 
   <main class="contenido-principal">
-    <!-- SECCIÓN INICIO CON ID CORRECTO PARA LA NAVEGACIÓN -->
     <section id="inicio">
       <h2 class="titulo-seccion">Bienvenido a Mi Mundo Literario</h2>
-      <div style="max-width: 800px; margin: 0 auto; font-size: 1.2rem; text-align: center;">
+      <div style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; text-align: center;">
         <p>Cada novela que escribo nace de una necesidad profunda de explorar el corazón humano, sus contradicciones, sus silencios y sus verdades más íntimas.</p>
-        <p style="margin-top: 1.5rem; font-style: italic; color: var(--marron-claro);">
+        <p style="margin-top: 1.2rem; font-style: italic; color: var(--marron-claro);">
           "Escribo para aquellos que buscan respuestas en el amor, el perdón y la redención."
         </p>
       </div>
@@ -506,13 +535,16 @@
           </div>
         </article>
 
-        <!-- LIBRO 3: Donde el Amor nos Enseñó a Volver -->
+        <!-- LIBRO 3: Donde el Amor nos Enseñó a Volver - IMAGEN FUNCIONAL -->
         <article class="tarjeta-libro destacado">
           <div class="badge-nuevo">¡NUEVO!</div>
           <div class="portada-contenedor portada-3">
-            <img src="https://i.imgur.com/7Qh2jZP.png" 
+            <!-- IMAGEN CON SISTEMA DE RESPALDO -->
+            <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/portada3.png" 
                  alt="Donde el Amor nos Enseñó a Volver"
-                 class="portada-libro">
+                 class="portada-libro"
+                 id="imagen-portada3"
+                 onerror="cargarImagenRespaldo()">
           </div>
           <div class="info-libro">
             <h3>Donde el Amor nos Enseñó a Volver</h3>
@@ -555,7 +587,8 @@
       <div class="contenedor-autor">
         <div class="foto-autor">
           <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/autor.png" 
-               alt="J. LÓPEZ M. - Escritor nicaragüense">
+               alt="J. LÓPEZ M. - Escritor nicaragüense"
+               onerror="this.src='https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'">
         </div>
         
         <div class="bio-autor">
@@ -566,27 +599,27 @@
           
           <p>Cada una de sus novelas es un viaje hacia la esencia del ser humano, donde el amor, el perdón y la redención se entrelazan para crear historias que resuenan en lo más profundo del lector.</p>
           
-          <p style="margin-top: 2rem; font-style: italic;">
+          <p style="margin-top: 1.5rem; font-style: italic;">
             "Escribo para sanar, para entender y para compartir esa luz que siempre encuentra su camino, incluso en la oscuridad más profunda."
           </p>
         </div>
       </div>
     </section>
 
-    <section id="contacto" style="padding: 4rem 0; text-align: center;">
+    <section id="contacto" style="padding: 3rem 0; text-align: center;">
       <h2 class="titulo-seccion">Contacto</h2>
       <div style="max-width: 600px; margin: 0 auto;">
-        <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+        <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
           ¿Interesado en colaboraciones, presentaciones o simplemente quieres compartir tu experiencia con mis libros?
         </p>
         
-        <div style="background: var(--dorado); color: white; padding: 2rem; border-radius: 10px;">
+        <div style="background: var(--dorado); color: white; padding: 1.5rem; border-radius: 10px;">
           <h3 style="margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Escríbeme</h3>
           <a href="mailto:jlopezmoficial@gmail.com" 
-             style="font-size: 1.5rem; color: white; text-decoration: none; font-weight: 600;">
+             style="font-size: 1.3rem; color: white; text-decoration: none; font-weight: 600;">
             jlopezmoficial@gmail.com
           </a>
-          <p style="margin-top: 1rem; opacity: 0.9;">
+          <p style="margin-top: 1rem; opacity: 0.9; font-size: 0.95rem;">
             Respondo personalmente a todos los mensajes
           </p>
         </div>
@@ -609,41 +642,60 @@
   </footer>
 
   <script>
-    // JAVASCRIPT SIMPLE
+    // SISTEMA DE RESPALDO PARA IMÁGENES
+    function cargarImagenRespaldo() {
+      const imagen = document.getElementById('imagen-portada3');
+      if (imagen) {
+        console.log('⚠️ Imagen principal no cargó. Cargando respaldo...');
+        // Cambiar a imagen de respaldo (Imgur)
+        imagen.src = 'https://i.imgur.com/7Qh2jZP.png?t=' + new Date().getTime();
+        imagen.onerror = null; // Eliminar el error handler para evitar loops
+      }
+    }
+    
+    // FUNCIÓN PARA VERIFICAR IMÁGENES
+    function verificarImagen(url, callback) {
+      const img = new Image();
+      img.onload = () => callback(true);
+      img.onerror = () => callback(false);
+      img.src = url;
+    }
     
     document.addEventListener('DOMContentLoaded', function() {
-      console.log('✅ Sitio cargado - Espaciado corregido');
+      console.log('✅ Sitio cargado - Todas las correcciones aplicadas');
       
-      // Asegurar que la sección Inicio tenga suficiente margen superior
-      const seccionInicio = document.getElementById('inicio');
-      if (seccionInicio) {
-        // Verificar posición después de cargar
-        setTimeout(() => {
-          const rect = seccionInicio.getBoundingClientRect();
-          console.log('📏 Posición de Inicio:', rect.top, 'px desde el top');
-          
-          // Si está muy cerca del top, añadir más margen
-          if (rect.top < 100) {
-            seccionInicio.style.paddingTop = '4rem';
-            console.log('➕ Añadiendo padding adicional a la sección Inicio');
-          }
-        }, 500);
-      }
+      // Verificar si la imagen portada3.png existe
+      verificarImagen('https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/portada3.png', function(existe) {
+        if (!existe) {
+          console.log('ℹ️ portada3.png no encontrada en GitHub');
+        } else {
+          console.log('✅ portada3.png encontrada en GitHub');
+        }
+      });
+      
+      // Añadir timestamp a las imágenes para evitar caché
+      const timestamp = new Date().getTime();
+      const imagenes = document.querySelectorAll('img');
+      imagenes.forEach(img => {
+        if (!img.src.includes('?t=')) {
+          img.src = img.src + '?t=' + timestamp;
+        }
+      });
       
       // Animación para las tarjetas
       const tarjetas = document.querySelectorAll('.tarjeta-libro');
       tarjetas.forEach((tarjeta, index) => {
         tarjeta.style.opacity = '0';
-        tarjeta.style.transform = 'translateY(30px)';
+        tarjeta.style.transform = 'translateY(20px)';
         
         setTimeout(() => {
-          tarjeta.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+          tarjeta.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
           tarjeta.style.opacity = '1';
           tarjeta.style.transform = 'translateY(0)';
-        }, 300 + (index * 200));
+        }, 200 + (index * 150));
       });
       
-      // Navegación suave CON OFFSET PARA EL HEADER FIJO
+      // Navegación suave con offset para el header
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
           const href = this.getAttribute('href');
@@ -653,44 +705,45 @@
             
             const targetElement = document.querySelector(href);
             if (targetElement) {
-              // Calcular posición con offset para el header
-              const headerHeight = document.querySelector('.header-principal').offsetHeight;
-              const targetPosition = targetElement.offsetTop - headerHeight - 20;
+              const headerHeight = 100; // Altura aproximada del header
+              const targetPosition = targetElement.offsetTop - headerHeight;
               
               window.scrollTo({
                 top: targetPosition,
                 behavior: 'smooth'
               });
+              
+              // Actualizar URL
+              history.pushState(null, null, href);
             }
           }
         });
       });
       
-      // Añadir timestamp a las imágenes para evitar caché
-      const timestamp = new Date().getTime();
-      const imagenes = document.querySelectorAll('.portada-libro, .foto-autor img');
-      imagenes.forEach(img => {
-        if (!img.src.includes('?t=')) {
-          img.src = img.src + '?t=' + timestamp;
-        }
-      });
+      // Ajustar scroll si hay hash en la URL
+      if (window.location.hash) {
+        setTimeout(() => {
+          const targetElement = document.querySelector(window.location.hash);
+          if (targetElement) {
+            const headerHeight = 100;
+            const targetPosition = targetElement.offsetTop - headerHeight;
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+          }
+        }, 300);
+      }
     });
     
-    // Ajustar scroll al cargar si hay hash en la URL
-    window.addEventListener('load', function() {
-      if (window.location.hash) {
-        const targetElement = document.querySelector(window.location.hash);
-        if (targetElement) {
-          const headerHeight = document.querySelector('.header-principal').offsetHeight;
-          const targetPosition = targetElement.offsetTop - headerHeight - 20;
-          
-          setTimeout(() => {
-            window.scrollTo({
-              top: targetPosition,
-              behavior: 'smooth'
-            });
-          }, 100);
-        }
+    // Atajo para recargar imágenes: Ctrl + Shift + R
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && e.shiftKey && e.key === 'R') {
+        e.preventDefault();
+        const imagenes = document.querySelectorAll('img');
+        imagenes.forEach(img => {
+          const srcOriginal = img.src.split('?')[0];
+          img.src = srcOriginal + '?t=' + new Date().getTime();
+        });
+        console.log('🔄 Todas las imágenes recargadas');
+        alert('Imágenes recargadas. Refresca si es necesario.');
       }
     });
   </script>
