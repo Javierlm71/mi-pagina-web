@@ -167,7 +167,6 @@
     .portada-contenedor {
       height: 280px;
       overflow: hidden;
-      background: #f5f5f5;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -175,10 +174,17 @@
       position: relative;
     }
     
-    /* COLOR DE FONDO ESPECÍFICO PARA CADA PORTADA */
-    .portada-1 { background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); }
-    .portada-2 { background: linear-gradient(135deg, #2C3E50 0%, #4A6572 100%); }
-    .portada-3 { background: linear-gradient(135deg, #8B4513 0%, #B8860B 100%); }
+    .portada-1 { 
+      background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    }
+    
+    .portada-2 { 
+      background: linear-gradient(135deg, #2C3E50 0%, #4A6572 100%);
+    }
+    
+    .portada-3 { 
+      background: linear-gradient(135deg, #8B4513 0%, #B8860B 100%);
+    }
     
     .portada-libro {
       max-height: 100%;
@@ -186,34 +192,50 @@
       object-fit: contain;
       transition: transform 0.5s ease;
       filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+      z-index: 1;
     }
     
     .tarjeta-libro:hover .portada-libro {
       transform: scale(1.05);
     }
     
-    /* ESTILO PARA CUANDO LA IMAGEN NO SE CARGA */
-    .portada-fallback {
-      display: flex;
+    /* TEXTO DE PORTADA (se muestra si no hay imagen) */
+    .texto-portada {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       color: white;
       text-align: center;
       padding: 2rem;
-      width: 100%;
-      height: 100%;
-    }
-    
-    .portada-fallback h4 {
+      z-index: 0;
       font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
     }
     
-    .portada-fallback p {
-      font-size: 0.9rem;
+    .texto-portada h4 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+    
+    .texto-portada p {
+      font-size: 1.1rem;
       opacity: 0.9;
+    }
+    
+    .badge-asin {
+      background: rgba(255,255,255,0.2);
+      padding: 5px 15px;
+      border-radius: 20px;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      border: 1px solid rgba(255,255,255,0.3);
+      font-family: 'Raleway', sans-serif;
     }
     
     .info-libro {
@@ -365,6 +387,10 @@
       .header-principal h1 {
         font-size: 2.5rem;
       }
+      
+      .texto-portada h4 {
+        font-size: 1.5rem;
+      }
     }
     
     .foto-autor img {
@@ -437,9 +463,9 @@
   </header>
 
   <main class="contenido-principal">
-    <section id="inicio" style="padding: 3rem 0; text-align: center;">
+    <section id="inicio">
       <h2 class="titulo-seccion">Bienvenido a Mi Mundo Literario</h2>
-      <div style="max-width: 800px; margin: 0 auto; font-size: 1.2rem;">
+      <div style="max-width: 800px; margin: 0 auto; font-size: 1.2rem; text-align: center;">
         <p>Cada novela que escribo nace de una necesidad profunda de explorar el corazón humano, sus contradicciones, sus silencios y sus verdades más íntimas.</p>
         <p style="margin-top: 1.5rem; font-style: italic; color: var(--marron-claro);">
           "Escribo para aquellos que buscan respuestas en el amor, el perdón y la redención."
@@ -452,14 +478,13 @@
       
       <div class="grid-libros">
         
-        <!-- LIBRO 1 -->
+        <!-- LIBRO 1: Amor Prohibido -->
         <article class="tarjeta-libro">
           <div class="portada-contenedor portada-1">
             <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/amor-prohibido.png" 
                  alt="Amor Prohibido en Pueblo Tradicional"
-                 class="portada-libro"
-                 onerror="this.style.display='none'; document.getElementById('fallback-1').style.display='flex';">
-            <div id="fallback-1" class="portada-fallback" style="display: none;">
+                 class="portada-libro">
+            <div class="texto-portada">
               <h4>Amor Prohibido</h4>
               <p>en Pueblo Tradicional</p>
             </div>
@@ -474,14 +499,13 @@
           </div>
         </article>
 
-        <!-- LIBRO 2 -->
+        <!-- LIBRO 2: Nacen los Hermanos -->
         <article class="tarjeta-libro">
           <div class="portada-contenedor portada-2">
             <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/nacen-hermanos.png" 
                  alt="Nacen los Hermanos"
-                 class="portada-libro"
-                 onerror="this.style.display='none'; document.getElementById('fallback-2').style.display='flex';">
-            <div id="fallback-2" class="portada-fallback" style="display: none;">
+                 class="portada-libro">
+            <div class="texto-portada">
               <h4>Nacen</h4>
               <p>los Hermanos</p>
             </div>
@@ -496,35 +520,19 @@
           </div>
         </article>
 
-        <!-- LIBRO 3 - CON MÚLTIPLES OPCIONES DE IMAGEN -->
+        <!-- LIBRO 3: Donde el Amor nos Enseñó a Volver -->
         <article class="tarjeta-libro destacado">
           <div class="badge-nuevo">¡NUEVO!</div>
           <div class="portada-contenedor portada-3">
-            
-            <!-- OPCIÓN 1: Imagen desde tu GitHub (si la subes) -->
-            <!-- REEMPLAZA ESTA LÍNEA EN LA SECCIÓN DEL TERCER LIBRO -->
-<img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/refs/heads/main/portada3.png" 
-     alt="Donde el Amor nos Enseñó a Volver"
-     class="portada-libro">
-                 onerror="this.style.display='none'; document.getElementById('img-option2').style.display='block';">
-            
-            <!-- OPCIÓN 2: Imagen alternativa desde otro servidor -->
-            <img id="img-option2" 
-                 src="https://i.ibb.co/7Qh2jZP/portada3.png" 
+            <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/portada3.png" 
                  alt="Donde el Amor nos Enseñó a Volver"
                  class="portada-libro"
-                 style="display: none;"
-                 onerror="this.style.display='none'; document.getElementById('img-option3').style.display='block';">
-            
-            <!-- OPCIÓN 3: Imagen de respaldo con texto -->
-            <div id="img-option3" class="portada-fallback" style="display: none;">
+                 id="imagen-tercer-libro">
+            <div class="texto-portada">
               <h4>Donde el Amor</h4>
               <p>nos Enseñó a Volver</p>
-              <p style="font-size: 0.8rem; margin-top: 1rem; opacity: 0.8;">
-                ASIN: B0GFT68SL2
-              </p>
+              <div class="badge-asin">ASIN: B0GFT68SL2</div>
             </div>
-            
           </div>
           <div class="info-libro">
             <h3>Donde el Amor nos Enseñó a Volver</h3>
@@ -538,20 +546,23 @@
             </div>
             
             <div class="formulario-suscripcion">
-              <h4>📢 Disponible en Amazon</h4>
-              <p style="margin-bottom: 1.5rem;">ASIN: <strong>B0GFT68SL2</strong></p>
+              <h4>📗 Disponible en Amazon</h4>
+              <p style="margin-bottom: 1rem;">
+                <strong>ASIN:</strong> B0GFT68SL2<br>
+                <small>eBook y tapa blanda</small>
+              </p>
               
               <div class="grupo-input">
                 <a href="https://www.amazon.com/dp/B0GFT68SL2" 
                    target="_blank" 
                    class="btn-primario"
-                   style="text-align: center; text-decoration: none;">
-                  Comprar en Amazon
+                   style="text-align: center; text-decoration: none; flex: 1;">
+                  📖 Comprar en Amazon
                 </a>
               </div>
               
               <p style="font-size: 0.9rem; opacity: 0.9; margin-top: 1rem;">
-                eBook y tapa blanda disponibles
+                También disponible en tu librería favorita
               </p>
             </div>
           </div>
@@ -564,8 +575,7 @@
       <div class="contenedor-autor">
         <div class="foto-autor">
           <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/autor.png" 
-               alt="J. LÓPEZ M. - Escritor nicaragüense"
-               onerror="this.src='https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'">
+               alt="J. LÓPEZ M. - Escritor nicaragüense">
         </div>
         
         <div class="bio-autor">
@@ -620,17 +630,45 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      console.log('✅ Sitio cargado - Versión con imágenes corregidas');
+      console.log('✅ Sitio cargado correctamente');
       
-      // Forzar recarga sin caché para imágenes
-      const imagenes = document.querySelectorAll('img');
-      imagenes.forEach(img => {
-        if (img.src.includes('?')) {
-          img.src = img.src.split('?')[0] + '?t=' + new Date().getTime();
-        } else {
-          img.src = img.src + '?t=' + new Date().getTime();
-        }
-      });
+      // Verificar imágenes y mostrar texto si no cargan
+      function verificarImagenes() {
+        const imagenes = document.querySelectorAll('.portada-libro');
+        
+        imagenes.forEach(img => {
+          // Añadir timestamp para evitar caché
+          if (!img.src.includes('?t=')) {
+            img.src = img.src + '?t=' + new Date().getTime();
+          }
+          
+          // Verificar si la imagen cargó
+          if (!img.complete || img.naturalHeight === 0) {
+            img.addEventListener('error', function() {
+              // Ocultar imagen y mostrar texto
+              this.style.display = 'none';
+              const textoPortada = this.parentElement.querySelector('.texto-portada');
+              if (textoPortada) {
+                textoPortada.style.display = 'flex';
+              }
+            });
+            
+            // Verificar después de 2 segundos
+            setTimeout(() => {
+              if (!img.complete || img.naturalHeight === 0) {
+                img.style.display = 'none';
+                const textoPortada = img.parentElement.querySelector('.texto-portada');
+                if (textoPortada) {
+                  textoPortada.style.display = 'flex';
+                }
+              }
+            }, 2000);
+          }
+        });
+      }
+      
+      // Verificar imágenes al cargar
+      verificarImagenes();
       
       // Animación para las tarjetas
       const tarjetas = document.querySelectorAll('.tarjeta-libro');
@@ -644,27 +682,6 @@
           tarjeta.style.transform = 'translateY(0)';
         }, 300 + (index * 200));
       });
-      
-      // Verificar si las imágenes se cargaron
-      setTimeout(() => {
-        const imagenesTercerLibro = document.querySelectorAll('.portada-3 img');
-        let algunaCargada = false;
-        
-        imagenesTercerLibro.forEach(img => {
-          if (img.complete && img.naturalHeight !== 0) {
-            algunaCargada = true;
-            console.log('✅ Imagen cargada:', img.src);
-          }
-        });
-        
-        if (!algunaCargada) {
-          console.log('⚠️ Ninguna imagen cargó, mostrando fallback');
-          const fallback = document.getElementById('img-option3');
-          if (fallback) {
-            fallback.style.display = 'flex';
-          }
-        }
-      }, 2000);
       
       // Navegación suave
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -685,48 +702,66 @@
         });
       });
       
-      // Detectar tecla F5 para recarga forzada
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'F5') {
-          e.preventDefault();
-          location.reload(true);
-        }
-      });
-    });
-    
-    // Función para probar URLs de imágenes
-    function probarImagen(url, callback) {
-      const img = new Image();
-      img.onload = function() {
-        callback(true, url);
-      };
-      img.onerror = function() {
-        callback(false, url);
-      };
-      img.src = url;
-    }
-    
-    // Probar todas las posibles URLs para el tercer libro
-    window.addEventListener('load', function() {
-      const posiblesUrls = [
-        'https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/donde-el-amor.png',
-        'https://i.imgur.com/7Qh2jZP.png',
-        'https://i.ibb.co/7Qh2jZP/donde-el-amor.png',
-        'https://via.placeholder.com/300x400/8B4513/FFFFFF?text=Donde+el+Amor'
-      ];
-      
-      console.log('🔍 Probando URLs de imágenes...');
-      
-      posiblesUrls.forEach((url, index) => {
-        probarImagen(url, function(cargada, urlProbada) {
-          if (cargada) {
-            console.log(`✅ URL ${index + 1} funciona:`, urlProbada);
-          } else {
-            console.log(`❌ URL ${index + 1} no funciona:`, urlProbada);
+      // Verificar específicamente la imagen del tercer libro
+      const imagenTercerLibro = document.getElementById('imagen-tercer-libro');
+      if (imagenTercerLibro) {
+        // Probar diferentes URLs si la primera falla
+        const urlsAlternativas = [
+          'https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/portada3.png',
+          'https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/master/portada3.png',
+          'https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/refs/heads/main/portada3.png'
+        ];
+        
+        let intento = 0;
+        
+        function probarSiguienteUrl() {
+          intento++;
+          if (intento < urlsAlternativas.length) {
+            console.log(`🔄 Probando URL alternativa ${intento}: ${urlsAlternativas[intento]}`);
+            imagenTercerLibro.src = urlsAlternativas[intento] + '?t=' + new Date().getTime();
           }
-        });
-      });
+        }
+        
+        imagenTercerLibro.addEventListener('error', probarSiguienteUrl);
+        
+        // Verificar después de 3 segundos
+        setTimeout(() => {
+          if (!imagenTercerLibro.complete || imagenTercerLibro.naturalHeight === 0) {
+            console.log('⏱️  La imagen no cargó en 3 segundos');
+            const textoPortada = imagenTercerLibro.parentElement.querySelector('.texto-portada');
+            if (textoPortada) {
+              imagenTercerLibro.style.display = 'none';
+              textoPortada.style.display = 'flex';
+            }
+          }
+        }, 3000);
+      }
     });
+    
+    // Función para forzar recarga de imagen específica
+    window.recargarImagen = function(nombreLibro) {
+      let selector;
+      switch(nombreLibro) {
+        case 1:
+          selector = '.portada-1 .portada-libro';
+          break;
+        case 2:
+          selector = '.portada-2 .portada-libro';
+          break;
+        case 3:
+          selector = '.portada-3 .portada-libro';
+          break;
+        default:
+          selector = '.portada-3 .portada-libro';
+      }
+      
+      const imagen = document.querySelector(selector);
+      if (imagen) {
+        const srcOriginal = imagen.src.split('?')[0];
+        imagen.src = srcOriginal + '?t=' + new Date().getTime();
+        console.log(`🔄 Recargando imagen del libro ${nombreLibro}`);
+      }
+    };
   </script>
 </body>
 </html>
