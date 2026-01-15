@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer Capítulo - Nacen los Hermanos | J. LÓPEZ M.</title>
+    <meta name="description" content="Lee el primer capítulo de 'Nacen los Hermanos' - Una historia de tres destinos entrelazados por el amor, la pérdida y la esperanza.">
+    <meta name="author" content="J. LÓPEZ M.">
+    
+    <style>
+        /* ESTILOS GENERALES */
+        :root {
+            --color-primario: #2C5F2D;
+            --color-secundario: #97BC62;
+            --color-fondo: #F8FFF0;
+            --color-texto: #1E3A1E;
+            --color-blanco: #FFFFFF;
+            --color-sombra: rgba(44, 95, 45, 0.1);
+            --transicion: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* ENCABEZADO */
+        .encabezado {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--color-primario);
+        }
+        
+        .encabezado h1 {
+            color: var(--color-primario);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .cita-destacada {
+            font-style: italic;
+            color: var(--color-secundario);
+            font-size: 1.3rem;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: rgba(151, 188, 98, 0.05);
+            border-radius: 8px;
+            border-left: 4px solid var(--color-secundario);
+        }
+        
+        /* FICHA TÉCNICA */
+        .ficha-tecnica {
+            background-color: var(--color-blanco);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px var(--color-sombra);
+            border: 1px solid rgba(44, 95, 45, 0.1);
+        }
+        
+        .ficha-tecnica h2 {
+            color: var(--color-primario);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .datos-libro {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+        }
+        
+        .dato-item {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        
+        .dato-item strong {
+            color: var(--color-primario);
+        }
+        
+        /* CAPÍTULO */
+        .capitulo {
+            margin-bottom: 40px;
+        }
+        
+        .capitulo h2 {
+            color: var(--color-primario);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(44, 95, 45, 0.2);
+        }
+        
+        .texto-capitulo {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+        
+        .texto-capitulo p {
+            margin-bottom: 20px;
+            text-indent: 30px;
+        }
+        
+        /* BOTONES */
+        .acciones {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(44, 95, 45, 0.1);
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transicion);
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            min-width: 200px;
+        }
+        
+        .btn-comprar {
+            background: linear-gradient(135deg, #2C5F2D, #97BC62);
+            color: white;
+        }
+        
+        .btn-comprar:hover {
+            background: linear-gradient(135deg, #1E3A1E, #2C5F2D);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(44, 95, 45, 0.3);
+        }
+        
+        .btn-volver {
+            background-color: transparent;
+            color: var(--color-primario);
+            border: 2px solid var(--color-primario);
+        }
+        
+        .btn-volver:hover {
+            background-color: var(--color-primario);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(44, 95, 45, 0.1);
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .encabezado h1 {
+                font-size: 1.8rem;
+            }
+            
+            .cita-destacada {
+                font-size: 1.1rem;
+                padding: 12px;
+            }
+            
+            .btn {
+                width: 100%;
+                min-width: auto;
+            }
+            
+            .acciones {
+                flex-direction: column;
+            }
+            
+            .texto-capitulo p {
+                text-indent: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .encabezado h1 {
+                font-size: 1.5rem;
+            }
+            
+            .capitulo h2 {
+                font-size: 1.4rem;
+            }
+            
+            .texto-capitulo {
+                font-size: 1rem;
+                line-height: 1.7;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="encabezado">
+        <h1>Nacen los Hermanos</h1>
+        <div class="cita-destacada">
+            "Entre los escombros del dolor y las pérdidas, la esperanza florece donde los lazos del alma se entrelazan."<br>
+            <span style="display: block; text-align: right; margin-top: 5px; font-size: 0.9em;">— J. LÓPEZ M.</span>
+        </div>
+        <p style="color: #666; font-style: italic;">por J. LÓPEZ M.</p>
+    </header>
+    
+    <section class="ficha-tecnica">
+        <h2>📋 Detalles del libro</h2>
+        <div class="datos-libro">
+            <div class="dato-item"><strong>ASIN:</strong> B0FKYRM3ZS</div>
+            <div class="dato-item"><strong>Editorial:</strong> Independently published</div>
+            <div class="dato-item"><strong>Fecha de publicación:</strong> 10 Julio 2025</div>
+            <div class="dato-item"><strong>Idioma:</strong> Español</div>
+            <div class="dato-item"><strong>Páginas:</strong> 349</div>
+            <div class="dato-item"><strong>ISBN-13:</strong> 979-8290724188</div>
+            <div class="dato-item"><strong>Edad de lectura:</strong> De 15 a 18 años</div>
+            <div class="dato-item"><strong>Dimensiones:</strong> 6 x 0.79 x 9 pulgadas</div>
+        </div>
+    </section>
+    
+    <section class="capitulo">
+        <h2>Capítulo 1 — El niño que quiso ser visto</h2>
+        <div class="texto-capitulo">
+            <p>En una escuelita rural con paredes despintadas y pupitres cojos, el sol entraba como si también tuviera curiosidad por lo que allí pasaba.</p>
+            
+            <p>Era tercer grado de primaria, y Leopoldo, con sus 9 años mal vestidos, pasaba los días mirando de reojo a Grethel, la niña que, para él, era más que bonita… era un sueño inalcanzable.</p>
+            
+            <p>Ella usaba cintas blancas en el cabello, hablaba con seguridad y olía siempre a jabón caro. Era hija de comerciantes, de gente que podía regalarle cuadernos nuevos, meriendas con sabor a ciudad y zapatos relucientes.</p>
+            
+            <p>Leopoldo, en cambio, era un niño flaco, callado, con el rostro manchado por el sol y las manos llenas de tierra. Su uniforme estaba remendado con puntadas torpes hechas por su abuela, y llegaba cada día con un solo cuaderno prestado y una mochila vieja que olía a maíz.</p>
+            
+            <p>Pero eso no le impedía soñar.</p>
+            
+            <p>Hacía de todo para que Grethel lo notara: le dejaba flores silvestres en el pupitre, le llevaba dibujos mal hechos donde él era un príncipe y ella una princesa, e incluso aprendió a recitar poemas con la esperanza de que, algún día, ella le sonriera…</p>
+            
+            <p>Pero Grethel nunca lo miró.</p>
+            
+            <p>A quien sí miró fue al hijo de la profesora: alto, de sonrisa perfecta, siempre limpio y seguro. Era el niño que jugaba con un balón de cuero mientras Leopoldo pateaba uno hecho con medias viejas.</p>
+            
+            <p>Grethel y aquel muchacho pronto se hicieron inseparables, y Leopoldo, desde su rincón del aula, se tragó en silencio la rabia… y la tristeza.</p>
+            
+            <p>Durante el acto de clausura de sexto grado, mientras todos se tomaban fotos, él se quedó solo en una banca, mirando hacia la cancha vacía. Nadie notó cuando murmuró para sí mismo:</p>
+            
+            <p style="text-align: center; font-style: italic; padding: 15px; background-color: rgba(44, 95, 45, 0.05); border-radius: 5px; margin: 25px 0;">
+                —Nunca más voy a sufrir por una mujer. Para mí, solo van a ser un pasatiempo.
+            </p>
+            
+            <p>A sus 12 años, Leopoldo no sabía que esa promesa se convertiría en una maldición… y que, con el tiempo, dejaría una estela de corazones rotos. Incluyendo los de sus propios hijos.</p>
+        </div>
+    </section>
+    
+    <div class="acciones">
+        <a href="https://www.amazon.com/dp/B0FKYRM3ZS" target="_blank" class="btn btn-comprar">
+            🛒 Comprar en Amazon
+        </a>
+        <a href="index.html" class="btn btn-volver">
+            ← Volver a la biblioteca
+        </a>
+    </div>
+    
+    <footer class="footer">
+        <p>© 2025 J. LÓPEZ M. | <a href="index.html" style="color: var(--color-primario); text-decoration: none;">Volver al inicio</a></p>
+        <p style="margin-top: 10px; font-size: 0.85rem; color: #888;">
+            ASIN: B0FKYRM3ZS • Disponible en Amazon Kindle y tapa blanda
+        </p>
+    </footer>
+</body>
+</html>
