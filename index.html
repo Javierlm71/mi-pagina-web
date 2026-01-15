@@ -1,729 +1,572 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sitio oficial de J. LÓPEZ M., escritor nicaragüense. Autor de 'Donde el Amor nos Enseñó a Volver', 'Amor Prohibido en Pueblo Tradicional' y 'Nacen los Hermanos'." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J. LÓPEZ M. - Página Oficial del Autor</title>
+  <meta name="description" content="Página oficial del autor J. LÓPEZ M. Descubre sus novelas 'Amor Prohibido en Pueblo Tradicional', 'Nacen los Hermanos' y 'Donde el Amor nos Enseñó a Volver'.">
+  <meta name="keywords" content="J. López M., autor nicaragüense, novelas, libros, ficción literaria, amor, familia, drama">
+  <meta name="author" content="J. LÓPEZ M.">
   
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  
-  <title>J. LÓPEZ M. | Escritor Nicaragüense</title>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Fuentes de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   
   <style>
+    /* Variables CSS */
+    :root {
+      --color-primario: #b8860b;
+      --color-primario-oscuro: #8c6c10;
+      --color-secundario: #2f1b0c;
+      --color-terciario: #6b4226;
+      --color-fondo: #fffaf2;
+      --color-texto: #2f1b0c;
+      --color-blanco: #ffffff;
+      --color-sombra: rgba(0, 0, 0, 0.1);
+      --transicion-rapida: all 0.3s ease;
+      --borde-redondeado: 8px;
+    }
+    
+    /* Reset y estilos base */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
     
-    :root {
-      --dorado: #C9A227;
-      --dorado-oscuro: #A8841F;
-      --marron: #3E2723;
-      --marron-claro: #5D4037;
-      --crema: #FFF8E1;
-      --blanco: #FFFFFF;
-    }
-    
     body {
-      font-family: 'Raleway', sans-serif;
-      background: linear-gradient(135deg, #fdf6e3 0%, #fff8e1 100%);
-      color: #333;
-      line-height: 1.8;
-      min-height: 100vh;
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
+      line-height: 1.6;
     }
     
-    /* HEADER */
-    .header-principal {
-      background: linear-gradient(rgba(62, 39, 35, 0.95), rgba(62, 39, 35, 0.98)), 
-                  url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-      background-size: cover;
-      background-position: center;
-      color: var(--blanco);
-      padding: 3rem 2rem 2rem;
-      text-align: center;
-      position: relative;
+    h1, h2, h3, h4 {
+      font-family: 'Crimson Text', serif;
+      font-weight: 700;
+      line-height: 1.3;
     }
     
-    .header-principal h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-      letter-spacing: 2px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
-    
-    .header-principal .subtitulo {
-      font-size: 1.2rem;
-      opacity: 0.9;
-      margin-bottom: 1.5rem;
-      font-weight: 300;
-    }
-    
-    .menu-principal {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 1.5rem;
-      position: relative;
-    }
-    
-    .menu-principal a {
-      color: var(--blanco);
+    a {
       text-decoration: none;
-      padding: 0.7rem 1.3rem;
-      background: rgba(201, 162, 39, 0.3);
-      border: 2px solid var(--dorado);
-      border-radius: 25px;
-      transition: all 0.3s ease;
-      font-weight: 600;
-      letter-spacing: 1px;
-      font-size: 0.95rem;
+      color: inherit;
+      transition: var(--transicion-rapida);
     }
     
-    .menu-principal a:hover {
-      background: var(--dorado);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
     
-    /* CONTENIDO PRINCIPAL */
-    .contenido-principal {
+    /* Contenedor principal */
+    .contenedor {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 1rem 2rem 0;
+      padding: 0 20px;
     }
     
-    /* SECCIÓN INICIO */
-    #inicio {
-      padding: 2rem 0 3rem;
+    /* Header */
+    header {
+      background: linear-gradient(135deg, var(--color-primario), var(--color-primario-oscuro));
+      color: var(--color-blanco);
+      padding: 40px 20px;
       text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
     
-    .seccion-libros {
-      padding: 3rem 0;
+    .logo {
+      margin-bottom: 15px;
     }
     
-    .titulo-seccion {
+    .logo h1 {
+      font-size: 2.5em;
+      margin-bottom: 5px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    
+    .logo p {
+      font-size: 1.1em;
+      opacity: 0.9;
+      font-style: italic;
+    }
+    
+    /* Navegación */
+    nav {
+      margin-top: 25px;
+    }
+    
+    .navegacion-principal {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    
+    .navegacion-principal a {
+      padding: 10px 22px;
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95em;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .navegacion-principal a:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-2px);
+    }
+    
+    /* Hero Section */
+    .hero {
       text-align: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      color: var(--marron);
-      margin-bottom: 2.5rem;
-      position: relative;
+      padding: 60px 20px;
+      background-color: rgba(184, 134, 11, 0.05);
+      border-radius: var(--borde-redondeado);
+      margin: 30px 0;
     }
     
-    .titulo-seccion::after {
-      content: '';
-      display: block;
-      width: 80px;
-      height: 3px;
-      background: var(--dorado);
-      margin: 1rem auto;
+    .hero h2 {
+      font-size: 2.2em;
+      color: var(--color-terciario);
+      margin-bottom: 15px;
+    }
+    
+    .hero p {
+      font-size: 1.1em;
+      max-width: 800px;
+      margin: 0 auto 25px;
+    }
+    
+    /* Sección de libros */
+    .libros {
+      padding: 50px 0;
+    }
+    
+    .libros h2 {
+      text-align: center;
+      color: var(--color-terciario);
+      font-size: 2em;
+      margin-bottom: 40px;
     }
     
     .grid-libros {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2.5rem;
-      margin-top: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
     }
     
     .tarjeta-libro {
-      background: var(--blanco);
-      border-radius: 12px;
+      background-color: var(--color-blanco);
+      border-radius: var(--borde-redondeado);
       overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      transition: all 0.4s ease;
-      position: relative;
+      box-shadow: 0 6px 20px var(--color-sombra);
+      transition: var(--transicion-rapida);
+      display: flex;
+      flex-direction: column;
     }
     
     .tarjeta-libro:hover {
       transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-    }
-    
-    .tarjeta-libro.destacado {
-      border: 2px solid var(--dorado);
-    }
-    
-    .badge-nuevo {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background: #27ae60;
-      color: white;
-      padding: 6px 12px;
-      border-radius: 15px;
-      font-weight: bold;
-      z-index: 2;
-      font-size: 0.85rem;
-      animation: pulse 2s infinite;
-    }
-    
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
     }
     
     .portada-contenedor {
-      height: 260px;
-      overflow: hidden;
+      height: 280px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 1rem;
-      position: relative;
-    }
-    
-    .portada-1 { 
-      background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
-    }
-    
-    .portada-2 { 
-      background: linear-gradient(135deg, #2C3E50 0%, #4A6572 100%);
-    }
-    
-    .portada-3 { 
+      padding: 20px;
       background: linear-gradient(135deg, #8B4513 0%, #B8860B 100%);
     }
     
-    .portada-libro {
-      max-height: 100%;
+    .portada-libro-img {
+      max-height: 240px;
       max-width: 100%;
-      object-fit: contain;
-      transition: transform 0.5s ease;
-      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));
+      border-radius: 5px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
     
-    .tarjeta-libro:hover .portada-libro {
-      transform: scale(1.03);
+    .contenido-tarjeta {
+      padding: 25px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
     }
     
-    .info-libro {
-      padding: 1.8rem;
+    .contenido-tarjeta h3 {
+      color: var(--color-primario-oscuro);
+      font-size: 1.5em;
+      margin-bottom: 10px;
     }
     
-    .info-libro h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      color: var(--marron);
-      margin-bottom: 0.8rem;
-      line-height: 1.3;
+    .contenido-tarjeta p {
+      margin-bottom: 20px;
+      flex-grow: 1;
     }
     
-    .info-libro p {
-      color: #666;
-      margin-bottom: 1.2rem;
-      line-height: 1.6;
-      font-size: 0.95rem;
+    .etiqueta-nuevo {
+      background-color: #27ae60;
+      color: var(--color-blanco);
+      padding: 5px 12px;
+      border-radius: 50px;
+      font-size: 0.85em;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 10px;
+      align-self: flex-start;
     }
     
+    /* Botones */
     .botones-accion {
       display: flex;
-      gap: 0.8rem;
+      gap: 12px;
       flex-wrap: wrap;
     }
     
-    .btn-primario {
-      background: var(--dorado);
-      color: var(--blanco);
+    .boton {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       padding: 10px 20px;
-      border-radius: 6px;
-      text-decoration: none;
+      background-color: var(--color-primario);
+      color: var(--color-blanco);
+      border-radius: var(--borde-redondeado);
       font-weight: 600;
-      transition: all 0.3s ease;
+      transition: var(--transicion-rapida);
       border: none;
       cursor: pointer;
-      flex: 1;
+      font-family: 'Open Sans', sans-serif;
       text-align: center;
-      font-size: 0.95rem;
-    }
-    
-    .btn-primario:hover {
-      background: var(--dorado-oscuro);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(169, 132, 31, 0.25);
-    }
-    
-    .btn-secundario {
-      background: transparent;
-      color: var(--marron);
-      padding: 10px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      border: 2px solid var(--dorado);
-      cursor: pointer;
       flex: 1;
-      text-align: center;
-      font-size: 0.95rem;
-    }
-    
-    .btn-secundario:hover {
-      background: var(--dorado);
-      color: var(--blanco);
-    }
-    
-    .formulario-suscripcion {
-      background: linear-gradient(135deg, var(--marron) 0%, var(--marron-claro) 100%);
-      padding: 2rem;
-      border-radius: 12px;
-      margin-top: 1.5rem;
-      color: var(--blanco);
-    }
-    
-    .formulario-suscripcion h4 {
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 1.2rem;
-      font-size: 1.3rem;
-    }
-    
-    .grupo-input {
-      display: flex;
-      gap: 0.8rem;
-      margin-bottom: 1rem;
-    }
-    
-    .grupo-input input {
-      flex: 1;
-      padding: 12px;
-      border: none;
-      border-radius: 6px;
-      font-size: 0.95rem;
-      background: rgba(255,255,255,0.95);
-    }
-    
-    .grupo-input button {
-      background: var(--dorado);
-      color: white;
-      border: none;
-      padding: 0 1.5rem;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-size: 0.95rem;
       min-width: 120px;
     }
     
-    .grupo-input button:hover {
-      background: var(--dorado-oscuro);
+    .boton:hover {
+      background-color: var(--color-primario-oscuro);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(184, 134, 11, 0.3);
     }
     
-    .seccion-autor {
-      padding: 4rem 0;
-      background: linear-gradient(135deg, #f9f5e7 0%, #f0e6d6 100%);
-      margin-top: 2rem;
-      border-radius: 15px;
+    .boton-secundario {
+      background-color: transparent;
+      color: var(--color-primario);
+      border: 2px solid var(--color-primario);
     }
     
-    .contenedor-autor {
-      max-width: 1000px;
-      margin: 0 auto;
+    .boton-secundario:hover {
+      background-color: var(--color-primario);
+      color: var(--color-blanco);
+    }
+    
+    /* Sección del autor */
+    .autor {
+      background-color: rgba(107, 66, 38, 0.05);
+      padding: 60px 20px;
+      border-radius: var(--borde-redondeado);
+      margin: 50px 0;
+    }
+    
+    .autor h2 {
+      color: var(--color-terciario);
+      font-size: 2em;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    
+    .contenido-autor {
       display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 3rem;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
       align-items: center;
     }
     
     @media (max-width: 768px) {
-      .contenedor-autor {
+      .contenido-autor {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 2rem;
+      }
+    }
+    
+    .foto-autor {
+      text-align: center;
+    }
+    
+    .avatar-autor {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid var(--color-primario);
+      margin: 0 auto;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .bio-autor h3 {
+      color: var(--color-primario-oscuro);
+      font-size: 1.6em;
+      margin-bottom: 15px;
+    }
+    
+    .bio-autor p {
+      margin-bottom: 15px;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: var(--color-secundario);
+      color: #f5deb3;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+    
+    .footer-contenido p {
+      margin-bottom: 15px;
+    }
+    
+    .enlace-footer {
+      color: #f5deb3;
+      font-weight: 600;
+      border-bottom: 1px dotted #f5deb3;
+    }
+    
+    .enlace-footer:hover {
+      opacity: 0.8;
+    }
+    
+    .copyright {
+      margin-top: 25px;
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .logo h1 {
+        font-size: 2em;
       }
       
-      .grid-libros {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+      .hero h2 {
+        font-size: 1.8em;
       }
       
-      .menu-principal {
+      .navegacion-principal {
         flex-direction: column;
         align-items: center;
-        gap: 0.8rem;
       }
       
-      .menu-principal a {
-        width: 90%;
-        max-width: 250px;
-        margin-bottom: 0.3rem;
+      .navegacion-principal a {
+        width: 200px;
       }
       
-      .grupo-input {
+      .botones-accion {
         flex-direction: column;
       }
       
-      .header-principal h1 {
-        font-size: 2.2rem;
-      }
-      
-      .header-principal {
-        padding: 2rem 1.5rem 1.5rem;
-      }
-      
-      .titulo-seccion {
-        font-size: 1.8rem;
-      }
-      
-      #inicio {
-        padding: 1.5rem 0 2.5rem;
-      }
-      
-      .seccion-libros {
-        padding: 2rem 0;
-      }
-      
-      .portada-contenedor {
-        height: 240px;
+      .boton {
+        width: 100%;
       }
     }
     
     @media (max-width: 480px) {
-      .contenido-principal {
-        padding: 1rem 1rem 0;
+      .portada-contenedor {
+        height: 240px;
       }
       
-      .header-principal h1 {
-        font-size: 1.8rem;
+      .portada-libro-img {
+        max-height: 200px;
       }
       
-      .menu-principal a {
-        font-size: 0.9rem;
-        padding: 0.6rem 1rem;
+      .contenido-tarjeta h3 {
+        font-size: 1.3em;
       }
-      
-      .titulo-seccion {
-        font-size: 1.6rem;
-      }
-      
-      .info-libro {
-        padding: 1.5rem;
-      }
-      
-      .info-libro h3 {
-        font-size: 1.3rem;
-      }
-    }
-    
-    .foto-autor img {
-      width: 100%;
-      border-radius: 15px;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-      border: 4px solid var(--blanco);
-    }
-    
-    .bio-autor h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      color: var(--marron);
-      margin-bottom: 1.2rem;
-    }
-    
-    .bio-autor p {
-      font-size: 1.05rem;
-      line-height: 1.7;
-      margin-bottom: 1.2rem;
-      color: #555;
-    }
-    
-    .footer-principal {
-      background: var(--marron);
-      color: var(--crema);
-      padding: 3rem 2rem 2rem;
-      text-align: center;
-      margin-top: 3rem;
-    }
-    
-    .enlaces-footer {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-    }
-    
-    .enlaces-footer a {
-      color: var(--crema);
-      text-decoration: none;
-      transition: color 0.3s ease;
-      font-size: 0.95rem;
-    }
-    
-    .enlaces-footer a:hover {
-      color: var(--dorado);
-    }
-    
-    .derechos {
-      margin-top: 1.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid rgba(255,248,225,0.1);
-      font-size: 0.85rem;
-      opacity: 0.8;
     }
   </style>
 </head>
 
 <body>
-  <header class="header-principal">
-    <h1>J. LÓPEZ M.</h1>
-    <p class="subtitulo">Escritor Nicaragüense • Novelas de Amor, Perdón y Redención</p>
-    
-    <nav class="menu-principal">
-      <a href="#inicio">Inicio</a>
-      <a href="#libros">Mis Libros</a>
-      <a href="#autor">Sobre Mí</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+  <!-- Header -->
+  <header>
+    <div class="contenedor">
+      <div class="logo">
+        <h1>J. LÓPEZ M.</h1>
+        <p>Autor | Novelista | Contador de Historias</p>
+      </div>
+      
+      <nav>
+        <div class="navegacion-principal">
+          <a href="#inicio">Inicio</a>
+          <a href="#libros">Mis Libros</a>
+          <a href="#autor">Sobre Mí</a>
+        </div>
+      </nav>
+    </div>
   </header>
 
-  <main class="contenido-principal">
-    <section id="inicio">
-      <h2 class="titulo-seccion">Bienvenido a Mi Mundo Literario</h2>
-      <div style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; text-align: center;">
-        <p>Cada novela que escribo nace de una necesidad profunda de explorar el corazón humano, sus contradicciones, sus silencios y sus verdades más íntimas.</p>
-        <p style="margin-top: 1.2rem; font-style: italic; color: var(--marron-claro);">
-          "Escribo para aquellos que buscan respuestas en el amor, el perdón y la redención."
-        </p>
-      </div>
+  <main class="contenedor">
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+      <h2>Historias que tocan el alma</h2>
+      <p>Explora universos literarios donde el amor, la memoria y la redención se entrelazan en narrativas profundas que reflejan la complejidad del ser humano. Cada novela es un viaje íntimo hacia la verdad del corazón.</p>
     </section>
 
-    <section id="libros" class="seccion-libros">
-      <h2 class="titulo-seccion">Mis Obras Publicadas</h2>
+    <!-- Sección de Libros -->
+    <section id="libros" class="libros">
+      <h2>Mis Obras</h2>
       
       <div class="grid-libros">
-        
-        <!-- LIBRO 1: Amor Prohibido -->
+        <!-- Libro 1: Amor Prohibido -->
         <article class="tarjeta-libro">
-          <div class="portada-contenedor portada-1">
-            <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/amor-prohibido.png" 
-                 alt="Amor Prohibido en Pueblo Tradicional"
-                 class="portada-libro">
+          <div class="portada-contenedor">
+            <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/portada1.png" 
+                 alt="Portada Amor Prohibido en Pueblo Tradicional" 
+                 class="portada-libro-img">
           </div>
-          <div class="info-libro">
+          
+          <div class="contenido-tarjeta">
             <h3>Amor Prohibido en Pueblo Tradicional</h3>
-            <p>Una historia de amor que desafía las costumbres más arraigadas de un pueblo tradicional, donde el corazón y la fe se enfrentan a los juicios colectivos.</p>
+            <p>Un amor que desafió las reglas de un pueblo anclado en tradiciones. Una historia sobre secretos, sacrificio y el precio de amar en un lugar donde las apariencias lo son todo.</p>
+            
             <div class="botones-accion">
-              <a href="amor-prohibido.html" class="btn-primario">Conocer la Historia</a>
-              <a href="#libros" class="btn-secundario">Detalles</a>
+              <!-- BOTÓN "CONOCE LA HISTORIA" - Lleva a página completa -->
+              <a href="amor-prohibido.html" class="boton">Conoce la historia</a>
+              <!-- BOTÓN "DETALLE" - Lleva a primer capítulo -->
+              <a href="primer-capitulo-amor-prohibido.html" class="boton boton-secundario">Detalle</a>
             </div>
           </div>
         </article>
 
-        <!-- LIBRO 2: Nacen los Hermanos -->
+        <!-- Libro 2: Nacen los Hermanos -->
         <article class="tarjeta-libro">
-          <div class="portada-contenedor portada-2">
-            <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/nacen-hermanos.png" 
-                 alt="Nacen los Hermanos"
-                 class="portada-libro">
+          <div class="portada-contenedor">
+            <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/portada2.png" 
+                 alt="Portada Nacen los Hermanos" 
+                 class="portada-libro-img">
           </div>
-          <div class="info-libro">
+          
+          <div class="contenido-tarjeta">
             <h3>Nacen los Hermanos</h3>
-            <p>Una novela conmovedora sobre el destino, la familia y el perdón, que sigue las vidas entrelazadas de hermanos separados por circunstancias inesperadas.</p>
+            <p>La historia de tres destinos entrelazados por el amor, la pérdida y la esperanza. Una saga familiar que explora los lazos que nos unen más allá de la sangre y el tiempo.</p>
+            
             <div class="botones-accion">
-              <a href="nacen-hermanos.html" class="btn-primario">Conocer la Historia</a>
-              <a href="#libros" class="btn-secundario">Detalles</a>
+              <!-- BOTÓN "CONOCE LA HISTORIA" - Lleva a página completa -->
+              <a href="nacen-hermanos.html" class="boton">Conoce la historia</a>
+              <!-- BOTÓN "DETALLE" - Lleva a primer capítulo -->
+              <a href="primer-capitulo-nacen-hermanos.html" class="boton boton-secundario">Detalle</a>
             </div>
           </div>
         </article>
 
-        <!-- LIBRO 3: Donde el Amor nos Enseñó a Volver - CON TU IMAGEN DE GITHUB -->
-        <article class="tarjeta-libro destacado">
-          <div class="badge-nuevo">¡NUEVA PUBLICACIÓN!</div>
-          <div class="portada-contenedor portada-3">
-            <!-- TU IMAGEN DE TU REPOSITORIO GITHUB -->
+        <!-- Libro 3: Donde el Amor nos Enseñó a Volver -->
+        <article class="tarjeta-libro">
+          <div class="portada-contenedor">
+            <span class="etiqueta-nuevo">¡NUEVA OBRA!</span>
             <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/portada3.png" 
-                 alt="Donde el Amor nos Enseñó a Volver"
-                 class="portada-libro"
-                 id="imagen-portada3"
-                 onerror="cargarImagenRespaldo(this)">
+                 alt="Portada Donde el Amor nos Enseñó a Volver" 
+                 class="portada-libro-img">
           </div>
-          <div class="info-libro">
+          
+          <div class="contenido-tarjeta">
             <h3>Donde el Amor nos Enseñó a Volver</h3>
-            <p><strong>El amor que nos une cuando el silencio se rompe</strong></p>
-            <p>Después de veinte años, Elena regresa a San Isidro para enfrentar secretos familiares y una verdad que cambiará todo lo que creía saber.</p>
+            <p>Después de veinte años de silencio, una mujer regresa a su pueblo natal para enfrentar secretos familiares y descubrir que el amor verdadero siempre encuentra el camino de vuelta.</p>
             
             <div class="botones-accion">
-              <a href="donde-el-amor-nos-enseno-a-volver.html" class="btn-primario">
-                Conocer la Historia
-              </a>
-            </div>
-            
-            <div class="formulario-suscripcion">
-              <h4>📗 Disponible en Amazon</h4>
-              <p style="margin-bottom: 1rem;">
-                <strong>ASIN:</strong> B0GFT68SL2<br>
-                <small>eBook y tapa blanda</small>
-              </p>
-              
-              <div class="grupo-input">
-                <a href="https://www.amazon.com/dp/B0GFT68SL2" 
-                   target="_blank" 
-                   class="btn-primario"
-                   style="text-align: center; text-decoration: none; flex: 1;">
-                  📖 Comprar en Amazon
-                </a>
-              </div>
-              
-              <p style="font-size: 0.9rem; opacity: 0.9; margin-top: 1rem;">
-                También disponible en tu librería favorita
-              </p>
+              <!-- BOTÓN "CONOCE LA HISTORIA" - Lleva a página completa -->
+              <a href="donde-el-amor-nos-enseno-a-volver.html" class="boton">Conoce la historia</a>
+              <!-- BOTÓN "DETALLE" - Lleva a primer capítulo -->
+              <a href="primer-capitulo-donde-el-amor.html" class="boton boton-secundario">Detalle</a>
             </div>
           </div>
         </article>
-
       </div>
     </section>
 
-    <section id="autor" class="seccion-autor">
-      <div class="contenedor-autor">
+    <!-- Sección del Autor -->
+    <section id="autor" class="autor">
+      <h2>Sobre el Autor</h2>
+      
+      <div class="contenido-autor">
         <div class="foto-autor">
           <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/autor.png" 
-               alt="J. LÓPEZ M. - Escritor nicaragüense"
-               onerror="this.src='https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'">
+               alt="J. LÓPEZ M." 
+               class="avatar-autor"
+               onerror="this.src='https://via.placeholder.com/200/8B4513/FFFFFF?text=J.+LÓPEZ+M.'">
         </div>
         
         <div class="bio-autor">
-          <h2>Sobre el Autor</h2>
-          <p><strong>J. LÓPEZ M.</strong> es un escritor y óptometrista nicaragüense cuya obra literaria se caracteriza por una profunda exploración de las emociones humanas y los dilemas morales.</p>
+          <h3>J. LÓPEZ M.</h3>
+          <p>Escritor nicaragüense con una profunda pasión por explorar las complejidades del corazón humano a través de la ficción literaria. Su obra se caracteriza por una prosa sensible y reflexiva que aborda temas universales como el amor, la memoria, la redención y los lazos familiares.</p>
           
-          <p>Su formación en ciencias de la salud visual le ha proporcionado una perspectiva única sobre la percepción humana, que traslada magistralmente a su narrativa, explorando cómo vemos no solo con los ojos, sino también con el corazón.</p>
+          <p>Cada una de sus novelas es una invitación a adentrarse en mundos donde los personajes enfrentan sus verdades más íntimas, desafiando silencios heredados y encontrando, en el proceso, caminos hacia la sanación y la comprensión.</p>
           
-          <p>Cada una de sus novelas es un viaje hacia la esencia del ser humano, donde el amor, el perdón y la redención se entrelazan para crear historias que resuenan en lo más profundo del lector.</p>
-          
-          <p style="margin-top: 1.5rem; font-style: italic;">
-            "Escribo para sanar, para entender y para compartir esa luz que siempre encuentra su camino, incluso en la oscuridad más profunda."
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contacto" style="padding: 3rem 0; text-align: center;">
-      <h2 class="titulo-seccion">Contacto</h2>
-      <div style="max-width: 600px; margin: 0 auto;">
-        <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
-          ¿Interesado en colaboraciones, presentaciones o simplemente quieres compartir tu experiencia con mis libros?
-        </p>
-        
-        <div style="background: var(--dorado); color: white; padding: 1.5rem; border-radius: 10px;">
-          <h3 style="margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Escríbeme</h3>
-          <a href="mailto:jlopezmoficial@gmail.com" 
-             style="font-size: 1.3rem; color: white; text-decoration: none; font-weight: 600;">
-            jlopezmoficial@gmail.com
-          </a>
-          <p style="margin-top: 1rem; opacity: 0.9; font-size: 0.95rem;">
-            Respondo personalmente a todos los mensajes
-          </p>
+          <p>Con una narrativa que combina realismo emotivo y profundidad psicológica, J. López M. crea historias que resuenan con lectores que buscan más que entretenimiento: buscan conexión, significado y reflexión sobre las experiencias que nos hacen humanos.</p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer-principal">
-    <div class="enlaces-footer">
-      <a href="#inicio">Inicio</a>
-      <a href="#libros">Libros</a>
-      <a href="#autor">Autor</a>
-      <a href="#contacto">Contacto</a>
-    </div>
-    
-    <div class="derechos">
-      <p>© 2025 J. LÓPEZ M. | Todos los derechos reservados</p>
-      <p>Sitio oficial del autor nicaragüense</p>
+  <!-- Footer -->
+  <footer>
+    <div class="contenedor">
+      <div class="footer-contenido">
+        <p>© 2025 J. LÓPEZ M. | Todos los derechos reservados</p>
+        <p><a href="#inicio" class="enlace-footer">Volver al inicio</a> | <a href="#libros" class="enlace-footer">Ver todos los libros</a></p>
+        
+        <div class="copyright">
+          <p>Las portadas e imágenes son propiedad del autor.</p>
+          <p>Disponible en Amazon Kindle y formato físico.</p>
+        </div>
+      </div>
     </div>
   </footer>
 
   <script>
-    // SISTEMA DE RESPALDO INTELIGENTE
-    function cargarImagenRespaldo(imagen) {
-      console.log('⚠️ Imagen de GitHub no cargó. Probando alternativas...');
-      
-      // Lista de URLs alternativas en orden de prioridad
-      const urlsAlternativas = [
-        'https://i.ibb.co/B2cbVbTx/portada3.png',  // Tu ImgBB
-        'https://i.imgur.com/7Qh2jZP.png',         // Imgur genérico
-        'https://via.placeholder.com/300x400/8B4513/FFFFFF?text=Donde+el+Amor+nos+Ense%C3%B1%C3%B3+a+Volver'
-      ];
-      
-      // Buscar la imagen actual en la lista
-      const indexActual = urlsAlternativas.findIndex(url => 
-        imagen.src.includes(url.split('/')[2]) // Comparar dominio
-      );
-      
-      // Intentar siguiente URL
-      const siguienteIndex = indexActual === -1 ? 0 : indexActual + 1;
-      
-      if (siguienteIndex < urlsAlternativas.length) {
-        console.log(`🔄 Intentando URL alternativa ${siguienteIndex + 1}`);
-        imagen.src = urlsAlternativas[siguienteIndex] + '?t=' + new Date().getTime();
-      }
-    }
+    // Suavizar el desplazamiento a las secciones
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        
+        if (href !== '#') {
+          e.preventDefault();
+          
+          const targetElement = document.querySelector(href);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    });
     
+    // Sistema de respaldo para imágenes
     document.addEventListener('DOMContentLoaded', function() {
-      console.log('✅ Sitio cargado - Usando TU repositorio GitHub');
-      
-      // Verificar si la imagen de GitHub existe
-      const testImg = new Image();
-      testImg.onload = function() {
-        console.log('✅ portada3.png EXISTE en tu GitHub');
-        console.log('📏 Dimensiones:', this.width, 'x', this.height);
-      };
-      testImg.onerror = function() {
-        console.log('❌ portada3.png NO existe o no es accesible en GitHub');
-        console.log('💡 Verifica que el archivo esté en la raíz del repositorio');
-      };
-      testImg.src = 'https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/portada3.png?t=' + new Date().getTime();
-      
-      // Añadir timestamp a todas las imágenes
-      const timestamp = new Date().getTime();
       const imagenes = document.querySelectorAll('img');
-      imagenes.forEach(img => {
+      
+      imagenes.forEach(imagen => {
+        imagen.addEventListener('error', function() {
+          console.log('⚠️ Imagen no cargada: ' + this.src);
+          
+          // Intentar con respaldo de ImgBB
+          if (this.src.includes('portada1.png')) {
+            this.src = 'https://i.ibb.co/B2cbVbTx/portada3.png?t=' + new Date().getTime();
+          } else if (this.src.includes('portada2.png')) {
+            this.src = 'https://i.ibb.co/B2cbVbTx/portada3.png?t=' + new Date().getTime();
+          } else if (this.src.includes('autor.png')) {
+            this.src = 'https://via.placeholder.com/200/8B4513/FFFFFF?text=J.+LÓPEZ+M.';
+          }
+        });
+      });
+      
+      // Añadir timestamp para evitar caché
+      const timestamp = new Date().getTime();
+      const imagenesPrincipales = document.querySelectorAll('.portada-libro-img, .avatar-autor');
+      
+      imagenesPrincipales.forEach(img => {
         if (!img.src.includes('?t=')) {
           img.src = img.src + '?t=' + timestamp;
         }
-      });
-      
-      // Animación para las tarjetas
-      const tarjetas = document.querySelectorAll('.tarjeta-libro');
-      tarjetas.forEach((tarjeta, index) => {
-        tarjeta.style.opacity = '0';
-        tarjeta.style.transform = 'translateY(20px)';
-        
-        setTimeout(() => {
-          tarjeta.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-          tarjeta.style.opacity = '1';
-          tarjeta.style.transform = 'translateY(0)';
-        }, 200 + (index * 150));
-      });
-      
-      // Navegación suave
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-          const href = this.getAttribute('href');
-          
-          if (href !== '#' && !href.includes('.html')) {
-            e.preventDefault();
-            
-            const targetElement = document.querySelector(href);
-            if (targetElement) {
-              const headerHeight = 100;
-              const targetPosition = targetElement.offsetTop - headerHeight;
-              
-              window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-              });
-            }
-          }
-        });
       });
     });
   </script>
