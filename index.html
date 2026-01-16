@@ -548,10 +548,12 @@
         imagen.addEventListener('error', function() {
           console.log('⚠️ Imagen no cargada: ' + this.src);
           
-          // Intentar con respaldo de ImgBB
+          // Intentar con respaldo de ImgBB si las de GitHub fallan
           if (this.src.includes('portada1.png')) {
-            this.src = 'https://i.ibb.co/B2cbVbTx/portada3.png?t=' + new Date().getTime();
+            this.src = 'https://i.ibb.co/2cvR9yP/portada1.png?t=' + new Date().getTime();
           } else if (this.src.includes('portada2.png')) {
+            this.src = 'https://i.ibb.co/9WbT2jB/portada2.png?t=' + new Date().getTime();
+          } else if (this.src.includes('portada3.png')) {
             this.src = 'https://i.ibb.co/B2cbVbTx/portada3.png?t=' + new Date().getTime();
           } else if (this.src.includes('autor.png')) {
             this.src = 'https://via.placeholder.com/200/8B4513/FFFFFF?text=J.+LÓPEZ+M.';
