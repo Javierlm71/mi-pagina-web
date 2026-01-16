@@ -418,7 +418,8 @@
         <!-- Libro 1: Amor Prohibido -->
         <article class="tarjeta-libro">
           <div class="portada-contenedor">
-            <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/portada1.png" 
+            <!-- IMAGEN DE RESPALDO SEGURO -->
+            <img src="https://i.ibb.co/2cvR9yP/portada1.png" 
                  alt="Portada Amor Prohibido en Pueblo Tradicional" 
                  class="portada-libro-img">
           </div>
@@ -439,7 +440,8 @@
         <!-- Libro 2: Nacen los Hermanos -->
         <article class="tarjeta-libro">
           <div class="portada-contenedor">
-            <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/portada2.png" 
+            <!-- IMAGEN DE RESPALDO SEGURO -->
+            <img src="https://i.ibb.co/9WbT2jB/portada2.png" 
                  alt="Portada Nacen los Hermanos" 
                  class="portada-libro-img">
           </div>
@@ -461,7 +463,8 @@
         <article class="tarjeta-libro">
           <div class="portada-contenedor">
             <span class="etiqueta-nuevo">¡NUEVA OBRA!</span>
-            <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/portada3.png" 
+            <!-- IMAGEN DE RESPALDO SEGURO -->
+            <img src="https://i.ibb.co/B2cbVbTx/portada3.png" 
                  alt="Portada Donde el Amor nos Enseñó a Volver" 
                  class="portada-libro-img">
           </div>
@@ -487,7 +490,8 @@
       
       <div class="contenido-autor">
         <div class="foto-autor">
-          <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/autor.png" 
+          <!-- IMAGEN DE RESPALDO SEGURO -->
+          <img src="https://i.ibb.co/k5g2R8t/autor.png" 
                alt="J. LÓPEZ M." 
                class="avatar-autor"
                onerror="this.src='https://via.placeholder.com/200/8B4513/FFFFFF?text=J.+LÓPEZ+M.'">
@@ -540,28 +544,8 @@
       });
     });
     
-    // Sistema de respaldo para imágenes
+    // Añadir timestamp para evitar caché
     document.addEventListener('DOMContentLoaded', function() {
-      const imagenes = document.querySelectorAll('img');
-      
-      imagenes.forEach(imagen => {
-        imagen.addEventListener('error', function() {
-          console.log('⚠️ Imagen no cargada: ' + this.src);
-          
-          // Intentar con respaldo de ImgBB si las de GitHub fallan
-          if (this.src.includes('portada1.png')) {
-            this.src = 'https://i.ibb.co/2cvR9yP/portada1.png?t=' + new Date().getTime();
-          } else if (this.src.includes('portada2.png')) {
-            this.src = 'https://i.ibb.co/9WbT2jB/portada2.png?t=' + new Date().getTime();
-          } else if (this.src.includes('portada3.png')) {
-            this.src = 'https://i.ibb.co/B2cbVbTx/portada3.png?t=' + new Date().getTime();
-          } else if (this.src.includes('autor.png')) {
-            this.src = 'https://via.placeholder.com/200/8B4513/FFFFFF?text=J.+LÓPEZ+M.';
-          }
-        });
-      });
-      
-      // Añadir timestamp para evitar caché
       const timestamp = new Date().getTime();
       const imagenesPrincipales = document.querySelectorAll('.portada-libro-img, .avatar-autor');
       
