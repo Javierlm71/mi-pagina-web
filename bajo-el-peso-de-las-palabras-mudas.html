@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bajo el peso de las palabras mudas | J. LÓPEZ M.</title>
+    <meta name="description" content="Bajo el peso de las palabras mudas - La nueva novela de J. López M. Una historia sobre el peso del silencio, la herencia emocional y la justicia tardía de un abrazo.">
+    <meta name="author" content="J. LÓPEZ M.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-primario: #2C3E50;
+            --color-primario-oscuro: #1A2A3A;
+            --color-secundario: #8B5A2B;
+            --color-terciario: #5D3A1A;
+            --color-fondo: #FDF8F0;
+            --color-texto: #2C3E50;
+            --color-blanco: #FFFFFF;
+            --color-sombra: rgba(44, 62, 80, 0.1);
+            --transicion: all 0.3s ease;
+            --borde-redondeado: 8px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            line-height: 1.7;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Crimson Text', serif;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transicion);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .header-libro {
+            background: linear-gradient(135deg, var(--color-primario), var(--color-primario-oscuro));
+            color: var(--color-blanco);
+            padding: 40px 20px 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        
+        .header-libro h1 {
+            font-size: 2.2em;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header-libro p {
+            font-size: 1.1em;
+            opacity: 0.95;
+            margin-bottom: 25px;
+        }
+        
+        .navegacion-libro {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .navegacion-libro a {
+            padding: 8px 18px;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95em;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .navegacion-libro a:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+        
+        .contenedor {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .seccion-superior {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            margin-bottom: 50px;
+            align-items: start;
+        }
+        
+        @media (max-width: 768px) {
+            .seccion-superior {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        
+        .portada-libro {
+            text-align: center;
+        }
+        
+        .portada-img {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto 20px;
+            border-radius: var(--borde-redondeado);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, #2C3E50 0%, #5D3A1A 100%);
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 380px;
+        }
+        
+        .portada-img img {
+            max-height: 350px;
+            max-width: 100%;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+        
+        .etiqueta-nuevo {
+            background-color: #27ae60;
+            color: var(--color-blanco);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.9em;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .info-libro h2 {
+            color: var(--color-secundario);
+            font-size: 2.2em;
+            margin-bottom: 15px;
+        }
+        
+        .detalles-libro {
+            background-color: rgba(44, 62, 80, 0.05);
+            padding: 20px;
+            border-radius: var(--borde-redondeado);
+            margin-bottom: 25px;
+            border-left: 4px solid var(--color-primario);
+        }
+        
+        .detalles-libro p {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+        
+        .asin-info {
+            background-color: rgba(39, 174, 96, 0.1);
+            padding: 10px 15px;
+            border-radius: var(--borde-redondeado);
+            margin-top: 10px;
+            font-size: 0.95em;
+            border-left: 3px solid #27ae60;
+        }
+        
+        .botones-accion {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .boton {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 25px;
+            background-color: var(--color-primario);
+            color: var(--color-blanco);
+            border-radius: var(--borde-redondeado);
+            font-weight: 600;
+            transition: var(--transicion);
+            border: none;
+            cursor: pointer;
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+        }
+        
+        .boton:hover {
+            background-color: var(--color-primario-oscuro);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(44, 62, 80, 0.3);
+        }
+        
+        .boton-volver {
+            background-color: #6c757d;
+        }
+        
+        .boton-volver:hover {
+            background-color: #545b62;
+        }
+        
+        .boton-amazon {
+            background-color: #ff9900;
+        }
+        
+        .boton-amazon:hover {
+            background-color: #e68a00;
+        }
+        
+        .seccion-sinopsis {
+            margin-bottom: 50px;
+        }
+        
+        .seccion-sinopsis h3 {
+            color: var(--color-secundario);
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(44, 62, 80, 0.2);
+        }
+        
+        .contenido-sinopsis {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        
+        .contenido-sinopsis p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .cita-inicio {
+            font-size: 1.3em;
+            font-weight: 600;
+            text-align: center;
+            color: var(--color-terciario);
+            margin: 30px 0;
+            line-height: 1.6;
+            font-style: italic;
+        }
+        
+        .cita-destacada {
+            background-color: rgba(44, 62, 80, 0.05);
+            padding: 30px;
+            border-radius: var(--borde-redondeado);
+            margin: 40px 0;
+            border-left: 5px solid var(--color-primario);
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.7;
+            text-align: center;
+        }
+        
+        .nota-autor {
+            background-color: rgba(139, 90, 43, 0.05);
+            padding: 25px;
+            border-radius: var(--borde-redondeado);
+            margin-top: 40px;
+            border-top: 1px solid rgba(139, 90, 43, 0.1);
+        }
+        
+        .nota-autor h4 {
+            color: var(--color-terciario);
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .nota-autor p {
+            font-style: italic;
+        }
+        
+        .firma-autor {
+            margin-top: 15px;
+            font-weight: 600;
+            color: var(--color-primario);
+            text-align: right;
+        }
+        
+        .footer-libro {
+            background-color: var(--color-primario-oscuro);
+            color: #f5deb3;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-libro p {
+            margin-bottom: 15px;
+        }
+        
+        .enlace-footer {
+            color: #f5deb3;
+            font-weight: 600;
+            border-bottom: 1px dotted #f5deb3;
+        }
+        
+        .enlace-footer:hover {
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .header-libro h1 {
+                font-size: 1.8em;
+            }
+            
+            .info-libro h2 {
+                font-size: 1.8em;
+            }
+            
+            .botones-accion {
+                flex-direction: column;
+            }
+            
+            .boton {
+                width: 100%;
+            }
+            
+            .cita-inicio {
+                font-size: 1.1em;
+            }
+            
+            .portada-img {
+                min-height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-libro">
+        <h1>Bajo el peso de las palabras mudas</h1>
+        <p>por J. LÓPEZ M. — Una novela sobre el silencio heredado, la ausencia y la justicia tardía del abrazo</p>
+        
+        <nav class="navegacion-libro">
+            <a href="index.html">Inicio</a>
+            <a href="#sinopsis">Esta obra</a>
+            <a href="amor-prohibido.html">Amor Prohibido</a>
+            <a href="nacen-hermanos.html">Nacen los Hermanos</a>
+            <a href="donde-el-amor-nos-enseno-a-volver.html">Donde el Amor nos Enseñó a Volver</a>
+            <a href="index.html#autor">Sobre el autor</a>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+        <section class="seccion-superior">
+            <div class="portada-libro">
+                <span class="etiqueta-nuevo">¡NUEVA OBRA 2026!</span>
+                <div class="portada-img">
+                    <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/bajo-el-peso-de-las-palabras-mudas.png" 
+                         alt="Portada Bajo el peso de las palabras mudas"
+                         onerror="this.src='https://via.placeholder.com/300x380/2C3E50/f5deb3?text=Bajo+el+peso+de+las+palabras+mudas'">
+                </div>
+                <p><em>Portada Bajo el peso de las palabras mudas</em></p>
+            </div>
+            
+            <div class="info-libro">
+                <h2>Bajo el peso de las palabras mudas</h2>
+                
+                <div class="detalles-libro">
+                    <p><strong>Formato eBook:</strong> ASIN B0GPP9JKV7 | $3,99 USD</p>
+                    <p><strong>Formato Tapa blanda:</strong> ASIN B0GPR2KM21 | $14,95 USD</p>
+                    <p><strong>Fecha de publicación:</strong> 22-23 febrero 2026</p>
+                    <div class="asin-info">
+                        <p><strong>Género:</strong> Ficción literaria / Drama familiar</p>
+                        <p><em>Disponible en Amazon Kindle y tapa blanda</em></p>
+                    </div>
+                </div>
+                
+                <div class="botones-accion">
+                    <a href="https://www.amazon.com/dp/B0GPP9JKV7" target="_blank" class="boton boton-amazon">
+                        📖 Comprar eBook
+                    </a>
+                    <a href="https://www.amazon.com/dp/B0GPR2KM21" target="_blank" class="boton boton-amazon">
+                        📚 Comprar Tapa blanda
+                    </a>
+                    <a href="index.html#libros" class="boton boton-volver">
+                        ← Volver a la biblioteca
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sinopsis" class="seccion-sinopsis">
+            <h3>Sinopsis</h3>
+            
+            <div class="contenido-sinopsis">
+                <div class="cita-inicio">
+                    <p>¿Puede el tiempo devolvernos lo que el silencio nos arrebató?</p>
+                </div>
+                
+                <p>Julián se marchó de su pueblo por obligación, convocado al servicio militar y dejando atrás el rastro de aserrín del taller de su padre. Se fue cargando con el peso de lo que no se atrevió a decir, creyendo que la distancia era una forma de protección. No sabía que el tiempo no perdona las ausencias y que el silencio tiene un precio que se cobra décadas después.</p>
+                
+                <p>Años más tarde, el regreso es inevitable. El pueblo sigue ahí, detenido en sus tradiciones y prejuicios, pero Julián ya no es el mismo. A pesar de su éxito profesional, descubre que no hay estudio ni título que cure el nudo en el pescuezo que le provoca el reencuentro con "ella". En un mundo de secretos heredados y mandatos familiares, Julián deberá enfrentar la verdad: hay decisiones que llegan tarde y palabras que, una vez calladas, ya no obedecen.</p>
+                
+                <div class="cita-destacada">
+                    <p>J. López M. nos entrega su obra más profunda hasta la fecha, consolidando el universo literario iniciado en <em>Nacen los Hermanos</em>, <em>Amor Prohibido en Pueblo Tradicional</em> y <em>Donde el Amor Nos Enseñó a Volver</em>.</p>
+                </div>
+                
+                <p>Con una maestría única en el uso de la psicología del dolor, el autor explora la herencia emocional, el peso del deber y la justicia tardía de un abrazo que llega cuando el alma ya ha aprendido a vivir en la sombra.</p>
+                
+                <p>Una novela imprescindible para quienes creen que el amor es justo, pero que la vida a veces nos enseña a volver por el camino más difícil.</p>
+                
+                <div class="nota-autor">
+                    <h4>Un mensaje del autor:</h4>
+                    <p>Esta novela nació de la necesidad de explorar lo que no se dice, lo que se queda atorado en la garganta por miedo, por deber o por el simple peso de las tradiciones. Julián es un personaje que lleva dentro a muchos hombres que crecieron creyendo que la distancia era una forma de proteger, cuando en realidad era una forma de huir. Escribir esta historia fue un acto de reconciliación con la idea de que nunca es tarde para volver, aunque el camino sea el más difícil.</p>
+                    <p class="firma-autor">— J. LÓPEZ M.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-libro">
+        <p>© 2026 J. LÓPEZ M. | <a href="index.html#libros" class="enlace-footer">Volver a la biblioteca</a></p>
+        <p><a href="index.html" class="enlace-footer">← Regresar al inicio</a></p>
+        <p style="margin-top: 20px; font-size: 0.9em;">
+            ASIN eBook: B0GPP9JKV7 | ASIN Tapa blanda: B0GPR2KM21<br>
+            Disponible en Amazon Kindle y tapa blanda
+        </p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && !href.startsWith('http')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        window.scrollTo({ top: target.offsetTop - 100, behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+        
+        const portada = document.querySelector('.portada-img img');
+        if (portada) {
+            portada.style.opacity = '0';
+            portada.style.transform = 'scale(0.95)';
+            portada.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            setTimeout(() => {
+                portada.style.opacity = '1';
+                portada.style.transform = 'scale(1)';
+            }, 200);
+        }
+    </script>
+</body>
+</html>
