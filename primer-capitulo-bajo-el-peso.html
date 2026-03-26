@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer Capítulo - Bajo el peso de las palabras mudas | J. LÓPEZ M.</title>
+    <meta name="description" content="Lee el primer capítulo de 'Bajo el peso de las palabras mudas' - Una novela sobre el peso del silencio, la ausencia y la justicia tardía del abrazo.">
+    <meta name="author" content="J. LÓPEZ M.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-primario: #2C3E50;
+            --color-secundario: #8B5A2B;
+            --color-terciario: #5D3A1A;
+            --color-fondo: #FDF8F0;
+            --color-texto: #2C3E50;
+            --color-blanco: #FFFFFF;
+            --color-sombra: rgba(44, 62, 80, 0.1);
+            --transicion: all 0.3s ease;
+            --borde-redondeado: 8px;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            line-height: 1.7;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1, h2 { font-family: 'Crimson Text', serif; font-weight: 700; }
+        
+        .encabezado {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--color-primario);
+        }
+        
+        .encabezado h1 {
+            color: var(--color-primario);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .cita-destacada {
+            font-style: italic;
+            color: var(--color-secundario);
+            font-size: 1.2rem;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: rgba(139, 90, 43, 0.05);
+            border-radius: 8px;
+            border-left: 4px solid var(--color-secundario);
+        }
+        
+        .ficha-tecnica {
+            background-color: var(--color-blanco);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px var(--color-sombra);
+            border: 1px solid rgba(44, 62, 80, 0.1);
+        }
+        
+        .ficha-tecnica h2 {
+            color: var(--color-primario);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .datos-libro {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+        }
+        
+        .dato-item { margin-bottom: 8px; font-size: 0.95rem; }
+        .dato-item strong { color: var(--color-primario); }
+        
+        .capitulo { margin-bottom: 40px; }
+        
+        .capitulo h2 {
+            color: var(--color-primario);
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(44, 62, 80, 0.2);
+        }
+        
+        .texto-capitulo {
+            font-size: 1rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+        
+        .texto-capitulo p {
+            margin-bottom: 20px;
+            text-indent: 30px;
+        }
+        
+        .acciones {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(44, 62, 80, 0.1);
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transicion);
+            font-size: 1rem;
+            min-width: 200px;
+        }
+        
+        .btn-comprar {
+            background: linear-gradient(135deg, #ff9900, #ffad33);
+            color: white;
+        }
+        
+        .btn-comprar:hover {
+            background: linear-gradient(135deg, #e68a00, #ff9900);
+            transform: translateY(-2px);
+        }
+        
+        .btn-volver {
+            background-color: transparent;
+            color: var(--color-primario);
+            border: 2px solid var(--color-primario);
+        }
+        
+        .btn-volver:hover {
+            background-color: var(--color-primario);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(44, 62, 80, 0.1);
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            .encabezado h1 { font-size: 1.6rem; }
+            .cita-destacada { font-size: 1rem; }
+            .btn { width: 100%; min-width: auto; }
+            .acciones { flex-direction: column; }
+            .texto-capitulo p { text-indent: 20px; }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="encabezado">
+        <h1>Bajo el peso de las palabras mudas</h1>
+        <div class="cita-destacada">
+            "Cuidar es quedarse. Cuidar es poner el cuerpo. Y yo, en mi huida constante, no supe hacerlo."
+        </div>
+        <p style="color: #666; font-style: italic;">por J. LÓPEZ M.</p>
+    </header>
+    
+    <section class="ficha-tecnica">
+        <h2>📋 Detalles del libro</h2>
+        <div class="datos-libro">
+            <div class="dato-item"><strong>ASIN eBook:</strong> B0GPP9JKV7</div>
+            <div class="dato-item"><strong>ASIN Tapa blanda:</strong> B0GPR2KM21</div>
+            <div class="dato-item"><strong>Fecha publicación:</strong> 22-23 febrero 2026</div>
+            <div class="dato-item"><strong>Género:</strong> Ficción literaria / Drama familiar</div>
+        </div>
+    </section>
+    
+    <section class="capitulo">
+        <h2>Capítulo 1 — El peso de la madera</h2>
+        <div class="texto-capitulo">
+            <p>Mi padre no sabía despedirse. Nunca lo vi decir adiós como en las películas, con esos discursos cargados de drama y música de fondo. Él soltaba las cosas como quien confía en la gravedad: sin exageración, sin promesas grandes, sin esos abrazos largos que parecen querer detener el reloj.</p>
+            
+            <p>Simplemente abría la mano y dejaba que la vida siguiera su curso, aunque por dentro se le estuviera partiendo el alma.</p>
+            
+            <p>La mañana en que me fui, el sol apenas empezaba a estirarse sobre el patio. Él estaba de pie, con las manos apoyadas en la mesa de madera que había labrado años atrás, cuando mis manos eran tan pequeñas que apenas alcanzaban el borde.</p>
+            
+            <p>Decía que una mesa bien hecha no era para ser un adorno de sala. Una mesa era para quedarse, para aguantar el peso de los platos y de las penas; para reunir a la familia y, sobre todo, para tener un lugar a donde volver. Yo, en mi arrogancia de muchacho, no entendía ese lenguaje de carpintero. Para mí, la mesa era solo un mueble; para él, era un ancla.</p>
+            
+            <p>—Cuidá de ella cuando yo ya no pueda —me dijo, con la voz tan seca como una rama quebrada.</p>
+            
+            <p>No levantó la vista. No me miró a los ojos. Lo dijo con una naturalidad que me dio escalofríos, como si me estuviera encargando una tarea sencilla, como cerrar una puerta para que no entre el aire. Pero en ese silencio que siguió a sus palabras, sentí el socollón en el pecho.</p>
+            
+            <p>Acepté. Yo siempre aceptaba, porque en mi casa el silencio era la ley y la obediencia el único camino.</p>
+            
+            <p>Salí de la casa con una mochila liviana, pero con un corazón que todavía no sabía lo que iba a cargar. Al pisar la calle, el suelo me pareció enorme, infinito, como cuando era un cipote y daba pasos torpes sin estar seguro de llegar al otro lado del patio. Caminé sin mirar atrás, apretando los dientes. En ese entonces, creía que no volver la cara era una muestra de valentía, cuando en realidad era el miedo más puro disfrazado de orgullo.</p>
+            
+            <p>Me fui joven, con esa soberbia de los que creen que el tiempo es un favor que siempre te espera en la esquina. En el ejército aprendí a marchar bajo el sol, a obedecer sin chistar y a endurecer el gesto para que nadie viera las grietas por donde se me escapaba la angustia.</p>
+            
+            <p>También se alistó conmigo el hermano de ella y, por supuesto, el recuerdo constante de su risa. Todavía podía sentir el corrientazo de su alegría, una marca que se quedó grabada con más fuerza que cualquier disciplina militar. Ella era sencilla, natural, con esa capacidad de llenar los espacios sin necesidad de hablar.</p>
+            
+            <p>Yo, en cambio, tenía palabras de sobra, pero todas se me quedaban atoradas en el gañote, como astillas que no me atrevía a escupir. El miedo se me sentó en el pecho como una orden superior que no se cuestiona. Nunca le dije nada. Nunca tuve el valor de ser libre.</p>
+            
+            <p>Después me fui otra vez. A estudiar, a crecer, a buscar un título para sentir que valía algo. Pensé que volver era solo cuestión de marcar una fecha en el calendario. Pero la vida es un río que sigue, aunque uno se baje en la orilla.</p>
+            
+            <p>Cuando regresé, el silencio de mi pueblo me recibió con la noticia que ya presentía en mis pesadillas. Ella tenía un anillo que brillaba con otra promesa, una casa que no era la nuestra y un hijo que llevaba un nombre que yo no elegí.</p>
+            
+            <p>No hubo reproches, porque no tenía derecho a reclamar lo que nunca me atreví a sembrar. Solo esa certeza muda y amarga de haber llegado tarde a mi propia felicidad. La felicité con una sonrisa fingida que me dolió hasta los huesos. Aprendí a cuidar desde lejos, en las sombras.</p>
+            
+            <p>Los años pasaron como una procesión lenta. Las cartas se hicieron menos hasta que no llegaron más. Y la promesa que le hice a mi padre… esa promesa empezó a pesarme como un fusil cargado en una marcha eterna.</p>
+            
+            <p>Hoy estoy de nuevo aquí, de pie frente a la misma mesa. La madera sigue firme, fiel a su naturaleza de quedarse, pero yo ya no tanto. Entiendo al fin lo que mi padre quiso decir: cuidar no es enviar dinero, ni recordar de vez en cuando.</p>
+            
+            <p>Cuidar es quedarse. Cuidar es poner el cuerpo. Y yo, en mi huida constante, no supe hacerlo.</p>
+            
+            <p style="text-align: center; font-style: italic; padding: 20px; background-color: rgba(44, 62, 80, 0.05); border-radius: 5px; margin: 25px 0;">
+                Respiro hondo. El pasado no grita, pero tampoco se va; se queda ahí, como el olor a madera vieja en los rincones. No miro atrás; esta vez sé que, si caigo sobre mis propias ruinas, todavía puedo aprender a levantarme.
+            </p>
+        </div>
+    </section>
+    
+    <div class="acciones">
+        <a href="https://www.amazon.com/dp/B0GPP9JKV7" target="_blank" class="btn btn-comprar">
+            🛒 Comprar en Amazon
+        </a>
+        <a href="index.html" class="btn btn-volver">
+            ← Volver a la biblioteca
+        </a>
+    </div>
+    
+    <footer class="footer">
+        <p>© 2026 J. LÓPEZ M. | <a href="index.html" style="color: var(--color-primario);">Volver al inicio</a></p>
+        <p style="margin-top: 10px;">ASIN: B0GPP9JKV7 (eBook) | B0GPR2KM21 (Tapa blanda)</p>
+    </footer>
+</body>
+</html>
