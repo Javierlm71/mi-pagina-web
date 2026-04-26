@@ -190,6 +190,49 @@
     .bio-autor h3 { color: var(--color-primario-oscuro); font-size: 1.6em; margin-bottom: 15px; }
     .bio-autor p { margin-bottom: 15px; }
     
+    /* Nueva sección de contacto */
+    .contacto {
+      background-color: rgba(184, 134, 11, 0.1);
+      padding: 30px 20px;
+      margin: 40px 0 20px 0;
+      border-radius: var(--borde-redondeado);
+      text-align: center;
+      border-bottom: 2px solid var(--color-primario);
+    }
+    .contacto h3 {
+      color: var(--color-terciario);
+      font-size: 1.4em;
+      margin-bottom: 15px;
+    }
+    .contacto-enlaces {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .contacto-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.1em;
+      padding: 8px 20px;
+      background-color: var(--color-blanco);
+      border-radius: 50px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: var(--transicion-rapida);
+    }
+    .contacto-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+    .contacto-item a {
+      color: var(--color-primario-oscuro);
+      font-weight: 600;
+    }
+    .contacto-item a:hover {
+      color: var(--color-primario);
+    }
+    
     footer {
       background-color: var(--color-secundario);
       color: #f5deb3;
@@ -212,6 +255,8 @@
       .portada-contenedor { height: 280px; }
       .portada-libro-img { max-height: 240px; }
       .contenido-tarjeta h3 { font-size: 1.3em; }
+      .contacto-enlaces { flex-direction: column; align-items: center; gap: 15px; }
+      .contacto-item { width: 80%; justify-content: center; }
     }
   </style>
 </head>
@@ -328,6 +373,19 @@
           <p>Escritor nicaragüense con una profunda pasión por explorar las complejidades del corazón humano a través de la ficción literaria. Su obra se caracteriza por una prosa sensible y reflexiva que aborda temas universales como el amor, la memoria, la redención y los lazos familiares.</p>
           <p>Cada una de sus novelas es una invitación a adentrarse en mundos donde los personajes enfrentan sus verdades más íntimas, desafiando silencios heredados y encontrando, en el proceso, caminos hacia la sanación y la comprensión.</p>
           <p>Con una narrativa que combina realismo emotivo y profundidad psicológica, J. López M. crea historias que resuenan con lectores que buscan más que entretenimiento: buscan conexión, significado y reflexión sobre las experiencias que nos hacen humanos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN DE CONTACTO -->
+    <section class="contacto">
+      <h3>📬 Conéctate con el Autor</h3>
+      <div class="contacto-enlaces">
+        <div class="contacto-item">
+          📧 <a href="mailto:jlopezmoficial@gmail.com">jlopezmoficial@gmail.com</a>
+        </div>
+        <div class="contacto-item">
+          📘 <a href="https://facebook.com/J.Lopez.M" target="_blank">Facebook: J. LÓPEZ M.</a>
         </div>
       </div>
     </section>
