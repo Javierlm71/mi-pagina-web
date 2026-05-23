@@ -29,10 +29,18 @@
     
     h1 {
       font-family: 'Crimson Text', serif;
-      font-size: 2.5em;
+      font-size: 2.2em;
       color: #8c6c10;
       text-align: center;
-      margin: 20px 0 10px;
+      margin: 20px 0 5px;
+    }
+    
+    .subtitulo {
+      text-align: center;
+      font-size: 1.1em;
+      color: #6b4226;
+      font-style: italic;
+      margin-bottom: 30px;
     }
     
     h2 {
@@ -53,33 +61,32 @@
     
     .portada {
       text-align: center;
-      margin: 30px 0;
+      margin: 20px 0;
     }
     
     .portada img {
       max-width: 100%;
-      max-height: 500px;
+      max-height: 400px;
       border-radius: 10px;
       box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-      border: 1px solid #e0d5c0;
     }
     
     .boton {
       display: inline-block;
-      margin: 20px 10px;
-      padding: 12px 30px;
+      margin: 10px 5px;
+      padding: 10px 25px;
       background-color: #b8860b;
       color: white;
       text-decoration: none;
       border-radius: 50px;
       font-weight: 600;
       transition: all 0.3s ease;
+      font-size: 0.9em;
     }
     
     .boton:hover {
       background-color: #8c6c10;
       transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(184, 134, 11, 0.3);
     }
     
     .boton-secundario {
@@ -93,25 +100,43 @@
       color: white;
     }
     
-    .ficha-tecnica {
-      background: white;
-      padding: 25px;
-      border-radius: 15px;
-      margin: 25px 0;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      border: 1px solid #e8e0d0;
+    .menu-principal {
+      text-align: center;
+      margin: 20px 0;
+      padding: 15px;
+      background-color: #f5efe6;
+      border-radius: 10px;
     }
     
-    .ficha-tecnica p {
-      margin: 12px 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    
-    .ficha-tecnica strong {
-      width: 140px;
+    .menu-principal a {
+      margin: 0 10px;
       color: #6b4226;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    .menu-principal a:hover {
+      color: #b8860b;
+    }
+    
+    .idiomas {
+      background-color: #2f1b0c;
+      color: #f5deb3;
+      padding: 8px;
+      text-align: center;
+      border-radius: 8px;
+      margin: 15px 0;
+      font-size: 0.85em;
+    }
+    
+    .idiomas a {
+      color: #f5deb3;
+      margin: 0 8px;
+      text-decoration: none;
+    }
+    
+    .idiomas a:hover {
+      color: #b8860b;
     }
     
     .sinopsis {
@@ -121,100 +146,120 @@
       margin: 30px 0;
       border-radius: 10px;
       font-style: italic;
-      font-size: 1.05em;
+    }
+    
+    .ficha-tecnica {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border: 1px solid #e8e0d0;
+    }
+    
+    .ficha-tecnica p {
+      margin: 10px 0;
+    }
+    
+    .ficha-tecnica strong {
+      color: #6b4226;
+      display: inline-block;
+      width: 130px;
+    }
+    
+    .precios {
+      background: linear-gradient(135deg, #f0e8dc, #e8dfd0);
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    
+    .precios p {
+      margin: 8px 0;
+    }
+    
+    .botones-compra {
+      text-align: center;
+      margin: 20px 0;
     }
     
     .capitulo {
       background: white;
       padding: 25px;
-      border-radius: 15px;
-      margin: 30px 0;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      margin: 25px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
     
     .capitulo p {
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       text-align: justify;
     }
     
     .nota-autor {
-      background: linear-gradient(135deg, #f5efe6, #ede5d8);
-      padding: 25px;
-      border-radius: 15px;
-      margin: 30px 0;
+      background: #f5efe6;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 25px 0;
       text-align: center;
       font-style: italic;
     }
     
-    .frase-destacada {
+    .frase {
       text-align: center;
-      font-size: 1.2em;
+      font-size: 1.1em;
       color: #8c6c10;
       font-style: italic;
-      margin: 40px 0;
-      padding: 20px;
-      background: linear-gradient(135deg, rgba(184,134,11,0.05), rgba(184,134,11,0.1));
-      border-radius: 15px;
-    }
-    
-    .idiomas {
-      background-color: #2f1b0c;
-      color: #f5deb3;
-      padding: 12px;
-      text-align: center;
-      border-radius: 10px;
-      margin: 20px 0;
-    }
-    
-    .idiomas a {
-      color: #f5deb3;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-    
-    .idiomas a:hover {
-      color: #b8860b;
-    }
-    
-    .botones-compra {
-      text-align: center;
       margin: 30px 0;
+      padding: 15px;
+      background: rgba(184,134,11,0.05);
+      border-radius: 10px;
     }
     
     hr {
       border: none;
-      border-top: 2px solid #e0d5c0;
-      margin: 40px 0;
+      border-top: 1px solid #e0d5c0;
+      margin: 30px 0;
     }
     
     footer {
       text-align: center;
-      margin-top: 50px;
-      padding-top: 30px;
+      margin-top: 40px;
+      padding-top: 20px;
       border-top: 1px solid #e0d5c0;
-      font-size: 0.85em;
+      font-size: 0.8em;
       color: #888;
     }
     
     @media (max-width: 768px) {
       .contenedor { padding: 15px; }
-      h1 { font-size: 2em; }
-      h2 { font-size: 1.5em; }
-      .ficha-tecnica p strong { width: 100%; }
-      .boton { display: block; margin: 10px 0; text-align: center; }
+      h1 { font-size: 1.8em; }
+      .ficha-tecnica strong { width: 100%; display: block; margin-bottom: 5px; }
+      .menu-principal a { display: inline-block; margin: 5px; }
+      .boton { display: block; margin: 10px; text-align: center; }
     }
   </style>
 </head>
 <body>
   <div class="contenedor">
-    <!-- Botón volver -->
-    <a href="index.html" class="boton">← Volver a la página principal</a>
+    <!-- Título principal -->
+    <h1>J. LÓPEZ M.</h1>
+    <div class="subtitulo">Rosa Perdida del Rosal — Donde el odio termina y la vida florece</div>
+    
+    <!-- Menú principal -->
+    <div class="menu-principal">
+      <a href="index.html">Inicio</a> |
+      <a href="amor-prohibido.html">Amor Prohibido</a> |
+      <a href="bajo-el-peso-de-las-palabras-mudas.html">Bajo el peso...</a> |
+      <a href="nacen-hermanos.html">Nacen hermanos</a>
+    </div>
     
     <!-- Selector de idiomas -->
     <div class="idiomas">
       🌐 También disponible en: 
       <a href="#">🇪🇸 Español</a> | 
-      <a href="#">🇫🇷 Français</a> | 
+      <a href="#">🇫🇷 Français</a> |
       <a href="#">🇬🇧 English</a>
     </div>
     
@@ -224,12 +269,9 @@
            alt="Portada de Rosa Perdida del Rosal">
     </div>
     
-    <h1>Rosa Perdida del Rosal</h1>
-    <p style="text-align: center; font-size: 1.2em; color: #6b4226; font-style: italic;">"Donde el odio termina y la vida florece"</p>
-    
     <!-- Sinopsis -->
     <div class="sinopsis">
-      <p><strong>📖 Sinopsis:</strong></p>
+      <p><strong>📖 Sinopsis</strong></p>
       <p>Los rosales no solo florecen... también guardan memoria.</p>
       <p>Rosa creció entre pétalos y silencios, creyendo que el mundo era tan puro como el agua que corría junto a su hogar. En aquel rincón donde todo parecía intacto, la vida transcurría con la calma de lo eterno.</p>
       <p>Pero hay historias que no se marchitan. Solo esperan.</p>
@@ -240,36 +282,42 @@
       <p><strong>En un mundo donde el amor, la sangre y el destino se entrelazan, todo tiene un precio. Y alguien tendrá que pagarlo.</strong></p>
     </div>
     
-    <!-- Ficha técnica -->
+    <!-- Frase destacada -->
+    <div class="frase">
+      "Hay deudas que no se pagan con monedas, sino con pétalos arrancados a destiempo y sangre que se niega a secar en la tierra de los padres."<br>
+      — J. LÓPEZ M.
+    </div>
+    
+    <!-- Detalles del libro -->
+    <h2>📋 Detalles del libro</h2>
     <div class="ficha-tecnica">
-      <p><strong>📖 Autor:</strong> J. López M.</p>
-      <p><strong>🎭 Género:</strong> Ficción literaria / Drama familiar</p>
+      <p><strong>📖 Autor:</strong> J. LÓPEZ M.</p>
+      <p><strong>🎭 Género:</strong> Novela / Drama familiar</p>
       <p><strong>📚 Formato:</strong> eBook Kindle | Tapa blanda</p>
       <p><strong>📄 Páginas:</strong> 402 páginas</p>
-      <p><strong>📅 Fecha de publicación:</strong> 19 de mayo de 2026 (eBook) | 20 de mayo de 2026 (Tapa blanda)</p>
-      <p><strong>🔢 ASIN:</strong> B0H28QM5VX (eBook) | B0H2D4VCWG (Tapa blanda)</p>
+      <p><strong>🔢 ASIN eBook:</strong> B0H28QM5VX</p>
+      <p><strong>🔢 ASIN Tapa blanda:</strong> B0H2D4VCWG</p>
       <p><strong>📚 ISBN-13:</strong> 9798197400284</p>
+      <p><strong>📅 Fecha publicación:</strong> 19 de mayo de 2026 (eBook) | 20 de mayo de 2026 (Tapa blanda)</p>
       <p><strong>🏢 Publicado por:</strong> Kindle Direct Publishing (KDP Select)</p>
     </div>
     
-    <!-- Precios y compra -->
-    <div class="botones-compra">
-      <p><strong>📚 Kindle:</strong> $3.50 USD (con Kindle Unlimited)</p>
-      <p><strong>📖 Tapa blanda:</strong> $15.00 USD</p>
-      <a href="https://www.amazon.com/dp/B0H28QM5VX" target="_blank" class="boton">📱 Comprar en Amazon (eBook)</a>
-      <a href="https://www.amazon.com/dp/B0H2D4VCWG" target="_blank" class="boton boton-secundario">📖 Comprar Tapa blanda</a>
+    <!-- Precios -->
+    <div class="precios">
+      <p>📚 <strong>Kindle:</strong> $3.50 USD (con Kindle Unlimited)</p>
+      <p>📖 <strong>Tapa blanda:</strong> $15.00 USD</p>
     </div>
     
-    <!-- Frase destacada -->
-    <div class="frase-destacada">
-      "Hay deudas que no se pagan con monedas, sino con pétalos arrancados a destiempo y sangre que se niega a secar en la tierra de los padres."<br>
-      — J. LÓPEZ M.
+    <!-- Botones de compra -->
+    <div class="botones-compra">
+      <a href="https://www.amazon.com/dp/B0H28QM5VX" target="_blank" class="boton">📱 Comprar en Amazon (eBook)</a>
+      <a href="https://www.amazon.com/dp/B0H2D4VCWG" target="_blank" class="boton boton-secundario">📖 Comprar Tapa blanda</a>
     </div>
     
     <hr>
     
     <!-- Capítulo 1 -->
-    <h2>📖 Capítulo 1: La Herencia de los Pétalos</h2>
+    <h2>📖 Capítulo 1 — La Herencia de los Pétalos</h2>
     
     <div class="capitulo">
       <p>La Hacienda "Don Pedro" no era solo una propiedad: era un reino de aromas. Desde los cerros, el viento bajaba con el olor punzante del pino, entrelazado con el dulzor pesado, casi embriagador, de las rosas que cubrían la tierra como una alfombra de sangre, nieve y oro. La casa señorial presidía el valle, rígida y ajena a la explosión de colores que la rodeaba.</p>
@@ -307,23 +355,20 @@
     <div class="nota-autor">
       <p><strong>📝 Nota del autor:</strong></p>
       <p>"Escribir <em>Rosa Perdida del Rosal</em> ha sido un descenso a mis propias sombras y un ascenso necesario hacia la luz. Esta novela nació del olor a pino y rosas, de la memoria de los silencios que tardan una vida en romperse. Con ella, quiero contar la fuerza del perdón y la esperanza que emerge cuando dos almas se atreven a enfrentar la verdad. El rosal más hermoso es aquel que ha hundido sus raíces en lo que todos callan, porque solo la verdad tiene el poder de convertir la espina en flor."</p>
-      <p style="margin-top: 15px;">— J. LÓPEZ M.</p>
+      <p style="margin-top: 10px;">— J. LÓPEZ M.</p>
     </div>
     
-    <hr>
-    
-    <p style="text-align: center; font-size: 0.9em; color: #888;">¿Quieres seguir leyendo? Adquiere el libro completo en Amazon Kindle y en formato físico.</p>
-    
-    <div style="text-align: center; margin: 40px 0;">
-      <a href="index.html" class="boton">← Volver a la página principal</a>
-      <a href="#inicio" class="boton boton-secundario">↑ Volver al inicio</a>
+    <!-- Botones finales -->
+    <div class="botones-compra">
+      <a href="https://www.amazon.com/dp/B0H28QM5VX" target="_blank" class="boton">🛒 Comprar en Amazon</a>
+      <a href="index.html" class="boton boton-secundario">← Volver a la biblioteca</a>
     </div>
     
+    <!-- Footer -->
     <footer>
       <p>© 2026 J. LÓPEZ M. — Todos los derechos reservados.</p>
-      <p><em>Rosa Perdida del Rosal</em> - Una novela sobre el peso de los silencios heredados</p>
-      <p>ASIN: B0H28QM5VX (eBook) | B0H2D4VCWG (Tapa blanda) | ISBN: 9798197400284</p>
       <p>Esta es una obra de ficción. Cualquier semejanza con personas reales es mera coincidencia.</p>
+      <p>ASIN: B0H28QM5VX (eBook) | B0H2D4VCWG (Tapa blanda)</p>
     </footer>
   </div>
 </body>
