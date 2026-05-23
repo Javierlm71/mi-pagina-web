@@ -18,11 +18,11 @@
       font-family: 'Open Sans', sans-serif;
       background-color: #fffaf2;
       color: #2f1b0c;
-      line-height: 1.8;
+      line-height: 1.7;
     }
     
     .contenedor {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 20px;
     }
@@ -48,7 +48,7 @@
       font-family: 'Crimson Text', serif;
       color: #8c6c10;
       margin: 25px 0 10px;
-      font-size: 1.4em;
+      font-size: 1.3em;
     }
     
     .portada {
@@ -64,9 +64,9 @@
       border: 1px solid #e0d5c0;
     }
     
-    .boton-volver {
+    .boton {
       display: inline-block;
-      margin: 20px 0;
+      margin: 20px 10px;
       padding: 12px 30px;
       background-color: #b8860b;
       color: white;
@@ -76,10 +76,21 @@
       transition: all 0.3s ease;
     }
     
-    .boton-volver:hover {
+    .boton:hover {
       background-color: #8c6c10;
       transform: translateY(-2px);
       box-shadow: 0 5px 15px rgba(184, 134, 11, 0.3);
+    }
+    
+    .boton-secundario {
+      background-color: transparent;
+      color: #b8860b;
+      border: 2px solid #b8860b;
+    }
+    
+    .boton-secundario:hover {
+      background-color: #b8860b;
+      color: white;
     }
     
     .ficha-tecnica {
@@ -99,7 +110,7 @@
     }
     
     .ficha-tecnica strong {
-      width: 130px;
+      width: 140px;
       color: #6b4226;
     }
     
@@ -126,15 +137,48 @@
       text-align: justify;
     }
     
+    .nota-autor {
+      background: linear-gradient(135deg, #f5efe6, #ede5d8);
+      padding: 25px;
+      border-radius: 15px;
+      margin: 30px 0;
+      text-align: center;
+      font-style: italic;
+    }
+    
     .frase-destacada {
       text-align: center;
-      font-size: 1.3em;
+      font-size: 1.2em;
       color: #8c6c10;
       font-style: italic;
       margin: 40px 0;
       padding: 20px;
       background: linear-gradient(135deg, rgba(184,134,11,0.05), rgba(184,134,11,0.1));
       border-radius: 15px;
+    }
+    
+    .idiomas {
+      background-color: #2f1b0c;
+      color: #f5deb3;
+      padding: 12px;
+      text-align: center;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    
+    .idiomas a {
+      color: #f5deb3;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    
+    .idiomas a:hover {
+      color: #b8860b;
+    }
+    
+    .botones-compra {
+      text-align: center;
+      margin: 30px 0;
     }
     
     hr {
@@ -157,29 +201,33 @@
       h1 { font-size: 2em; }
       h2 { font-size: 1.5em; }
       .ficha-tecnica p strong { width: 100%; }
+      .boton { display: block; margin: 10px 0; text-align: center; }
     }
   </style>
 </head>
 <body>
   <div class="contenedor">
-    <a href="index.html" class="boton-volver">← Volver a la página principal</a>
+    <!-- Botón volver -->
+    <a href="index.html" class="boton">← Volver a la página principal</a>
     
+    <!-- Selector de idiomas -->
+    <div class="idiomas">
+      🌐 También disponible en: 
+      <a href="#">🇪🇸 Español</a> | 
+      <a href="#">🇫🇷 Français</a> | 
+      <a href="#">🇬🇧 English</a>
+    </div>
+    
+    <!-- Portada -->
     <div class="portada">
-      <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/Portada%20de%20402%20paginas%20Rosa%20perdida%20del%20Rosal%20(1).png" 
+      <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/rosa-perdida-del-rosal-portada.png" 
            alt="Portada de Rosa Perdida del Rosal">
     </div>
     
     <h1>Rosa Perdida del Rosal</h1>
     <p style="text-align: center; font-size: 1.2em; color: #6b4226; font-style: italic;">"Donde el odio termina y la vida florece"</p>
     
-    <div class="ficha-tecnica">
-      <p><strong>📖 Autor:</strong> J. López M.</p>
-      <p><strong>📅 Año de publicación:</strong> 2026</p>
-      <p><strong>📚 ISBN:</strong> 9798197400284</p>
-      <p><strong>📄 Páginas:</strong> 402</p>
-      <p><strong>🏷️ Género:</strong> Ficción literaria / Drama familiar</p>
-    </div>
-    
+    <!-- Sinopsis -->
     <div class="sinopsis">
       <p><strong>📖 Sinopsis:</strong></p>
       <p>Los rosales no solo florecen... también guardan memoria.</p>
@@ -192,12 +240,35 @@
       <p><strong>En un mundo donde el amor, la sangre y el destino se entrelazan, todo tiene un precio. Y alguien tendrá que pagarlo.</strong></p>
     </div>
     
+    <!-- Ficha técnica -->
+    <div class="ficha-tecnica">
+      <p><strong>📖 Autor:</strong> J. López M.</p>
+      <p><strong>🎭 Género:</strong> Ficción literaria / Drama familiar</p>
+      <p><strong>📚 Formato:</strong> eBook Kindle | Tapa blanda</p>
+      <p><strong>📄 Páginas:</strong> 402 páginas</p>
+      <p><strong>📅 Fecha de publicación:</strong> 19 de mayo de 2026 (eBook) | 20 de mayo de 2026 (Tapa blanda)</p>
+      <p><strong>🔢 ASIN:</strong> B0H28QM5VX (eBook) | B0H2D4VCWG (Tapa blanda)</p>
+      <p><strong>📚 ISBN-13:</strong> 9798197400284</p>
+      <p><strong>🏢 Publicado por:</strong> Kindle Direct Publishing (KDP Select)</p>
+    </div>
+    
+    <!-- Precios y compra -->
+    <div class="botones-compra">
+      <p><strong>📚 Kindle:</strong> $3.50 USD (con Kindle Unlimited)</p>
+      <p><strong>📖 Tapa blanda:</strong> $15.00 USD</p>
+      <a href="https://www.amazon.com/dp/B0H28QM5VX" target="_blank" class="boton">📱 Comprar en Amazon (eBook)</a>
+      <a href="https://www.amazon.com/dp/B0H2D4VCWG" target="_blank" class="boton boton-secundario">📖 Comprar Tapa blanda</a>
+    </div>
+    
+    <!-- Frase destacada -->
     <div class="frase-destacada">
-      "Hay deudas que no se pagan con monedas, sino con pétalos arrancados a destiempo y sangre que se niega a secar en la tierra de los padres."
+      "Hay deudas que no se pagan con monedas, sino con pétalos arrancados a destiempo y sangre que se niega a secar en la tierra de los padres."<br>
+      — J. LÓPEZ M.
     </div>
     
     <hr>
     
+    <!-- Capítulo 1 -->
     <h2>📖 Capítulo 1: La Herencia de los Pétalos</h2>
     
     <div class="capitulo">
@@ -232,18 +303,27 @@
       <p>Cuando ella apareció —con sus rasgos finos y esa elegancia natural que ya entonces intimidaba—, la competencia dejó de ser un juego. El amor se transformó en obsesión; la amistad, en rivalidad a muerte. Pedro recordaba la primera vez que los tres la vieron: el aire se volvió tan tenso como el que ahora se respiraba en la sala. Ninguno estaba dispuesto a perder. Ninguno sabía que ganar el trofeo significaría perder el alma y sembrar una hectárea de rosas sobre las cenizas de una traición que sus hijos, décadas después, todavía intentarían vengar.</p>
     </div>
     
+    <!-- Nota del autor -->
+    <div class="nota-autor">
+      <p><strong>📝 Nota del autor:</strong></p>
+      <p>"Escribir <em>Rosa Perdida del Rosal</em> ha sido un descenso a mis propias sombras y un ascenso necesario hacia la luz. Esta novela nació del olor a pino y rosas, de la memoria de los silencios que tardan una vida en romperse. Con ella, quiero contar la fuerza del perdón y la esperanza que emerge cuando dos almas se atreven a enfrentar la verdad. El rosal más hermoso es aquel que ha hundido sus raíces en lo que todos callan, porque solo la verdad tiene el poder de convertir la espina en flor."</p>
+      <p style="margin-top: 15px;">— J. LÓPEZ M.</p>
+    </div>
+    
     <hr>
     
     <p style="text-align: center; font-size: 0.9em; color: #888;">¿Quieres seguir leyendo? Adquiere el libro completo en Amazon Kindle y en formato físico.</p>
     
     <div style="text-align: center; margin: 40px 0;">
-      <a href="index.html" class="boton-volver">← Volver a la página principal</a>
+      <a href="index.html" class="boton">← Volver a la página principal</a>
+      <a href="#inicio" class="boton boton-secundario">↑ Volver al inicio</a>
     </div>
     
     <footer>
-      <p>© 2026 J. LÓPEZ M. - Todos los derechos reservados</p>
-      <p>"Rosa Perdida del Rosal" - Una novela sobre el peso de los silencios heredados</p>
-      <p>ISBN: 9798197400284</p>
+      <p>© 2026 J. LÓPEZ M. — Todos los derechos reservados.</p>
+      <p><em>Rosa Perdida del Rosal</em> - Una novela sobre el peso de los silencios heredados</p>
+      <p>ASIN: B0H28QM5VX (eBook) | B0H2D4VCWG (Tapa blanda) | ISBN: 9798197400284</p>
+      <p>Esta es una obra de ficción. Cualquier semejanza con personas reales es mera coincidencia.</p>
     </footer>
   </div>
 </body>
