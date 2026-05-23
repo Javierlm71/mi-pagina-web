@@ -4,372 +4,110 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rosa Perdida del Rosal | J. LÓPEZ M.</title>
-  <meta name="description" content="Rosa Perdida del Rosal - Una novela de J. López M. sobre el peso de los silencios heredados, la redención tardía y cómo las decisiones de los padres se convierten en espinas en el camino de los hijos.">
-  <meta name="author" content="J. LÓPEZ M.">
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Rosa Perdida del Rosal - Una novela de J. López M. sobre el peso de los silencios heredados.">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #fffaf2;
-      color: #2f1b0c;
-      line-height: 1.7;
-    }
-    
-    .contenedor {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    
-    h1 {
-      font-family: 'Crimson Text', serif;
-      font-size: 2.2em;
-      color: #8c6c10;
-      text-align: center;
-      margin: 20px 0 5px;
-    }
-    
-    .subtitulo {
-      text-align: center;
-      font-size: 1.1em;
-      color: #6b4226;
-      font-style: italic;
-      margin-bottom: 30px;
-    }
-    
-    h2 {
-      font-family: 'Crimson Text', serif;
-      color: #6b4226;
-      margin: 30px 0 15px;
-      font-size: 1.8em;
-      border-left: 4px solid #b8860b;
-      padding-left: 15px;
-    }
-    
-    h3 {
-      font-family: 'Crimson Text', serif;
-      color: #8c6c10;
-      margin: 25px 0 10px;
-      font-size: 1.3em;
-    }
-    
-    .portada {
-      text-align: center;
-      margin: 20px 0;
-    }
-    
-    .portada img {
-      max-width: 100%;
-      max-height: 400px;
-      border-radius: 10px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-    }
-    
-    .boton {
-      display: inline-block;
-      margin: 10px 5px;
-      padding: 10px 25px;
-      background-color: #b8860b;
-      color: white;
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      font-size: 0.9em;
-    }
-    
-    .boton:hover {
-      background-color: #8c6c10;
-      transform: translateY(-2px);
-    }
-    
-    .boton-secundario {
-      background-color: transparent;
-      color: #b8860b;
-      border: 2px solid #b8860b;
-    }
-    
-    .boton-secundario:hover {
-      background-color: #b8860b;
-      color: white;
-    }
-    
-    .menu-principal {
-      text-align: center;
-      margin: 20px 0;
-      padding: 15px;
-      background-color: #f5efe6;
-      border-radius: 10px;
-    }
-    
-    .menu-principal a {
-      margin: 0 10px;
-      color: #6b4226;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    
-    .menu-principal a:hover {
-      color: #b8860b;
-    }
-    
-    .idiomas {
-      background-color: #2f1b0c;
-      color: #f5deb3;
-      padding: 8px;
-      text-align: center;
-      border-radius: 8px;
-      margin: 15px 0;
-      font-size: 0.85em;
-    }
-    
-    .idiomas a {
-      color: #f5deb3;
-      margin: 0 8px;
-      text-decoration: none;
-    }
-    
-    .idiomas a:hover {
-      color: #b8860b;
-    }
-    
-    .sinopsis {
-      background: #f9f3e8;
-      padding: 25px;
-      border-left: 5px solid #b8860b;
-      margin: 30px 0;
-      border-radius: 10px;
-      font-style: italic;
-    }
-    
-    .ficha-tecnica {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      margin: 20px 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      border: 1px solid #e8e0d0;
-    }
-    
-    .ficha-tecnica p {
-      margin: 10px 0;
-    }
-    
-    .ficha-tecnica strong {
-      color: #6b4226;
-      display: inline-block;
-      width: 130px;
-    }
-    
-    .precios {
-      background: linear-gradient(135deg, #f0e8dc, #e8dfd0);
-      padding: 20px;
-      border-radius: 12px;
-      margin: 20px 0;
-      text-align: center;
-    }
-    
-    .precios p {
-      margin: 8px 0;
-    }
-    
-    .botones-compra {
-      text-align: center;
-      margin: 20px 0;
-    }
-    
-    .capitulo {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      margin: 25px 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    
-    .capitulo p {
-      margin-bottom: 18px;
-      text-align: justify;
-    }
-    
-    .nota-autor {
-      background: #f5efe6;
-      padding: 20px;
-      border-radius: 12px;
-      margin: 25px 0;
-      text-align: center;
-      font-style: italic;
-    }
-    
-    .frase {
-      text-align: center;
-      font-size: 1.1em;
-      color: #8c6c10;
-      font-style: italic;
-      margin: 30px 0;
-      padding: 15px;
-      background: rgba(184,134,11,0.05);
-      border-radius: 10px;
-    }
-    
-    hr {
-      border: none;
-      border-top: 1px solid #e0d5c0;
-      margin: 30px 0;
-    }
-    
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid #e0d5c0;
-      font-size: 0.8em;
-      color: #888;
-    }
-    
-    @media (max-width: 768px) {
-      .contenedor { padding: 15px; }
-      h1 { font-size: 1.8em; }
-      .ficha-tecnica strong { width: 100%; display: block; margin-bottom: 5px; }
-      .menu-principal a { display: inline-block; margin: 5px; }
-      .boton { display: block; margin: 10px; text-align: center; }
-    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Open Sans',sans-serif;background:#fffaf2;color:#2f1b0c;line-height:1.7;}
+    .contenedor{max-width:1000px;margin:0 auto;padding:20px;}
+    h1{font-family:'Crimson Text',serif;font-size:2.2em;color:#8c6c10;text-align:center;margin:20px 0 5px;}
+    .subtitulo{text-align:center;font-size:1.1em;color:#6b4226;font-style:italic;margin-bottom:30px;}
+    h2{font-family:'Crimson Text',serif;color:#6b4226;margin:30px 0 15px;font-size:1.8em;border-left:4px solid #b8860b;padding-left:15px;}
+    .portada{text-align:center;margin:20px 0;}
+    .portada img{max-width:100%;max-height:400px;border-radius:10px;box-shadow:0 8px 25px rgba(0,0,0,0.2);}
+    .boton{display:inline-block;margin:10px 5px;padding:10px 25px;background:#b8860b;color:white;text-decoration:none;border-radius:50px;font-weight:600;transition:.3s;}
+    .boton:hover{background:#8c6c10;}
+    .boton-secundario{background:transparent;color:#b8860b;border:2px solid #b8860b;}
+    .boton-secundario:hover{background:#b8860b;color:white;}
+    .menu{text-align:center;margin:20px 0;padding:15px;background:#f5efe6;border-radius:10px;}
+    .menu a{margin:0 10px;color:#6b4226;text-decoration:none;font-weight:600;}
+    .menu a:hover{color:#b8860b;}
+    .idiomas{background:#2f1b0c;color:#f5deb3;padding:8px;text-align:center;border-radius:8px;margin:15px 0;font-size:.85em;}
+    .idiomas a{color:#f5deb3;margin:0 8px;text-decoration:none;}
+    .idiomas a:hover{color:#b8860b;}
+    .sinopsis{background:#f9f3e8;padding:25px;border-left:5px solid #b8860b;margin:30px 0;border-radius:10px;font-style:italic;}
+    .frase{text-align:center;font-size:1.1em;color:#8c6c10;font-style:italic;margin:30px 0;padding:15px;background:rgba(184,134,11,0.05);border-radius:10px;}
+    .ficha{background:white;padding:20px;border-radius:12px;margin:20px 0;border:1px solid #e8e0d0;}
+    .ficha p{margin:10px 0;}
+    .ficha strong{color:#6b4226;display:inline-block;width:140px;}
+    .precios{background:linear-gradient(135deg,#f0e8dc,#e8dfd0);padding:20px;border-radius:12px;margin:20px 0;text-align:center;}
+    .botones-compra{text-align:center;margin:20px 0;}
+    hr{margin:30px 0;border:none;border-top:1px solid #e0d5c0;}
+    footer{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid #e0d5c0;font-size:.8em;color:#888;}
+    @media(max-width:768px){.ficha strong{width:100%;display:block;margin-bottom:5px;}.boton{display:block;margin:10px;}}
   </style>
 </head>
 <body>
-  <div class="contenedor">
-    <!-- Título principal -->
-    <h1>J. LÓPEZ M.</h1>
-    <div class="subtitulo">Rosa Perdida del Rosal — Donde el odio termina y la vida florece</div>
-    
-    <!-- Menú principal -->
-    <div class="menu-principal">
-      <a href="index.html">Inicio</a> |
-      <a href="amor-prohibido.html">Amor Prohibido</a> |
-      <a href="bajo-el-peso-de-las-palabras-mudas.html">Bajo el peso...</a> |
-      <a href="nacen-hermanos.html">Nacen hermanos</a>
-    </div>
-    
-    <!-- Selector de idiomas -->
-    <div class="idiomas">
-      🌐 También disponible en: 
-      <a href="#">🇪🇸 Español</a> | 
-      <a href="#">🇫🇷 Français</a> |
-      <a href="#">🇬🇧 English</a>
-    </div>
-    
-    <!-- Portada -->
-    <div class="portada">
-      <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/rosa-perdida-del-rosal-portada.png" 
-           alt="Portada de Rosa Perdida del Rosal">
-    </div>
-    
-    <!-- Sinopsis -->
-    <div class="sinopsis">
-      <p><strong>📖 Sinopsis</strong></p>
-      <p>Los rosales no solo florecen... también guardan memoria.</p>
-      <p>Rosa creció entre pétalos y silencios, creyendo que el mundo era tan puro como el agua que corría junto a su hogar. En aquel rincón donde todo parecía intacto, la vida transcurría con la calma de lo eterno.</p>
-      <p>Pero hay historias que no se marchitan. Solo esperan.</p>
-      <p>Años atrás, una promesa se rompió. Una amistad se convirtió en herida. Y lo que no se dijo... echó raíces en lo más profundo.</p>
-      <p>Hoy, sin saberlo, Rosa camina sobre ese pasado.</p>
-      <p>Porque hay culpas que no desaparecen. Decisiones que regresan. Sombras que crecen en silencio... hasta encontrar a quién alcanzar.</p>
-      <p>Y cuando la verdad empiece a florecer, no habrá inocencia capaz de detenerla.</p>
-      <p><strong>En un mundo donde el amor, la sangre y el destino se entrelazan, todo tiene un precio. Y alguien tendrá que pagarlo.</strong></p>
-    </div>
-    
-    <!-- Frase destacada -->
-    <div class="frase">
-      "Hay deudas que no se pagan con monedas, sino con pétalos arrancados a destiempo y sangre que se niega a secar en la tierra de los padres."<br>
-      — J. LÓPEZ M.
-    </div>
-    
-    <!-- Detalles del libro -->
-    <h2>📋 Detalles del libro</h2>
-    <div class="ficha-tecnica">
-      <p><strong>📖 Autor:</strong> J. LÓPEZ M.</p>
-      <p><strong>🎭 Género:</strong> Novela / Drama familiar</p>
-      <p><strong>📚 Formato:</strong> eBook Kindle | Tapa blanda</p>
-      <p><strong>📄 Páginas:</strong> 402 páginas</p>
-      <p><strong>🔢 ASIN eBook:</strong> B0H28QM5VX</p>
-      <p><strong>🔢 ASIN Tapa blanda:</strong> B0H2D4VCWG</p>
-      <p><strong>📚 ISBN-13:</strong> 9798197400284</p>
-      <p><strong>📅 Fecha publicación:</strong> 19 de mayo de 2026 (eBook) | 20 de mayo de 2026 (Tapa blanda)</p>
-      <p><strong>🏢 Publicado por:</strong> Kindle Direct Publishing (KDP Select)</p>
-    </div>
-    
-    <!-- Precios -->
-    <div class="precios">
-      <p>📚 <strong>Kindle:</strong> $3.50 USD (con Kindle Unlimited)</p>
-      <p>📖 <strong>Tapa blanda:</strong> $15.00 USD</p>
-    </div>
-    
-    <!-- Botones de compra -->
-    <div class="botones-compra">
-      <a href="https://www.amazon.com/dp/B0H28QM5VX" target="_blank" class="boton">📱 Comprar en Amazon (eBook)</a>
-      <a href="https://www.amazon.com/dp/B0H2D4VCWG" target="_blank" class="boton boton-secundario">📖 Comprar Tapa blanda</a>
-    </div>
-    
-    <hr>
-    
-    <!-- Capítulo 1 -->
-    <h2>📖 Capítulo 1 — La Herencia de los Pétalos</h2>
-    
-    <div class="capitulo">
-      <p>La Hacienda "Don Pedro" no era solo una propiedad: era un reino de aromas. Desde los cerros, el viento bajaba con el olor punzante del pino, entrelazado con el dulzor pesado, casi embriagador, de las rosas que cubrían la tierra como una alfombra de sangre, nieve y oro. La casa señorial presidía el valle, rígida y ajena a la explosión de colores que la rodeaba.</p>
-      
-      <p>Don Pedro permanecía en el corredor, observando el horizonte con ojos grises —del color de la ceniza que queda después de un incendio. Su piel blanca y su cabello de plata lo hacían parecer un espectro de otro tiempo. Su cuerpo estaba allí, pero su mente siempre vagaba: en el río, en el pasado, en las sombras de los hombres que alguna vez llamó hermanos.</p>
-      
-      <h3>El Llanto de la Elegancia</h3>
-      
-      <p>Adentro, en la penumbra de la sala, el aire parecía tener peso. Doña Amalia estaba sentada con la espalda tan recta que ni el dolor más profundo lograba quebrarla. Su cabello —una catarata oscura que le llegaba a la cintura— era lo único que parecía tener vida propia.</p>
-      
-      <p>Sus manos, delicadas y blancas como el nácar, subían y bajaban sobre sus mejillas, secando lágrimas que brotaban de una herida invisible. No era dolor reciente: era el dolor de lo que nunca pasó, o de lo que pasó hace tanto tiempo que se había vuelto parte de su anatomía. Amalia lloraba porque sabía que la paz de su hogar era una mentira sostenida por alfileres.</p>
-      
-      <h3>La Discordia en el Pasillo</h3>
-      
-      <p>Cerca de allí, el pasillo era una frontera invisible.</p>
-      
-      <p>Luis, el mayor, se mantenía erguido. Su cuerpo flaco recordaba a los pinos de los cerros: flexible ante el viento, imposible de arrancar. Su presencia imponía un orden que nadie más sentía, un deber que ocultaba un cansancio milenario.</p>
-      
-      <p>Juan, en cambio, era la vibración del trueno antes de la tormenta. Su rebeldía no era juventud, sino estrategia de guerra. En sus ojos se leía la palabra "venganza". Él no veía rosas: veía deudas. Veía los daños que la historia de su padre le había heredado, y estaba dispuesto a cobrarlos, pétalo por pétalo.</p>
-      
-      <p>Y entre ellos, como un milagro de la tierra, la niña. Su piel mestiza —ese tono entre amarillo y blanco que recordaba al amanecer sobre el rosal— era el único punto de luz. Sus ojos verdes no buscaban culpables: emanaban una fortaleza que ninguno de los hombres de la casa poseía. Ella era la sobreviviente del río, la que recordaba el frío del agua pero elegía el calor del sol.</p>
-      
-      <h3>El Eco de la Juventud</h3>
-      
-      <p>El olor a pino transportó a Don Pedro treinta años atrás, cuando aún no era dueño de la hacienda, sino solo un joven de piel tersa y sueños feroces.</p>
-      
-      <p>En aquel entonces no caminaba solo. A su lado estaban Marvin y Lucas. Tres sombras inseparables que recorrían las calles del pueblo como dueños de cada esquina. Su juego favorito era la conquista: competían por la sonrisa de la chica más hermosa, por el baile de la joven más esquiva. Eran hermanos de sangre elegida. Hasta que el destino les puso nombre a su destrucción.</p>
-      
-      <p><strong>Amalia.</strong></p>
-      
-      <p>Cuando ella apareció —con sus rasgos finos y esa elegancia natural que ya entonces intimidaba—, la competencia dejó de ser un juego. El amor se transformó en obsesión; la amistad, en rivalidad a muerte. Pedro recordaba la primera vez que los tres la vieron: el aire se volvió tan tenso como el que ahora se respiraba en la sala. Ninguno estaba dispuesto a perder. Ninguno sabía que ganar el trofeo significaría perder el alma y sembrar una hectárea de rosas sobre las cenizas de una traición que sus hijos, décadas después, todavía intentarían vengar.</p>
-    </div>
-    
-    <!-- Nota del autor -->
-    <div class="nota-autor">
-      <p><strong>📝 Nota del autor:</strong></p>
-      <p>"Escribir <em>Rosa Perdida del Rosal</em> ha sido un descenso a mis propias sombras y un ascenso necesario hacia la luz. Esta novela nació del olor a pino y rosas, de la memoria de los silencios que tardan una vida en romperse. Con ella, quiero contar la fuerza del perdón y la esperanza que emerge cuando dos almas se atreven a enfrentar la verdad. El rosal más hermoso es aquel que ha hundido sus raíces en lo que todos callan, porque solo la verdad tiene el poder de convertir la espina en flor."</p>
-      <p style="margin-top: 10px;">— J. LÓPEZ M.</p>
-    </div>
-    
-    <!-- Botones finales -->
-    <div class="botones-compra">
-      <a href="https://www.amazon.com/dp/B0H28QM5VX" target="_blank" class="boton">🛒 Comprar en Amazon</a>
-      <a href="index.html" class="boton boton-secundario">← Volver a la biblioteca</a>
-    </div>
-    
-    <!-- Footer -->
-    <footer>
-      <p>© 2026 J. LÓPEZ M. — Todos los derechos reservados.</p>
-      <p>Esta es una obra de ficción. Cualquier semejanza con personas reales es mera coincidencia.</p>
-      <p>ASIN: B0H28QM5VX (eBook) | B0H2D4VCWG (Tapa blanda)</p>
-    </footer>
+<div class="contenedor">
+  <h1>J. LÓPEZ M.</h1>
+  <div class="subtitulo">Rosa Perdida del Rosal — Donde el odio termina y la vida florece</div>
+
+  <div class="menu">
+    <a href="index.html">Inicio</a> |
+    <a href="amor-prohibido.html">Amor Prohibido</a> |
+    <a href="bajo-el-peso-de-las-palabras-mudas.html">Bajo el peso...</a> |
+    <a href="nacen-hermanos.html">Nacen hermanos</a>
   </div>
+
+  <div class="idiomas">
+    🌐 También disponible en:
+    <a href="#">🇪🇸 Español</a> |
+    <a href="#">🇫🇷 Français</a> |
+    <a href="#">🇬🇧 English</a>
+  </div>
+
+  <div class="portada">
+    <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/rosa-perdida-del-rosal-portada.png" alt="Portada Rosa Perdida del Rosal">
+  </div>
+
+  <div class="sinopsis">
+    <strong>📖 Sinopsis</strong><br><br>
+    Los rosales no solo florecen... también guardan memoria.<br><br>
+    Rosa creció entre pétalos y silencios, creyendo que el mundo era tan puro como el agua que corría junto a su hogar.<br><br>
+    Pero hay historias que no se marchitan. Solo esperan.<br><br>
+    Años atrás, una promesa se rompió. Una amistad se convirtió en herida.<br><br>
+    Hoy, sin saberlo, Rosa camina sobre ese pasado.<br><br>
+    Porque hay culpas que no desaparecen. Decisiones que regresan. Sombras que crecen en silencio.<br><br>
+    <strong>En un mundo donde el amor, la sangre y el destino se entrelazan, todo tiene un precio. Y alguien tendrá que pagarlo.</strong>
+  </div>
+
+  <div class="frase">
+    "Hay deudas que no se pagan con monedas, sino con pétalos arrancados a destiempo y sangre que se niega a secar en la tierra de los padres."<br>
+    — J. LÓPEZ M.
+  </div>
+
+  <h2>📋 Detalles del libro</h2>
+  <div class="ficha">
+    <p><strong>📖 Autor:</strong> J. LÓPEZ M.</p>
+    <p><strong>🎭 Género:</strong> Novela / Drama familiar</p>
+    <p><strong>📚 Formato:</strong> eBook Kindle | Tapa blanda</p>
+    <p><strong>📄 Páginas:</strong> 402 páginas</p>
+    <p><strong>🔢 ASIN eBook:</strong> B0H28QM5VX</p>
+    <p><strong>🔢 ASIN Tapa blanda:</strong> B0H2D4VCWG</p>
+    <p><strong>📚 ISBN-13:</strong> 9798197400284</p>
+    <p><strong>📅 Fecha publicación:</strong> 19 de mayo de 2026 (eBook) | 20 de mayo de 2026 (Tapa blanda)</p>
+    <p><strong>🏢 Publicado por:</strong> Kindle Direct Publishing (KDP Select)</p>
+  </div>
+
+  <div class="precios">
+    📚 <strong>Kindle:</strong> $3.50 USD (con Kindle Unlimited)<br>
+    📖 <strong>Tapa blanda:</strong> $15.00 USD
+  </div>
+
+  <div class="botones-compra">
+    <a href="https://www.amazon.com/dp/B0H28QM5VX" target="_blank" class="boton">📱 Comprar en Amazon (eBook)</a>
+    <a href="https://www.amazon.com/dp/B0H2D4VCWG" target="_blank" class="boton boton-secundario">📖 Comprar Tapa blanda</a>
+  </div>
+
+  <div class="botones-compra">
+    <a href="primer-capitulo-rosa-perdida.html" class="boton boton-secundario">📖 Leer primer capítulo (Detalle)</a>
+    <a href="index.html" class="boton boton-secundario">← Volver a la biblioteca</a>
+  </div>
+
+  <footer>
+    © 2026 J. LÓPEZ M. — Todos los derechos reservados.<br>
+    Esta es una obra de ficción. Cualquier semejanza con personas reales es mera coincidencia.<br>
+    ASIN: B0H28QM5VX (eBook) | B0H2D4VCWG (Tapa blanda)
+  </footer>
+</div>
 </body>
 </html>
