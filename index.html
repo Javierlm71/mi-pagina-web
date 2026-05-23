@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>J. LÓPEZ M. - Página Oficial del Autor</title>
-  <meta name="description" content="Página oficial del autor J. LÓPEZ M. Descubre sus novelas: Bajo el peso de las palabras mudas, Amor Prohibido en Pueblo Tradicional, Nacen los Hermanos y Donde el Amor nos Enseñó a Volver.">
-  <meta name="keywords" content="J. López M., autor nicaragüense, novelas, libros, ficción literaria, amor, familia, drama, Bajo el peso de las palabras mudas">
+  <meta name="description" content="Página oficial del autor J. LÓPEZ M. Descubre sus novelas: Rosa Perdida del Rosal, Bajo el peso de las palabras mudas, Amor Prohibido en Pueblo Tradicional, Nacen los Hermanos y Donde el Amor nos Enseñó a Volver.">
+  <meta name="keywords" content="J. López M., autor nicaragüense, novelas, libros, ficción literaria, amor, familia, drama, Rosa Perdida del Rosal, Bajo el peso de las palabras mudas">
   <meta name="author" content="J. LÓPEZ M.">
   
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
@@ -190,7 +190,6 @@
     .bio-autor h3 { color: var(--color-primario-oscuro); font-size: 1.6em; margin-bottom: 15px; }
     .bio-autor p { margin-bottom: 15px; }
     
-    /* Nueva sección de contacto */
     .contacto {
       background-color: rgba(184, 134, 11, 0.1);
       padding: 30px 20px;
@@ -202,20 +201,20 @@
     .contacto h3 {
       color: var(--color-terciario);
       font-size: 1.4em;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
     .contacto-enlaces {
       display: flex;
       justify-content: center;
-      gap: 30px;
+      gap: 20px;
       flex-wrap: wrap;
     }
     .contacto-item {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      font-size: 1.1em;
-      padding: 8px 20px;
+      font-size: 1em;
+      padding: 8px 18px;
       background-color: var(--color-blanco);
       border-radius: 50px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -231,6 +230,16 @@
     }
     .contacto-item a:hover {
       color: var(--color-primario);
+    }
+    
+    .aviso-goodreads {
+      background-color: #f0f0e8;
+      padding: 12px;
+      margin-top: 20px;
+      border-radius: 8px;
+      font-size: 0.85em;
+      color: #555;
+      border-left: 4px solid var(--color-primario);
     }
     
     footer {
@@ -255,8 +264,8 @@
       .portada-contenedor { height: 280px; }
       .portada-libro-img { max-height: 240px; }
       .contenido-tarjeta h3 { font-size: 1.3em; }
-      .contacto-enlaces { flex-direction: column; align-items: center; gap: 15px; }
-      .contacto-item { width: 80%; justify-content: center; }
+      .contacto-enlaces { flex-direction: column; align-items: center; gap: 12px; }
+      .contacto-item { width: 90%; justify-content: center; }
     }
   </style>
 </head>
@@ -273,6 +282,7 @@
           <a href="#inicio">Inicio</a>
           <a href="#libros">Mis Libros</a>
           <a href="#autor">Sobre Mí</a>
+          <a href="#contacto">Contacto</a>
         </div>
       </nav>
     </div>
@@ -288,10 +298,27 @@
       <h2>Mis Obras</h2>
       
       <div class="grid-libros">
-        <!-- Libro 1: Bajo el peso de las palabras mudas (NUEVO) -->
+        <!-- LIBRO NUEVO: Rosa Perdida del Rosal -->
         <article class="tarjeta-libro">
           <div class="portada-contenedor">
             <span class="etiqueta-nuevo">¡NUEVA OBRA 2026!</span>
+            <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/Portada%20de%20402%20paginas%20Rosa%20perdida%20del%20Rosal%20(1).png" 
+                 alt="Portada Rosa Perdida del Rosal" 
+                 class="portada-libro-img">
+          </div>
+          <div class="contenido-tarjeta">
+            <h3>Rosa Perdida del Rosal</h3>
+            <p>Donde el odio termina y la vida florece. Una novela sobre el peso de los silencios heredados, la redención tardía y cómo las decisiones de los padres se convierten en espinas en el camino de los hijos.</p>
+            <div class="botones-accion">
+              <a href="rosa-perdida-del-rosal.html" class="boton">Conoce la historia</a>
+              <a href="primer-capitulo-rosa-perdida.html" class="boton boton-secundario">Detalle</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Libro 2: Bajo el peso de las palabras mudas -->
+        <article class="tarjeta-libro">
+          <div class="portada-contenedor">
             <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/bajo-el-peso-de-las-palabras-mudas.png" 
                  alt="Portada Bajo el peso de las palabras mudas" 
                  class="portada-libro-img">
@@ -306,7 +333,7 @@
           </div>
         </article>
 
-        <!-- Libro 2: Amor Prohibido -->
+        <!-- Libro 3: Amor Prohibido -->
         <article class="tarjeta-libro">
           <div class="portada-contenedor">
             <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/amor-prohibido.png" 
@@ -323,7 +350,7 @@
           </div>
         </article>
 
-        <!-- Libro 3: Nacen los Hermanos -->
+        <!-- Libro 4: Nacen los Hermanos -->
         <article class="tarjeta-libro">
           <div class="portada-contenedor">
             <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/nacen-hermanos.png" 
@@ -340,7 +367,7 @@
           </div>
         </article>
 
-        <!-- Libro 4: Donde el Amor nos Enseñó a Volver -->
+        <!-- Libro 5: Donde el Amor nos Enseñó a Volver -->
         <article class="tarjeta-libro">
           <div class="portada-contenedor">
             <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/portada3.png" 
@@ -365,8 +392,7 @@
         <div class="foto-autor">
           <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/autor.png" 
                alt="J. LÓPEZ M." 
-               class="avatar-autor"
-               onerror="this.src='https://via.placeholder.com/200/8B4513/FFFFFF?text=J.+LÓPEZ+M.'">
+               class="avatar-autor">
         </div>
         <div class="bio-autor">
           <h3>J. LÓPEZ M.</h3>
@@ -377,39 +403,37 @@
       </div>
     </section>
 
-   <!-- SECCIÓN DE CONTACTO ACTUALIZADA CON DOS CORREOS -->
-<section class="contacto">
-  <h3>📬 Conéctate con el Autor</h3>
-  
-  <!-- Correos oficiales (importante para Goodreads) -->
-  <div style="margin-bottom: 20px; padding: 15px; background-color: rgba(184, 134, 11, 0.12); border-radius: 10px;">
-    <p style="font-weight: 700; margin-bottom: 12px; color: #6b4226;">✉️ Correos electrónicos oficiales:</p>
-    <div class="contacto-enlaces">
-      <div class="contacto-item">📧 <a href="mailto:jlopezmoficial@gmail.com">jlopezmoficial@gmail.com</a></div>
-      <div class="contacto-item">📧 <a href="mailto:loaldiriamba72@gmail.com">loaldiriamba72@gmail.com</a></div>
-    </div>
-  </div>
+    <!-- SECCIÓN DE CONTACTO CON DOS CORREOS -->
+    <section id="contacto" class="contacto">
+      <h3>📬 Conéctate con el Autor</h3>
+      
+      <div style="margin-bottom: 20px; padding: 15px; background-color: rgba(184, 134, 11, 0.12); border-radius: 10px;">
+        <p style="font-weight: 700; margin-bottom: 12px; color: #6b4226;">✉️ Correos electrónicos oficiales:</p>
+        <div class="contacto-enlaces">
+          <div class="contacto-item">📧 <a href="mailto:jlopezmoficial@gmail.com">jlopezmoficial@gmail.com</a></div>
+          <div class="contacto-item">📧 <a href="mailto:loaldiriamba72@gmail.com">loaldiriamba72@gmail.com</a></div>
+        </div>
+      </div>
 
-  <!-- Redes sociales -->
-  <div>
-    <p style="font-weight: 600; margin-bottom: 12px; color: #6b4226;">🌐 Sígueme en:</p>
-    <div class="contacto-enlaces">
-      <div class="contacto-item">📘 <a href="https://facebook.com/J.Lopez.M" target="_blank">Facebook</a></div>
-      <div class="contacto-item">📚 <a href="https://www.goodreads.com/author/show/xxxxxxxxx" target="_blank">Goodreads</a></div>
-    </div>
-  </div>
+      <div>
+        <p style="font-weight: 600; margin-bottom: 12px; color: #6b4226;">🌐 Sígueme en:</p>
+        <div class="contacto-enlaces">
+          <div class="contacto-item">📘 <a href="https://facebook.com/J.Lopez.M" target="_blank">Facebook</a></div>
+          <div class="contacto-item">📚 <a href="https://www.goodreads.com/author/show/xxxxxxxxx" target="_blank">Goodreads</a></div>
+        </div>
+      </div>
 
-  <!-- Aviso para Goodreads -->
-  <div style="background-color: #f0f0e8; padding: 12px; margin-top: 20px; border-radius: 8px; font-size: 0.85em; color: #555; border-left: 4px solid #b8860b;">
-    📌 <strong>Para el Programa de Autores de Goodreads:</strong> Usa el correo <strong>loaldiriamba72@gmail.com</strong> para verificar tu cuenta.
-  </div>
-</section>
+      <div class="aviso-goodreads">
+        📌 <strong>Para el Programa de Autores de Goodreads:</strong> Usa el correo <strong>loaldiriamba72@gmail.com</strong> para verificar tu cuenta.
+      </div>
+    </section>
+  </main>
 
   <footer>
     <div class="contenedor">
       <div class="footer-contenido">
         <p>© 2026 J. LÓPEZ M. | Todos los derechos reservados</p>
-        <p><a href="#inicio" class="enlace-footer">Volver al inicio</a> | <a href="#libros" class="enlace-footer">Ver todos los libros</a></p>
+        <p><a href="#inicio" class="enlace-footer">Volver al inicio</a> | <a href="#libros" class="enlace-footer">Ver todos los libros</a> | <a href="#contacto" class="enlace-footer">Contacto</a></p>
         <div class="copyright">
           <p>Las portadas e imágenes son propiedad del autor.</p>
           <p>Disponible en Amazon Kindle y formato físico.</p>
@@ -422,7 +446,7 @@
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
-        if (href !== '#') {
+        if (href && href !== '#') {
           e.preventDefault();
           const target = document.querySelector(href);
           if (target) {
@@ -435,7 +459,9 @@
     document.addEventListener('DOMContentLoaded', function() {
       const timestamp = new Date().getTime();
       document.querySelectorAll('.portada-libro-img, .avatar-autor').forEach(img => {
-        if (!img.src.includes('?t=')) img.src = img.src + '?t=' + timestamp;
+        if (img.src.includes('raw.githubusercontent.com') && !img.src.includes('?t=')) {
+          img.src = img.src + '?t=' + timestamp;
+        }
       });
     });
   </script>
