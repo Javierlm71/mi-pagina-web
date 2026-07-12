@@ -3,10 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>J. LÓPEZ M. - Página Oficial del Autor</title>
-  <meta name="description" content="Página oficial del autor J. LÓPEZ M. Descubre sus novelas: El Dolor que No Pedí, Rosa Perdida del Rosal, Bajo el peso de las palabras mudas, Amor Prohibido en Pueblo Tradicional, Nacen los Hermanos y Donde el Amor nos Enseñó a Volver.">
-  <meta name="keywords" content="J. López M., autor nicaragüense, novelas, libros, ficción literaria, amor, familia, drama, El Dolor que No Pedí, Rosa Perdida del Rosal">
+  <title>El Dolor que No Pedí | Novela de Drama Familiar por J. López M.</title>
+  <meta name="description" content="Samuel Valverde lucha contra la culpa heredada de su familia en San Dionisio. Cuando Blanca llega al pueblo, ambos deberán romper ciclos de dolor. Nueva novela de J. López M. en Amazon Kindle y tapa blanda.">
+  <meta name="keywords" content="J. López M., autor nicaragüense, El Dolor que No Pedí, drama familiar, novela latinoamericana, herencia emocional, secretos familiares, San Dionisio">
   <meta name="author" content="J. LÓPEZ M.">
+  
+  <!-- Schema.org para que Google entienda que vendes libros -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Book",
+    "name":"El Dolor que No Pedí",
+    "author":{"@type":"Person","name":"J. López M.","sameAs":"https://www.goodreads.com/author/show/69806530.J_Lopez_M_"},
+    "url":"https://tuweb.com/el-dolor-que-no-pedi.html",
+    "image":"https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/el-dolor-que-no-pedi-portada.png",
+    "description":"Hay heridas que nacen antes que nosotros. Una conmovedora novela sobre el peso de la herencia emocional en San Dionisio.",
+    "isbn":"B0H5T8XKK3",
+    "bookFormat":"https://schema.org/EBook",
+    "offers":{
+      "@type":"Offer",
+      "price":"3.25",
+      "priceCurrency":"USD",
+      "availability":"https://schema.org/InStock",
+      "url":"https://amazon.com/dp/B0H5T8XKK3"
+    }
+  }
+  </script>
   
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   
@@ -79,6 +101,43 @@
     }
     .hero h2 { font-size: 2.2em; color: var(--color-terciario); margin-bottom: 15px; }
     .hero p { font-size: 1.1em; max-width: 800px; margin: 0 auto 25px; }
+    .hero-cta {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 32px;
+      background-color: var(--color-primario);
+      color: var(--color-blanco);
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1em;
+      box-shadow: 0 4px 15px rgba(184, 134, 11, 0.4);
+    }
+    .hero-cta:hover {
+      background-color: var(--color-primario-oscuro);
+      transform: translateY(-3px);
+    }
+    
+    .reseñas {
+      background-color: rgba(107, 66, 38, 0.05);
+      padding: 40px 20px;
+      border-radius: var(--borde-redondeado);
+      margin: 40px 0;
+      text-align: center;
+    }
+    .reseñas h2 { color: var(--color-terciario); margin-bottom: 30px; }
+    .reseña-item {
+      max-width: 700px;
+      margin: 0 auto 20px;
+      font-style: italic;
+      font-size: 1.05em;
+    }
+    .reseña-item span {
+      display: block;
+      margin-top: 8px;
+      font-style: normal;
+      font-weight: 600;
+      color: var(--color-primario-oscuro);
+    }
     
     .libros { padding: 50px 0; }
     .libros h2 { text-align: center; color: var(--color-terciario); font-size: 2em; margin-bottom: 40px; }
@@ -120,6 +179,13 @@
     
     .contenido-tarjeta { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
     .contenido-tarjeta h3 { color: var(--color-primario-oscuro); font-size: 1.4em; margin-bottom: 10px; }
+    .contenido-tarjeta .gancho {
+      font-style: italic;
+      color: var(--color-terciario);
+      font-size: 0.9em;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
     .contenido-tarjeta p { margin-bottom: 20px; flex-grow: 1; font-size: 0.95rem; }
     
     .etiqueta-nuevo {
@@ -166,6 +232,13 @@
     .boton-secundario:hover {
       background-color: var(--color-primario);
       color: var(--color-blanco);
+    }
+    .boton-amazon {
+      background-color: #FF9900;
+      font-weight: 700;
+    }
+    .boton-amazon:hover {
+      background-color: #e88a00;
     }
     
     .autor {
@@ -290,8 +363,22 @@
 
   <main class="contenedor">
     <section id="inicio" class="hero">
-      <h2>Historias que tocan el alma</h2>
-      <p>Explora universos literarios donde el amor, la memoria y la redención se entrelazan en narrativas profundas que reflejan la complejidad del ser humano. Cada novela es un viaje íntimo hacia la verdad del corazón.</p>
+      <h2>¿Cargas un dolor que no empezó contigo?</h2>
+      <p>Mis novelas son para quienes buscan romper herencias de silencio, culpa y secretos familiares. Historias donde el amor, la memoria y la redención se enfrentan a los fantasmas del pasado.</p>
+      <a href="#libros" class="hero-cta">Descubre El Dolor que No Pedí</a>
+    </section>
+
+    <!-- NUEVA SECCIÓN: PRUEBA SOCIAL -->
+    <section class="reseñas">
+      <h2>Lo que dicen los lectores</h2>
+      <div class="reseña-item">
+        "Sentí que Samuel era yo. Lloré, pero terminé con esperanza. Este libro te da permiso de soltar."
+        <span>★★★★★ María C., León</span>
+      </div>
+      <div class="reseña-item">
+        "J. López M. escribe sobre los silencios que todos cargamos en la familia. Necesario y sanador."
+        <span>★★★★★ Club de Lectura Diriamba</span>
+      </div>
     </section>
 
     <section id="libros" class="libros">
@@ -303,15 +390,16 @@
           <div class="portada-contenedor">
             <span class="etiqueta-nuevo">¡NUEVA OBRA 2026!</span>
             <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/el-dolor-que-no-pedi-portada.png" 
-                 alt="Portada El Dolor que No Pedí" 
+                 alt="Portada del libro El Dolor que No Pedí de J. López M. - Drama familiar en San Dionisio" 
                  class="portada-libro-img">
           </div>
           <div class="contenido-tarjeta">
             <h3>El Dolor que No Pedí</h3>
-            <p>Hay heridas que nacen antes que nosotros. Una conmovedora novela sobre el peso de la herencia emocional, los secretos familiares y la lucha por romper ciclos de dolor que parecen inevitables.</p>
+            <p class="gancho">"Porque hay vidas capaces de romper su cadena"</p>
+            <p>Samuel huyó de su apellido toda la vida. Pero en San Dionisio, los pecados de su padre lo estaban esperando. Cuando Blanca llega buscando un nuevo comienzo, ambos entenderán: puedes huir del pueblo, pero no de la sangre.</p>
             <div class="botones-accion">
-              <a href="el-dolor-que-no-pedi.html" class="boton">Conoce la historia</a>
-              <a href="primer-capitulo-el-dolor-que-no-pedi.html" class="boton boton-secundario">Detalle</a>
+              <a href="https://amazon.com/dp/B0H5T8XKK3" class="boton boton-amazon" target="_blank">Comprar en Amazon $3.25</a>
+              <a href="primer-capitulo-el-dolor-que-no-pedi.html" class="boton boton-secundario">Leer primer capítulo gratis</a>
             </div>
           </div>
         </article>
@@ -328,7 +416,7 @@
             <p>Donde el odio termina y la vida florece. Una novela sobre el peso de los silencios heredados, la redención tardía y cómo las decisiones de los padres se convierten en espinas en el camino de los hijos.</p>
             <div class="botones-accion">
               <a href="rosa-perdida-del-rosal.html" class="boton">Conoce la historia</a>
-              <a href="primer-capitulo-rosa-perdida.html" class="boton boton-secundario">Detalle</a>
+              <a href="primer-capitulo-rosa-perdida.html" class="boton boton-secundario">Leer capítulo 1</a>
             </div>
           </div>
         </article>
@@ -345,7 +433,7 @@
             <p>¿Puede el tiempo devolvernos lo que el silencio nos arrebató? Una historia sobre el peso del deber, la herencia emocional y la justicia tardía del abrazo.</p>
             <div class="botones-accion">
               <a href="bajo-el-peso-de-las-palabras-mudas.html" class="boton">Conoce la historia</a>
-              <a href="primer-capitulo-bajo-el-peso.html" class="boton boton-secundario">Detalle</a>
+              <a href="primer-capitulo-bajo-el-peso.html" class="boton boton-secundario">Leer capítulo 1</a>
             </div>
           </div>
         </article>
@@ -362,7 +450,7 @@
             <p>Un amor que desafió las reglas de un pueblo anclado en tradiciones. Una historia sobre secretos, sacrificio y el precio de amar en un lugar donde las apariencias lo son todo.</p>
             <div class="botones-accion">
               <a href="amor-prohibido.html" class="boton">Conoce la historia</a>
-              <a href="primer-capitulo-amor-prohibido.html" class="boton boton-secundario">Detalle</a>
+              <a href="primer-capitulo-amor-prohibido.html" class="boton boton-secundario">Leer capítulo 1</a>
             </div>
           </div>
         </article>
@@ -379,7 +467,7 @@
             <p>La historia de tres destinos entrelazados por el amor, la pérdida y la esperanza. Una saga familiar que explora los lazos que nos unen más allá de la sangre y el tiempo.</p>
             <div class="botones-accion">
               <a href="nacen-hermanos.html" class="boton">Conoce la historia</a>
-              <a href="primer-capitulo-nacen-hermanos.html" class="boton boton-secundario">Detalle</a>
+              <a href="primer-capitulo-nacen-hermanos.html" class="boton boton-secundario">Leer capítulo 1</a>
             </div>
           </div>
         </article>
@@ -396,7 +484,7 @@
             <p>Después de veinte años de silencio, una mujer regresa a su pueblo natal para enfrentar secretos familiares y descubrir que el amor verdadero siempre encuentra el camino de vuelta.</p>
             <div class="botones-accion">
               <a href="donde-el-amor-nos-enseno-a-volver.html" class="boton">Conoce la historia</a>
-              <a href="primer-capitulo-donde-el-amor.html" class="boton boton-secundario">Detalle</a>
+              <a href="primer-capitulo-donde-el-amor.html" class="boton boton-secundario">Leer capítulo 1</a>
             </div>
           </div>
         </article>
@@ -425,7 +513,7 @@
       <h3>📬 Conéctate con el Autor</h3>
       
       <div style="margin-bottom: 20px; padding: 15px; background-color: rgba(184, 134, 11, 0.12); border-radius: 10px;">
-        <p style="font-weight: 700; margin-bottom: 12px; color: #6b4226;">✉️ Correos electrónicos oficiales:</p>
+        <p style="font-weight: 700; margin-bottom: 12px; color: #6b4226;">✉ Correos electrónicos oficiales:</p>
         <div class="contacto-enlaces">
           <div class="contacto-item">📧 <a href="mailto:jlopezmoficial@gmail.com">jlopezmoficial@gmail.com</a></div>
           <div class="contacto-item">📧 <a href="mailto:loaldiriamba72@gmail.com">loaldiriamba72@gmail.com</a></div>
