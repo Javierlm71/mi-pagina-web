@@ -3,29 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El Dolor que No Pedí | Novela de Drama Familiar por J. López M.</title>
-  <meta name="description" content="Samuel Valverde lucha contra la culpa heredada de su familia en San Dionisio. Cuando Blanca llega al pueblo, ambos deberán romper ciclos de dolor. Nueva novela de J. López M. en Amazon Kindle y tapa blanda.">
-  <meta name="keywords" content="J. López M., autor nicaragüense, El Dolor que No Pedí, drama familiar, novela latinoamericana, herencia emocional, secretos familiares, San Dionisio">
+  <title>J. LÓPEZ M. | Novelas de Drama Familiar y Sanación</title>
+  <meta name="description" content="J. López M., autor nicaragüense. Novelas como El Dolor que No Pedí, Donde el Reloj se Detiene, Rosa Perdida del Rosal y más. Historias sobre duelo, amor y sanación.">
+  <meta name="keywords" content="J. López M., autor nicaragüense, El Dolor que No Pedí, Donde el Reloj se Detiene, Rosa Perdida del Rosal, drama familiar, duelo, amor, sanación, novelas latinoamericanas">
   <meta name="author" content="J. LÓPEZ M.">
   
-  <!-- Schema.org para que Google entienda que vendes libros -->
+  <!-- Schema.org para Google -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Book",
-    "name":"El Dolor que No Pedí",
-    "author":{"@type":"Person","name":"J. López M.","sameAs":"https://www.goodreads.com/author/show/69806530.J_Lopez_M_"},
-    "url":"https://tuweb.com/el-dolor-que-no-pedi.html",
-    "image":"https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/el-dolor-que-no-pedi-portada.png",
-    "description":"Hay heridas que nacen antes que nosotros. Una conmovedora novela sobre el peso de la herencia emocional en San Dionisio.",
-    "isbn":"B0H5T8XKK3",
+    "name":"Donde el Reloj se Detiene",
+    "author":{"@type":"Person","name":"J. López M."},
+    "url":"https://tuweb.com/donde-el-reloj-se-detiene.html",
+    "description":"Una novela sobre el duelo, el amor y la libertad de sanar. Dos corazones rotos que aprenden a dejar atrás el pasado.",
     "bookFormat":"https://schema.org/EBook",
     "offers":{
       "@type":"Offer",
-      "price":"3.25",
+      "price":"3.99",
       "priceCurrency":"USD",
       "availability":"https://schema.org/InStock",
-      "url":"https://amazon.com/dp/B0H5T8XKK3"
+      "url":"https://amazon.com/dp/B0HCRK2N7V"
     }
   }
   </script>
@@ -44,6 +42,8 @@
       --color-sombra: rgba(0, 0, 0, 0.1);
       --transicion-rapida: all 0.3s ease;
       --borde-redondeado: 8px;
+      --nuevo-color: #27ae60;
+      --destacado-color: #c0392b;
     }
     
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -117,6 +117,59 @@
       transform: translateY(-3px);
     }
     
+    /* BANNER DESTACADO NUEVO LIBRO */
+    .destacado-nuevo {
+      background: linear-gradient(135deg, #fef9e7, #fdebd0);
+      border-left: 5px solid var(--nuevo-color);
+      padding: 25px 30px;
+      border-radius: var(--borde-redondeado);
+      margin: 20px 0 40px 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    .destacado-nuevo .etiqueta {
+      display: inline-block;
+      background-color: var(--nuevo-color);
+      color: white;
+      padding: 4px 16px;
+      border-radius: 50px;
+      font-size: 0.75em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .destacado-nuevo h3 { color: var(--color-terciario); font-size: 1.8em; margin-bottom: 5px; }
+    .destacado-nuevo .subtitulo-destacado { font-size: 1.1em; font-weight: 600; color: var(--color-primario-oscuro); margin-bottom: 10px; }
+    .destacado-nuevo p { font-size: 1.05em; margin-bottom: 15px; }
+    .destacado-nuevo .boton-amazon-destacado {
+      background-color: #FF9900;
+      padding: 12px 28px;
+      border-radius: 50px;
+      color: white;
+      font-weight: 700;
+      display: inline-block;
+      transition: var(--transicion-rapida);
+      margin: 5px 8px 5px 0;
+    }
+    .destacado-nuevo .boton-amazon-destacado:hover {
+      background-color: #e88a00;
+      transform: translateY(-2px);
+    }
+    .destacado-nuevo .boton-tapa-destacado {
+      background-color: #2c3e50;
+      padding: 12px 28px;
+      border-radius: 50px;
+      color: white;
+      font-weight: 700;
+      display: inline-block;
+      transition: var(--transicion-rapida);
+      margin: 5px 8px 5px 0;
+    }
+    .destacado-nuevo .boton-tapa-destacado:hover {
+      background-color: #1a2a3a;
+      transform: translateY(-2px);
+    }
+    
     .reseñas {
       background-color: rgba(107, 66, 38, 0.05);
       padding: 40px 20px;
@@ -156,29 +209,62 @@
       transition: var(--transicion-rapida);
       display: flex;
       flex-direction: column;
+      position: relative;
     }
     .tarjeta-libro:hover { transform: translateY(-10px); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); }
     
     .portada-contenedor {
-      height: 300px;
+      height: 320px;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 20px;
-      background: linear-gradient(135deg, #8B4513 0%, #B8860B 100%);
+      background: linear-gradient(135deg, #2f1b0c 0%, #8c6c10 100%);
       position: relative;
     }
     
     .portada-libro-img {
-      max-height: 260px;
+      max-height: 280px;
       max-width: 90%;
       border-radius: 5px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       object-fit: contain;
     }
     
+    .etiqueta-nuevo {
+      background-color: var(--nuevo-color);
+      color: var(--color-blanco);
+      padding: 4px 14px;
+      border-radius: 50px;
+      font-size: 0.7em;
+      font-weight: 700;
+      display: inline-block;
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      z-index: 2;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .etiqueta-best-seller {
+      background-color: var(--destacado-color);
+      color: var(--color-blanco);
+      padding: 4px 14px;
+      border-radius: 50px;
+      font-size: 0.7em;
+      font-weight: 700;
+      display: inline-block;
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 2;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
     .contenido-tarjeta { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
-    .contenido-tarjeta h3 { color: var(--color-primario-oscuro); font-size: 1.4em; margin-bottom: 10px; }
+    .contenido-tarjeta h3 { color: var(--color-primario-oscuro); font-size: 1.3em; margin-bottom: 8px; }
     .contenido-tarjeta .gancho {
       font-style: italic;
       color: var(--color-terciario);
@@ -187,21 +273,6 @@
       font-weight: 600;
     }
     .contenido-tarjeta p { margin-bottom: 20px; flex-grow: 1; font-size: 0.95rem; }
-    
-    .etiqueta-nuevo {
-      background-color: #27ae60;
-      color: var(--color-blanco);
-      padding: 4px 12px;
-      border-radius: 50px;
-      font-size: 0.75em;
-      font-weight: 600;
-      display: inline-block;
-      margin-bottom: 8px;
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      z-index: 2;
-    }
     
     .botones-accion { display: flex; gap: 12px; flex-wrap: wrap; }
     .boton {
@@ -217,7 +288,7 @@
       text-align: center;
       flex: 1;
       min-width: 100px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
     .boton:hover {
       background-color: var(--color-primario-oscuro);
@@ -239,6 +310,13 @@
     }
     .boton-amazon:hover {
       background-color: #e88a00;
+    }
+    .boton-tapa {
+      background-color: #2c3e50;
+      font-weight: 700;
+    }
+    .boton-tapa:hover {
+      background-color: #1a2a3a;
     }
     
     .autor {
@@ -339,6 +417,9 @@
       .contenido-tarjeta h3 { font-size: 1.3em; }
       .contacto-enlaces { flex-direction: column; align-items: center; gap: 12px; }
       .contacto-item { width: 90%; justify-content: center; }
+      .destacado-nuevo { padding: 15px; }
+      .destacado-nuevo .boton-amazon-destacado,
+      .destacado-nuevo .boton-tapa-destacado { display: block; width: 100%; text-align: center; margin: 8px 0; }
     }
   </style>
 </head>
@@ -363,32 +444,69 @@
 
   <main class="contenedor">
     <section id="inicio" class="hero">
-      <h2>¿Cargas un dolor que no empezó contigo?</h2>
+      <h2>Historias que sanan el alma</h2>
       <p>Mis novelas son para quienes buscan romper herencias de silencio, culpa y secretos familiares. Historias donde el amor, la memoria y la redención se enfrentan a los fantasmas del pasado.</p>
-      <a href="#libros" class="hero-cta">Descubre El Dolor que No Pedí</a>
+      <a href="#libros" class="hero-cta">Descubre mis libros</a>
     </section>
 
-    <!-- NUEVA SECCIÓN: PRUEBA SOCIAL -->
+    <!-- BANNER DESTACADO: DONDE EL RELOJ SE DETIENE -->
+    <div class="destacado-nuevo">
+      <span class="etiqueta">📖 ¡NUEVA OBRA 2026!</span>
+      <h3>Donde el Reloj se Detiene</h3>
+      <p class="subtitulo-destacado">"Una novela sobre el duelo, el amor y la libertad de sanar"</p>
+      <p>Dos corazones rotos. Un reloj detenido en las 2:20. Una historia que te recordará que, incluso en el dolor más profundo, el tiempo siempre puede volver a empezar.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
+        <a href="https://amazon.com/dp/B0HCRK2N7V" class="boton-amazon-destacado" target="_blank">📱 eBook $3.99</a>
+        <a href="https://amazon.com/dp/B0HCVJ41NX" class="boton-tapa-destacado" target="_blank">📖 Tapa Blanda $14.99</a>
+        <a href="primer-capitulo-donde-el-reloj-se-detiene.html" style="display: inline-block; padding: 12px 28px; border-radius: 50px; background-color: transparent; color: var(--color-primario); border: 2px solid var(--color-primario); font-weight: 700; transition: var(--transicion-rapida);">Leer Capítulo 1 gratis</a>
+      </div>
+    </div>
+
+    <!-- RESEÑAS -->
     <section class="reseñas">
       <h2>Lo que dicen los lectores</h2>
-      
-      </div>
       <div class="reseña-item">
         "J. López M. escribe sobre los silencios que todos cargamos en la familia. Necesario y sanador."
-        <span>★★★★★ Club de Lectura </span>
+        <span>★★★★★ Club de Lectura "Palabras que Sanan"</span>
+      </div>
+      <div class="reseña-item">
+        "Una historia que te atrapa desde la primera página. El reloj de la fuente es un símbolo que no olvidarás."
+        <span>★★★★★ Lectora Anónima</span>
       </div>
     </section>
 
+    <!-- LIBROS -->
     <section id="libros" class="libros">
       <h2>Mis Obras</h2>
       
       <div class="grid-libros">
-        <!-- LIBRO NUEVO: El Dolor que No Pedí -->
+        <!-- LIBRO NUEVO: Donde el Reloj se Detiene -->
         <article class="tarjeta-libro">
-          <div class="portada-contenedor">
-            <span class="etiqueta-nuevo">¡NUEVA OBRA 2026!</span>
+          <div class="portada-contenedor" style="background: linear-gradient(135deg, #1a0e08 0%, #8c6c10 100%);">
+            <span class="etiqueta-nuevo">¡NUEVO!</span>
+            <span class="etiqueta-best-seller">eBook &amp; Tapa Blanda</span>
+            <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/donde-el-reloj-se-detiene-portada.png" 
+                 alt="Portada Donde el Reloj se Detiene - Novela de J. López M." 
+                 class="portada-libro-img">
+          </div>
+          <div class="contenido-tarjeta">
+            <h3>Donde el Reloj se Detiene</h3>
+            <p class="gancho">"Porque incluso el tiempo necesita descansar"</p>
+            <p>Managua, 2026. Elías llega cada tarde al parque, huyendo de un silencio que lo persigue. Inés sirve comida desde un pequeño puesto, escondiendo su mirada bajo una gorra blanca. Dos desconocidos que comparten un mismo dolor: la pérdida de alguien que amaron. Un reloj detenido en las 2:20 los une sin que ellos lo sepan. Una novela conmovedora sobre el duelo, el amor y la libertad de sanar.</p>
+            <div class="botones-accion">
+              <a href="https://amazon.com/dp/B0HCRK2N7V" class="boton boton-amazon" target="_blank">eBook $3.99</a>
+              <a href="https://amazon.com/dp/B0HCVJ41NX" class="boton boton-tapa" target="_blank">Tapa Blanda $14.99</a>
+              <a href="primer-capitulo-donde-el-reloj-se-detiene.html" class="boton boton-secundario">Leer Capítulo 1</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- LIBRO: El Dolor que No Pedí -->
+        <article class="tarjeta-libro">
+          <div class="portada-contenedor" style="background: linear-gradient(135deg, #8B4513 0%, #B8860B 100%);">
+            <span class="etiqueta-best-seller">Best Seller</span>
             <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/el-dolor-que-no-pedi-portada.png" 
-                 alt="Portada del libro El Dolor que No Pedí de J. López M. - Drama familiar en San Dionisio" 
+                 alt="Portada El Dolor que No Pedí" 
                  class="portada-libro-img">
           </div>
           <div class="contenido-tarjeta">
@@ -396,15 +514,15 @@
             <p class="gancho">"Porque hay vidas capaces de romper su cadena"</p>
             <p>Samuel huyó de su apellido toda la vida. Pero en San Dionisio, los pecados de su padre lo estaban esperando. Cuando Blanca llega buscando un nuevo comienzo, ambos entenderán: puedes huir del pueblo, pero no de la sangre.</p>
             <div class="botones-accion">
-              <a href="https://amazon.com/dp/B0H5T8XKK3" class="boton boton-amazon" target="_blank">Comprar en Amazon $3.25</a>
-              <a href="primer-capitulo-el-dolor-que-no-pedi.html" class="boton boton-secundario">Leer primer capítulo gratis</a>
+              <a href="https://amazon.com/dp/B0H5T8XKK3" class="boton boton-amazon" target="_blank">Comprar en Amazon</a>
+              <a href="primer-capitulo-el-dolor-que-no-pedi.html" class="boton boton-secundario">Leer Capítulo 1</a>
             </div>
           </div>
         </article>
 
-        <!-- Libro 2: Rosa Perdida del Rosal -->
+        <!-- LIBRO: Rosa Perdida del Rosal -->
         <article class="tarjeta-libro">
-          <div class="portada-contenedor">
+          <div class="portada-contenedor" style="background: linear-gradient(135deg, #5c2a1a 0%, #b87333 100%);">
             <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/rosa-perdida-del-rosal-portada.png" 
                  alt="Portada Rosa Perdida del Rosal" 
                  class="portada-libro-img">
@@ -414,14 +532,14 @@
             <p>Donde el odio termina y la vida florece. Una novela sobre el peso de los silencios heredados, la redención tardía y cómo las decisiones de los padres se convierten en espinas en el camino de los hijos.</p>
             <div class="botones-accion">
               <a href="rosa-perdida-del-rosal.html" class="boton">Conoce la historia</a>
-              <a href="primer-capitulo-rosa-perdida.html" class="boton boton-secundario">Leer capítulo 1</a>
+              <a href="primer-capitulo-rosa-perdida.html" class="boton boton-secundario">Leer Capítulo 1</a>
             </div>
           </div>
         </article>
 
-        <!-- Libro 3: Bajo el peso de las palabras mudas -->
+        <!-- LIBRO: Bajo el peso de las palabras mudas -->
         <article class="tarjeta-libro">
-          <div class="portada-contenedor">
+          <div class="portada-contenedor" style="background: linear-gradient(135deg, #2c3e50 0%, #7f8c8d 100%);">
             <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/bajo-el-peso-de-las-palabras-mudas.png" 
                  alt="Portada Bajo el peso de las palabras mudas" 
                  class="portada-libro-img">
@@ -431,14 +549,14 @@
             <p>¿Puede el tiempo devolvernos lo que el silencio nos arrebató? Una historia sobre el peso del deber, la herencia emocional y la justicia tardía del abrazo.</p>
             <div class="botones-accion">
               <a href="bajo-el-peso-de-las-palabras-mudas.html" class="boton">Conoce la historia</a>
-              <a href="primer-capitulo-bajo-el-peso.html" class="boton boton-secundario">Leer capítulo 1</a>
+              <a href="primer-capitulo-bajo-el-peso.html" class="boton boton-secundario">Leer Capítulo 1</a>
             </div>
           </div>
         </article>
 
-        <!-- Libro 4: Amor Prohibido -->
+        <!-- LIBRO: Amor Prohibido -->
         <article class="tarjeta-libro">
-          <div class="portada-contenedor">
+          <div class="portada-contenedor" style="background: linear-gradient(135deg, #6b1a2a 0%, #c0392b 100%);">
             <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/amor-prohibido.png" 
                  alt="Portada Amor Prohibido en Pueblo Tradicional" 
                  class="portada-libro-img">
@@ -448,14 +566,14 @@
             <p>Un amor que desafió las reglas de un pueblo anclado en tradiciones. Una historia sobre secretos, sacrificio y el precio de amar en un lugar donde las apariencias lo son todo.</p>
             <div class="botones-accion">
               <a href="amor-prohibido.html" class="boton">Conoce la historia</a>
-              <a href="primer-capitulo-amor-prohibido.html" class="boton boton-secundario">Leer capítulo 1</a>
+              <a href="primer-capitulo-amor-prohibido.html" class="boton boton-secundario">Leer Capítulo 1</a>
             </div>
           </div>
         </article>
 
-        <!-- Libro 5: Nacen los Hermanos -->
+        <!-- LIBRO: Nacen los Hermanos -->
         <article class="tarjeta-libro">
-          <div class="portada-contenedor">
+          <div class="portada-contenedor" style="background: linear-gradient(135deg, #1a3a2a 0%, #27ae60 100%);">
             <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/nacen-hermanos.png" 
                  alt="Portada Nacen los Hermanos" 
                  class="portada-libro-img">
@@ -465,14 +583,14 @@
             <p>La historia de tres destinos entrelazados por el amor, la pérdida y la esperanza. Una saga familiar que explora los lazos que nos unen más allá de la sangre y el tiempo.</p>
             <div class="botones-accion">
               <a href="nacen-hermanos.html" class="boton">Conoce la historia</a>
-              <a href="primer-capitulo-nacen-hermanos.html" class="boton boton-secundario">Leer capítulo 1</a>
+              <a href="primer-capitulo-nacen-hermanos.html" class="boton boton-secundario">Leer Capítulo 1</a>
             </div>
           </div>
         </article>
 
-        <!-- Libro 6: Donde el Amor nos Enseñó a Volver -->
+        <!-- LIBRO: Donde el Amor nos Enseñó a Volver -->
         <article class="tarjeta-libro">
-          <div class="portada-contenedor">
+          <div class="portada-contenedor" style="background: linear-gradient(135deg, #4a2a1a 0%, #d4a055 100%);">
             <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/portada3.png" 
                  alt="Portada Donde el Amor nos Enseñó a Volver" 
                  class="portada-libro-img">
@@ -482,13 +600,14 @@
             <p>Después de veinte años de silencio, una mujer regresa a su pueblo natal para enfrentar secretos familiares y descubrir que el amor verdadero siempre encuentra el camino de vuelta.</p>
             <div class="botones-accion">
               <a href="donde-el-amor-nos-enseno-a-volver.html" class="boton">Conoce la historia</a>
-              <a href="primer-capitulo-donde-el-amor.html" class="boton boton-secundario">Leer capítulo 1</a>
+              <a href="primer-capitulo-donde-el-amor.html" class="boton boton-secundario">Leer Capítulo 1</a>
             </div>
           </div>
         </article>
       </div>
     </section>
 
+    <!-- SOBRE EL AUTOR -->
     <section id="autor" class="autor">
       <h2>Sobre el Autor</h2>
       <div class="contenido-autor">
@@ -499,14 +618,15 @@
         </div>
         <div class="bio-autor">
           <h3>J. LÓPEZ M.</h3>
-          <p>Escritor nicaragüense con una profunda pasión por explorar las complejidades del corazón humano a través de la ficción literaria. Su obra se caracteriza por una prosa sensible y reflexiva que aborda temas universales como el amor, la memoria, la redención y los lazos familiares.</p>
+          <p>Escritor nicaragüense con una profunda pasión por explorar las complejidades del corazón humano a través de la ficción literaria. Su obra se caracteriza por una prosa sensible y reflexiva que aborda temas universales como el amor, la memoria, la redención, el duelo y los lazos familiares.</p>
           <p>Cada una de sus novelas es una invitación a adentrarse en mundos donde los personajes enfrentan sus verdades más íntimas, desafiando silencios heredados y encontrando, en el proceso, caminos hacia la sanación y la comprensión.</p>
           <p>Con una narrativa que combina realismo emotivo y profundidad psicológica, J. López M. crea historias que resuenan con lectores que buscan más que entretenimiento: buscan conexión, significado y reflexión sobre las experiencias que nos hacen humanos.</p>
+          <p style="font-style: italic; color: var(--color-terciario);">"Escribo para quienes han sentido que el tiempo se detiene, y necesitan una razón para que vuelva a moverse."</p>
         </div>
       </div>
     </section>
 
-    <!-- SECCIÓN DE CONTACTO CON GOODREADS VERIFICADO -->
+    <!-- CONTACTO -->
     <section id="contacto" class="contacto">
       <h3>📬 Conéctate con el Autor</h3>
       
