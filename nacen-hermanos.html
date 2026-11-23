@@ -34,6 +34,8 @@
     .detalles-libro{margin-top:14px;text-align:left;font-size:13px;color:#1d2f39;background:#f7fcff;padding:14px;border-radius:10px;line-height:1.7}
     .detalles-libro p{margin:0 0 4px}
     .detalles-libro .asin-info{margin-top:10px;padding:8px 10px;background:rgba(90,155,179,0.1);border-left:3px solid var(--celeste);border-radius:6px;font-size:12.5px}
+    .edicion-bloque{margin-top:14px;padding-top:12px;border-top:1px dashed rgba(23,76,97,0.25)}
+    .edicion-titulo{font-weight:700;color:var(--azul);margin-bottom:8px;font-size:13.5px}
 
     .meta{padding:18px;background:#f7fcff;border-radius:12px;box-shadow:var(--sombra)}
     .meta h2{color:var(--azul);margin:0 0 6px}
@@ -82,24 +84,42 @@
         <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/nacen-hermanos.png" alt="Portada Nacen los Hermanos">
         <div style="margin-top:12px">
           <div style="font-weight:700;color:#1d2f39;font-size:1.05rem">Nacen los Hermanos</div>
-          <div style="font-size:13px;color:#4b6774;margin-top:6px">eBook • 4 de julio de 2025 • 440 páginas • Español</div>
+          <div style="font-size:13px;color:#4b6774;margin-top:6px">eBook y tapa blanda • Español</div>
         </div>
 
         <div class="detalles-libro">
-          <p><strong>ASIN:</strong> B0FGRSCQT2</p>
-          <p><strong>Fecha de publicación:</strong> 4 de julio de 2025</p>
-          <p><strong>Edición:</strong> 1.ª</p>
           <p><strong>Idioma:</strong> Español</p>
-          <p><strong>Número de páginas:</strong> 440</p>
-          <p><strong>Tamaño del archivo:</strong> 1.9 MB</p>
+
+          <div class="edicion-bloque">
+            <p class="edicion-titulo">📖 Edición eBook</p>
+            <p><strong>ASIN:</strong> B0FGRSCQT2</p>
+            <p><strong>Fecha de publicación:</strong> 4 de julio de 2025</p>
+            <p><strong>Edición:</strong> 1.ª</p>
+            <p><strong>Tamaño del archivo:</strong> 1.9 MB</p>
+            <p><strong>Páginas:</strong> 440</p>
+            <p><strong>Tipografía mejorada:</strong> Activado · <strong>Word Wise:</strong> No activado · <strong>Page Flip:</strong> Activado</p>
+          </div>
+
+          <div class="edicion-bloque">
+            <p class="edicion-titulo">📚 Edición tapa blanda</p>
+            <p><strong>ASIN:</strong> B0FKYRM3ZS</p>
+            <p><strong>Editorial:</strong> Independently published</p>
+            <p><strong>Fecha de publicación:</strong> 10 de julio de 2025</p>
+            <p><strong>Páginas:</strong> 438</p>
+            <p><strong>ISBN-13:</strong> 979-8290724188</p>
+            <p><strong>Dimensiones:</strong> 6 × 1.03 × 9 pulgadas</p>
+          </div>
+
           <div class="asin-info">
             <p><strong>Género:</strong> Romance / Ficción en Español</p>
-            <p><em>Disponible en Amazon Kindle</em></p>
+            <p>★ 5.0 de 5 · <em>1 reseña en Amazon</em></p>
+            <p><em>Disponible en Amazon Kindle y tapa blanda</em></p>
           </div>
         </div>
 
         <div class="acciones" style="margin-top:14px">
-          <a class="btn" href="https://www.amazon.com/dp/B0FGRSCQT2" target="_blank" rel="noopener">📖 Comprar en Amazon</a>
+          <a class="btn" href="https://www.amazon.com/dp/B0FGRSCQT2" target="_blank" rel="noopener">📖 Comprar eBook</a>
+          <a class="btn" href="https://www.amazon.com/dp/B0FKYRM3ZS" target="_blank" rel="noopener">📚 Comprar tapa blanda</a>
           <a class="btn alt" href="index.html">← Volver a la biblioteca</a>
         </div>
       </div>
@@ -142,10 +162,12 @@
 
     <footer>
       <p>© 2025 J. LÓPEZ M. | <a href="index.html" style="color:inherit;text-decoration:underline">Volver a la biblioteca</a></p>
-      <p style="margin-top:8px;font-size:0.9em">ASIN: B0FGRSCQT2 · Disponible en Amazon Kindle</p>
+      <p style="margin-top:8px;font-size:0.9em">
+        eBook ASIN: B0FGRSCQT2 &nbsp;|&nbsp; Tapa blanda ASIN: B0FKYRM3ZS<br>
+        ISBN-13 (Tapa blanda): 979-8290724188 · Disponible en Amazon Kindle y tapa blanda
+      </p>
       <a class="volver" href="index.html">← Regresar</a>
     </footer>
   </div>
 </body>
 </html>
-
