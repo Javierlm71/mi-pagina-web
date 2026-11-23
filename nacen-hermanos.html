@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -31,6 +30,10 @@
 
     .cover{background:var(--card);border-radius:var(--radio);padding:12px;box-shadow:var(--sombra);text-align:center}
     .cover img{width:100%;height:auto;border-radius:8px}
+
+    .detalles-libro{margin-top:14px;text-align:left;font-size:13px;color:#1d2f39;background:#f7fcff;padding:14px;border-radius:10px;line-height:1.7}
+    .detalles-libro p{margin:0 0 4px}
+    .detalles-libro .asin-info{margin-top:10px;padding:8px 10px;background:rgba(90,155,179,0.1);border-left:3px solid var(--celeste);border-radius:6px;font-size:12.5px}
 
     .meta{padding:18px;background:#f7fcff;border-radius:12px;box-shadow:var(--sombra)}
     .meta h2{color:var(--azul);margin:0 0 6px}
@@ -78,11 +81,25 @@
       <div class="cover">
         <img src="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/nacen-hermanos.png" alt="Portada Nacen los Hermanos">
         <div style="margin-top:12px">
-          <div style="font-weight:700;color:#1d2f39">Nacen los Hermanos</div>
-          <div style="font-size:13px;color:#4b6774;margin-top:6px">Formato: eBook / Tapa blanda • 2023 • 354 páginas</div>
+          <div style="font-weight:700;color:#1d2f39;font-size:1.05rem">Nacen los Hermanos</div>
+          <div style="font-size:13px;color:#4b6774;margin-top:6px">eBook • 4 de julio de 2025 • 440 páginas • Español</div>
         </div>
+
+        <div class="detalles-libro">
+          <p><strong>ASIN:</strong> B0FGRSCQT2</p>
+          <p><strong>Fecha de publicación:</strong> 4 de julio de 2025</p>
+          <p><strong>Edición:</strong> 1.ª</p>
+          <p><strong>Idioma:</strong> Español</p>
+          <p><strong>Número de páginas:</strong> 440</p>
+          <p><strong>Tamaño del archivo:</strong> 1.9 MB</p>
+          <div class="asin-info">
+            <p><strong>Género:</strong> Romance / Ficción en Español</p>
+            <p><em>Disponible en Amazon Kindle</em></p>
+          </div>
+        </div>
+
         <div class="acciones" style="margin-top:14px">
-          <a class="btn" href="https://www.amazon.com/dp/B0FKYRM3ZS" target="_blank" rel="noopener">📖 Comprar en Amazon</a>
+          <a class="btn" href="https://www.amazon.com/dp/B0FGRSCQT2" target="_blank" rel="noopener">📖 Comprar en Amazon</a>
           <a class="btn alt" href="index.html">← Volver a la biblioteca</a>
         </div>
       </div>
@@ -125,8 +142,10 @@
 
     <footer>
       <p>© 2025 J. LÓPEZ M. | <a href="index.html" style="color:inherit;text-decoration:underline">Volver a la biblioteca</a></p>
+      <p style="margin-top:8px;font-size:0.9em">ASIN: B0FGRSCQT2 · Disponible en Amazon Kindle</p>
       <a class="volver" href="index.html">← Regresar</a>
     </footer>
   </div>
 </body>
 </html>
+
