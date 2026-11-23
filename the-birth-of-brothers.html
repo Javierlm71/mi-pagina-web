@@ -23,11 +23,7 @@
             --borde-redondeado: 8px;
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Open Sans', sans-serif;
@@ -36,23 +32,9 @@
             line-height: 1.7;
         }
         
-        h1, h2, h3 {
-            font-family: 'Crimson Text', serif;
-            font-weight: 700;
-            line-height: 1.3;
-        }
-        
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transicion);
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
+        h1, h2, h3 { font-family: 'Crimson Text', serif; font-weight: 700; line-height: 1.3; }
+        a { text-decoration: none; color: inherit; transition: var(--transicion); }
+        img { max-width: 100%; height: auto; display: block; }
         
         .header-libro {
             background: linear-gradient(135deg, var(--color-primario), var(--color-primario-oscuro));
@@ -61,27 +43,10 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             text-align: center;
         }
+        .header-libro h1 { font-size: 2.2em; margin-bottom: 5px; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); }
+        .header-libro p { font-size: 1.1em; opacity: 0.95; margin-bottom: 25px; }
         
-        .header-libro h1 {
-            font-size: 2.2em;
-            margin-bottom: 5px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-        }
-        
-        .header-libro p {
-            font-size: 1.1em;
-            opacity: 0.95;
-            margin-bottom: 25px;
-        }
-        
-        .navegacion-libro {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-        
+        .navegacion-libro { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-bottom: 15px; }
         .navegacion-libro a {
             padding: 8px 18px;
             background-color: rgba(255, 255, 255, 0.15);
@@ -90,17 +55,9 @@
             font-size: 0.95em;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
+        .navegacion-libro a:hover { background-color: rgba(255, 255, 255, 0.25); transform: translateY(-2px); }
         
-        .navegacion-libro a:hover {
-            background-color: rgba(255, 255, 255, 0.25);
-            transform: translateY(-2px);
-        }
-        
-        .contenedor {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+        .contenedor { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
         
         .seccion-superior {
             display: grid;
@@ -109,18 +66,11 @@
             margin-bottom: 50px;
             align-items: start;
         }
-        
         @media (max-width: 768px) {
-            .seccion-superior {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
+            .seccion-superior { grid-template-columns: 1fr; gap: 30px; }
         }
         
-        .portada-libro {
-            text-align: center;
-        }
-        
+        .portada-libro { text-align: center; }
         .portada-img {
             width: 100%;
             max-width: 300px;
@@ -134,19 +84,9 @@
             justify-content: center;
             min-height: 380px;
         }
+        .portada-img img { max-height: 350px; max-width: 100%; object-fit: contain; border-radius: 5px; }
         
-        .portada-img img {
-            max-height: 350px;
-            max-width: 100%;
-            object-fit: contain;
-            border-radius: 5px;
-        }
-        
-        .info-libro h2 {
-            color: var(--color-terciario);
-            font-size: 2.2em;
-            margin-bottom: 15px;
-        }
+        .info-libro h2 { color: var(--color-terciario); font-size: 2.2em; margin-bottom: 15px; }
         
         .detalles-libro {
             background-color: rgba(44, 95, 45, 0.05);
@@ -155,11 +95,7 @@
             margin-bottom: 25px;
             border-left: 4px solid var(--color-primario);
         }
-        
-        .detalles-libro p {
-            margin-bottom: 8px;
-            font-size: 1.05em;
-        }
+        .detalles-libro p { margin-bottom: 8px; font-size: 1.05em; }
         
         .asin-info {
             background-color: rgba(39, 174, 96, 0.1);
@@ -170,13 +106,7 @@
             border-left: 3px solid #27ae60;
         }
         
-        .botones-accion {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 25px;
-        }
-        
+        .botones-accion { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 25px; }
         .boton {
             display: inline-flex;
             align-items: center;
@@ -192,34 +122,17 @@
             font-family: 'Open Sans', sans-serif;
             text-align: center;
         }
-        
         .boton:hover {
             background-color: var(--color-primario-oscuro);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(44, 95, 45, 0.3);
         }
+        .boton-volver { background-color: #6c757d; }
+        .boton-volver:hover { background-color: #545b62; }
+        .boton-amazon { background: linear-gradient(135deg, #FF9900, #FFAD33); color: white; }
+        .boton-amazon:hover { background: linear-gradient(135deg, #E68A00, #FF9900); }
         
-        .boton-volver {
-            background-color: #6c757d;
-        }
-        
-        .boton-volver:hover {
-            background-color: #545b62;
-        }
-        
-        .boton-amazon {
-            background: linear-gradient(135deg, #FF9900, #FFAD33);
-            color: white;
-        }
-        
-        .boton-amazon:hover {
-            background: linear-gradient(135deg, #E68A00, #FF9900);
-        }
-        
-        .seccion-sinopsis {
-            margin-bottom: 50px;
-        }
-        
+        .seccion-sinopsis { margin-bottom: 50px; }
         .seccion-sinopsis h3 {
             color: var(--color-terciario);
             font-size: 1.8em;
@@ -227,16 +140,8 @@
             padding-bottom: 10px;
             border-bottom: 2px solid rgba(44, 95, 45, 0.2);
         }
-        
-        .contenido-sinopsis {
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-        
-        .contenido-sinopsis p {
-            margin-bottom: 20px;
-            text-align: justify;
-        }
+        .contenido-sinopsis { font-size: 1rem; line-height: 1.7; }
+        .contenido-sinopsis p { margin-bottom: 20px; text-align: justify; }
         
         .cita-inicio {
             font-size: 1.3em;
@@ -247,7 +152,6 @@
             line-height: 1.6;
             font-style: italic;
         }
-        
         .cita-destacada {
             background-color: rgba(44, 95, 45, 0.05);
             padding: 30px;
@@ -267,7 +171,6 @@
             margin-top: 30px;
             box-shadow: 0 4px 12px var(--color-sombra);
         }
-        
         .capitulo-muestra h4 {
             color: var(--color-primario);
             font-size: 1.4em;
@@ -275,16 +178,8 @@
             border-left: 4px solid var(--color-primario);
             padding-left: 15px;
         }
-        
-        .texto-capitulo {
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-        
-        .texto-capitulo p {
-            margin-bottom: 15px;
-            text-indent: 25px;
-        }
+        .texto-capitulo { font-size: 0.95rem; line-height: 1.7; }
+        .texto-capitulo p { margin-bottom: 15px; text-indent: 25px; }
         
         .nota-autor {
             background-color: rgba(151, 188, 98, 0.05);
@@ -293,23 +188,9 @@
             margin-top: 40px;
             border-top: 1px solid rgba(151, 188, 98, 0.1);
         }
-        
-        .nota-autor h4 {
-            color: var(--color-terciario);
-            margin-bottom: 15px;
-            font-size: 1.3em;
-        }
-        
-        .nota-autor p {
-            font-style: italic;
-        }
-        
-        .firma-autor {
-            margin-top: 15px;
-            font-weight: 600;
-            color: var(--color-primario);
-            text-align: right;
-        }
+        .nota-autor h4 { color: var(--color-terciario); margin-bottom: 15px; font-size: 1.3em; }
+        .nota-autor p { font-style: italic; }
+        .firma-autor { margin-top: 15px; font-weight: 600; color: var(--color-primario); text-align: right; }
         
         .footer-libro {
             background-color: var(--color-primario-oscuro);
@@ -318,29 +199,11 @@
             padding: 30px 20px;
             margin-top: 60px;
         }
+        .footer-libro p { margin-bottom: 15px; }
+        .enlace-footer { color: #f5deb3; font-weight: 600; border-bottom: 1px dotted #f5deb3; }
+        .enlace-footer:hover { opacity: 0.8; }
         
-        .footer-libro p {
-            margin-bottom: 15px;
-        }
-        
-        .enlace-footer {
-            color: #f5deb3;
-            font-weight: 600;
-            border-bottom: 1px dotted #f5deb3;
-        }
-        
-        .enlace-footer:hover {
-            opacity: 0.8;
-        }
-        
-        .idiomas {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 15px;
-            flex-wrap: wrap;
-        }
-        
+        .idiomas { display: flex; justify-content: center; gap: 20px; margin-top: 15px; flex-wrap: wrap; }
         .idioma-link {
             background-color: rgba(255, 255, 255, 0.1);
             padding: 5px 15px;
@@ -349,36 +212,15 @@
             text-decoration: none;
             transition: var(--transicion);
         }
-        
-        .idioma-link:hover {
-            background-color: rgba(255, 255, 255, 0.25);
-            transform: translateY(-2px);
-        }
+        .idioma-link:hover { background-color: rgba(255, 255, 255, 0.25); transform: translateY(-2px); }
         
         @media (max-width: 768px) {
-            .header-libro h1 {
-                font-size: 1.8em;
-            }
-            
-            .info-libro h2 {
-                font-size: 1.8em;
-            }
-            
-            .botones-accion {
-                flex-direction: column;
-            }
-            
-            .boton {
-                width: 100%;
-            }
-            
-            .cita-inicio {
-                font-size: 1.1em;
-            }
-            
-            .portada-img {
-                min-height: 300px;
-            }
+            .header-libro h1 { font-size: 1.8em; }
+            .info-libro h2 { font-size: 1.8em; }
+            .botones-accion { flex-direction: column; }
+            .boton { width: 100%; }
+            .cita-inicio { font-size: 1.1em; }
+            .portada-img { min-height: 300px; }
         }
     </style>
 </head>
@@ -443,27 +285,23 @@
             </div>
         </section>
 
-                             <section id="synopsis" class="seccion-sinopsis">
+        <section id="synopsis" class="seccion-sinopsis">
             <h3>Synopsis</h3>
             
             <div class="contenido-sinopsis">
                 <div class="cita-inicio">
-                    <p>"The silence between them wasn't hatred; it was pain. Because sometimes, loving a brother also means learning to lose him in order to find him again."</p>
+                    <p>"There are wounds that only forgiveness can heal."</p>
                 </div>
                 
-                <p>When Leopoldo discovers that two young strangers might be his long-lost children, a journey of redemption, pain, and hope begins.</p>
+                <p>When Leopoldo discovers that two young people might be his long-lost children, a path begins—one marked by guilt, secrets, and the hope of repairing the past.</p>
                 
-                <p>Sebastián, marked by absence. Valeria, forged in silence. Eliam, the bridge between three souls destined to find one another. A powerful story about family, forgiveness, and second chances. <strong>The Birth of Brothers</strong> is more than just a novel; it is an embrace for the soul.</p>
+                <p>Sebastián grew up carrying the weight of absence. Valeria learned to survive, forged in silence. And Eliam will become the unexpected bridge between three broken lives that destiny brings together once more.</p>
                 
                 <div class="cita-destacada">
                     <p>"The silence between them wasn't hatred; it was pain. Because sometimes, loving a brother also means learning to lose him in order to find him again."</p>
                 </div>
                 
-                <p><strong>The Birth of Brothers</strong> is a profound story about redemption, faith, and the love that survives even when everything seems lost. It is a novel that reminds us that no one is born knowing how to love, but we are all born seeking to be forgiven.</p>
-                
-                <div class="cita-destacada" style="background-color: rgba(44, 95, 45, 0.05);">
-                    <p>"There are wounds that only forgiveness can heal."</p>
-                </div>
+                <p><strong>The Birth of Brothers</strong> is a novel about blood ties, second chances, and the faith that sustains a family when everything seems lost. A story that reminds us that no one is born knowing how to love, but we are all born seeking to be forgiven.</p>
                 
                 <div class="capitulo-muestra">
                     <h4>📖 Chapter 1 — The Boy Who Wanted to be Seen</h4>
@@ -488,8 +326,7 @@
                 
                 <div class="nota-autor">
                     <h4>A Word from the Author</h4>
-                    <p>This novel was born from the desire to explore the invisible threads that connect us to our origins. What does it mean to be siblings? Is it only blood that defines us, or is it the choice to stand together through the storms? In a world that often reduces family to a biological accident, I wanted to write a story about those who decide to love despite everything, about wounds that become bridges, and about forgiveness that arrives just in time to heal what seemed irreparable.</p>
-                    <p>Through Leopoldo, Sebastián, Valeria, and Eliam, I invite you to reflect on the legacy we carry, the choices that define us, and the possibility—always present—of building a new home from the ruins of the past.</p>
+                    <p><em>The Birth of Brothers</em> marked the beginning of my journey as a writer. I wrote it thinking of all those families who carry silences for years out of fear of saying what hurts—with the certainty that it is never too late to ask for forgiveness or to begin again. Thank you for reading and sharing these words.</p>
                     <p class="firma-autor">— J. LÓPEZ M.</p>
                 </div>
             </div>
