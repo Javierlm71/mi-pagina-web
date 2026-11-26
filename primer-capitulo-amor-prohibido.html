@@ -1,286 +1,444 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primer Capítulo - Amor Prohibido en Pueblo Tradicional | J. LÓPEZ M.</title>
-    <meta name="description" content="Lee el primer capítulo de 'Amor Prohibido en Pueblo Tradicional' - Una novela sobre amor, tradición y secretos en un pueblo que vive de apariencias.">
-    <meta name="author" content="J. LÓPEZ M.">
-    
-    <style>
-        /* ESTILOS GENERALES */
-        :root {
-            --color-primario: #8B4513;
-            --color-secundario: #D2691E;
-            --color-fondo: #FFF8F0;
-            --color-texto: #2C1810;
-            --color-blanco: #FFFFFF;
-            --color-sombra: rgba(139, 69, 19, 0.1);
-            --transicion: all 0.3s ease;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            background-color: var(--color-fondo);
-            color: var(--color-texto);
-            line-height: 1.6;
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        /* ENCABEZADO */
-        .encabezado {
-            text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid var(--color-primario);
-        }
-        
-        .encabezado h1 {
-            color: var(--color-primario);
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-            line-height: 1.3;
-        }
-        
-        .cita-destacada {
-            font-style: italic;
-            color: var(--color-secundario);
-            font-size: 1.3rem;
-            margin: 20px 0;
-            padding: 15px;
-            background-color: rgba(210, 105, 30, 0.05);
-            border-radius: 8px;
-            border-left: 4px solid var(--color-secundario);
-        }
-        
-        /* FICHA TÉCNICA */
-        .ficha-tecnica {
-            background-color: var(--color-blanco);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 12px var(--color-sombra);
-            border: 1px solid rgba(139, 69, 19, 0.1);
-        }
-        
-        .ficha-tecnica h2 {
-            color: var(--color-primario);
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-        
-        .datos-libro {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 10px;
-        }
-        
-        .dato-item {
-            margin-bottom: 8px;
-            font-size: 0.95rem;
-        }
-        
-        .dato-item strong {
-            color: var(--color-primario);
-        }
-        
-        /* CAPÍTULO */
-        .capitulo {
-            margin-bottom: 40px;
-        }
-        
-        .capitulo h2 {
-            color: var(--color-primario);
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgba(139, 69, 19, 0.2);
-        }
-        
-        .texto-capitulo {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            text-align: justify;
-        }
-        
-        .texto-capitulo p {
-            margin-bottom: 20px;
-            text-indent: 30px;
-        }
-        
-        /* BOTONES */
-        .acciones {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(139, 69, 19, 0.1);
-        }
-        
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 25px;
-            border-radius: 30px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transicion);
-            font-size: 1rem;
-            border: none;
-            cursor: pointer;
-            text-align: center;
-            min-width: 200px;
-        }
-        
-        .btn-comprar {
-            background: linear-gradient(135deg, #FF9900, #FFAD33);
-            color: white;
-        }
-        
-        .btn-comprar:hover {
-            background: linear-gradient(135deg, #E68A00, #FF9900);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 153, 0, 0.3);
-        }
-        
-        .btn-volver {
-            background-color: transparent;
-            color: var(--color-primario);
-            border: 2px solid var(--color-primario);
-        }
-        
-        .btn-volver:hover {
-            background-color: var(--color-primario);
-            color: white;
-            transform: translateY(-2px);
-        }
-        
-        /* FOOTER */
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(139, 69, 19, 0.1);
-            color: #666;
-            font-size: 0.9rem;
-        }
-        
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            body {
-                padding: 15px;
-            }
-            
-            .encabezado h1 {
-                font-size: 1.8rem;
-            }
-            
-            .cita-destacada {
-                font-size: 1.1rem;
-                padding: 12px;
-            }
-            
-            .btn {
-                width: 100%;
-                min-width: auto;
-            }
-            
-            .acciones {
-                flex-direction: column;
-            }
-            
-            .texto-capitulo p {
-                text-indent: 20px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .encabezado h1 {
-                font-size: 1.5rem;
-            }
-            
-            .capitulo h2 {
-                font-size: 1.4rem;
-            }
-            
-            .texto-capitulo {
-                font-size: 1rem;
-                line-height: 1.7;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primer capítulo gratis: Amor Prohibido en Pueblo Tradicional | J. LÓPEZ M.</title>
+  <meta name="description" content="Lee gratis el primer capítulo de Amor Prohibido en Pueblo Tradicional, de J. López M. Un amor que desafió las reglas de un pueblo anclado en tradiciones. Disponible en Kindle ($3.99) y tapa blanda ($15.99).">
+  <meta name="keywords" content="Amor Prohibido en Pueblo Tradicional, primer capítulo gratis, J. López M., novela romántica, drama, Kindle, muestra gratis">
+  <meta name="author" content="J. LÓPEZ M.">
+  <link rel="canonical" href="https://javierlm71.github.io/mi-pagina-web/primer-capitulo-amor-prohibido.html">
+
+  <!-- hreflang: versiones multilingües -->
+  <link rel="alternate" hreflang="es" href="https://javierlm71.github.io/mi-pagina-web/primer-capitulo-amor-prohibido.html">
+  <link rel="alternate" hreflang="it" href="https://javierlm71.github.io/mi-pagina-web/amore-proibito-borgo-tradizionale.html">
+  <link rel="alternate" hreflang="x-default" href="https://javierlm71.github.io/mi-pagina-web/primer-capitulo-amor-prohibido.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="J. LÓPEZ M.">
+  <meta property="og:title" content="Primer capítulo gratis: Amor Prohibido en Pueblo Tradicional | J. LÓPEZ M.">
+  <meta property="og:description" content="Lee gratis el primer capítulo de Amor Prohibido en Pueblo Tradicional. Un amor que desafió las reglas de un pueblo.">
+  <meta property="og:url" content="https://javierlm71.github.io/mi-pagina-web/primer-capitulo-amor-prohibido.html">
+  <meta property="og:image" content="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/amor-prohibido.png">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="it_IT">
+  <meta property="article:author" content="J. LÓPEZ M.">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Primer capítulo gratis: Amor Prohibido en Pueblo Tradicional | J. LÓPEZ M.">
+  <meta name="twitter:description" content="Lee gratis el primer capítulo de Amor Prohibido en Pueblo Tradicional. Un amor que desafió las reglas de un pueblo.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/Javierlm71/mi-pagina-web/main/amor-prohibido.png">
+
+  <!-- Favicon y theme -->
+  <link rel="icon" href="favicon.png" type="image/png">
+  <meta name="theme-color" content="#b8860b">
+
+  <!-- Preconnect fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Schema.org Chapter -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Chapter",
+    "name": "Capítulo 1: El murmullo del pueblo",
+    "position": 1,
+    "inLanguage": "es",
+    "url": "https://javierlm71.github.io/mi-pagina-web/primer-capitulo-amor-prohibido.html",
+    "isPartOf": {
+      "@type": "Book",
+      "name": "Amor Prohibido en Pueblo Tradicional",
+      "author": {
+        "@type": "Person",
+        "@id": "https://javierlm71.github.io/mi-pagina-web/#person",
+        "name": "J. LÓPEZ M.",
+        "url": "https://javierlm71.github.io/mi-pagina-web/"
+      },
+      "isbn": "9798272467409",
+      "url": "https://javierlm71.github.io/mi-pagina-web/amor-prohibido.html",
+      "inLanguage": "es"
+    },
+    "author": {
+      "@type": "Person",
+      "@id": "https://javierlm71.github.io/mi-pagina-web/#person",
+      "name": "J. LÓPEZ M."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Independently published"
+    }
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-primario: #b8860b;
+      --color-primario-oscuro: #8c6c10;
+      --color-secundario: #2f1b0c;
+      --color-terciario: #6b4226;
+      --color-fondo: #fffaf2;
+      --color-texto: #2f1b0c;
+      --color-blanco: #ffffff;
+      --color-sombra: rgba(0, 0, 0, 0.1);
+      --transicion-rapida: all 0.3s ease;
+      --borde-redondeado: 8px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4 { font-family: 'Crimson Text', serif; font-weight: 700; line-height: 1.3; }
+    a { text-decoration: none; color: inherit; transition: var(--transicion-rapida); }
+    img { max-width: 100%; height: auto; display: block; }
+
+    .contenedor { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+    header {
+      background: linear-gradient(135deg, var(--color-primario), var(--color-primario-oscuro));
+      color: var(--color-blanco);
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo h1 { font-size: 2.5em; margin-bottom: 5px; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); }
+    .logo p { font-size: 1.1em; opacity: 0.9; font-style: italic; }
+
+    nav { margin-top: 25px; }
+    .navegacion-principal {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .navegacion-principal a {
+      padding: 10px 22px;
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95em;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .navegacion-principal a:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-2px);
+    }
+
+    .breadcrumb {
+      padding: 20px 0 10px;
+      font-size: 0.9em;
+      color: var(--color-terciario);
+    }
+    .breadcrumb a {
+      color: var(--color-primario-oscuro);
+      font-weight: 600;
+    }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { color: var(--color-terciario); }
+
+    .cabecera-capitulo {
+      text-align: center;
+      padding: 40px 20px 30px;
+      border-bottom: 2px solid rgba(184, 134, 11, 0.2);
+      margin-bottom: 40px;
+    }
+    .etiqueta-capitulo {
+      display: inline-block;
+      background-color: var(--color-primario);
+      color: white;
+      padding: 6px 20px;
+      border-radius: 50px;
+      font-size: 0.85em;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .cabecera-capitulo h1 {
+      color: var(--color-terciario);
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+    .subtitulo-libro {
+      font-size: 1.1em;
+      font-style: italic;
+      color: var(--color-primario-oscuro);
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .cita-apertura {
+      max-width: 700px;
+      margin: 25px auto 0;
+      font-family: 'Crimson Text', serif;
+      font-style: italic;
+      font-size: 1.25em;
+      color: var(--color-primario-oscuro);
+      padding: 20px 30px;
+      background-color: rgba(184, 134, 11, 0.06);
+      border-left: 4px solid var(--color-primario);
+      border-radius: 0 var(--borde-redondeado) var(--borde-redondeado) 0;
+      text-align: center;
+    }
+
+    .texto-capitulo {
+      font-size: 1.1em;
+      line-height: 1.9;
+      text-align: justify;
+      margin-bottom: 50px;
+    }
+    .texto-capitulo p {
+      margin-bottom: 20px;
+      text-indent: 1.5em;
+    }
+    .texto-capitulo .cierre-capitulo {
+      text-align: center;
+      font-style: italic;
+      font-family: 'Crimson Text', serif;
+      font-size: 1.1em;
+      color: var(--color-primario-oscuro);
+      padding: 18px 25px;
+      margin: 30px 0;
+      background-color: rgba(184, 134, 11, 0.06);
+      border-radius: var(--borde-redondeado);
+      border-left: 3px solid var(--color-primario);
+      border-right: 3px solid var(--color-primario);
+      text-indent: 0;
+      line-height: 1.7;
+    }
+
+    .fin-capitulo {
+      text-align: center;
+      padding: 30px 20px;
+      margin: 40px 0;
+      border-top: 2px solid rgba(184, 134, 11, 0.2);
+      border-bottom: 2px solid rgba(184, 134, 11, 0.2);
+    }
+    .fin-capitulo p {
+      font-family: 'Crimson Text', serif;
+      font-style: italic;
+      font-size: 1.2em;
+      color: var(--color-terciario);
+      margin-bottom: 10px;
+    }
+
+    .bloque-compra {
+      background: linear-gradient(135deg, #fef9e7, #fdebd0);
+      padding: 35px 30px;
+      border-radius: var(--borde-redondeado);
+      border-left: 5px solid var(--color-primario);
+      margin: 40px 0;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(184, 134, 11, 0.15);
+    }
+    .bloque-compra h3 {
+      color: var(--color-terciario);
+      font-size: 1.6em;
+      margin-bottom: 10px;
+    }
+    .bloque-compra .subtitulo-compra {
+      font-style: italic;
+      color: var(--color-primario-oscuro);
+      margin-bottom: 25px;
+      font-size: 1.05em;
+    }
+    .botones-compra {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .boton-compra {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 30px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1em;
+      transition: var(--transicion-rapida);
+      min-width: 200px;
+    }
+    .boton-kindle {
+      background-color: #FF9900;
+      color: white;
+    }
+    .boton-kindle:hover {
+      background-color: #e88a00;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 153, 0, 0.4);
+    }
+    .boton-papel {
+      background-color: #2c3e50;
+      color: white;
+    }
+    .boton-papel:hover {
+      background-color: #1a2a3a;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4);
+    }
+    .enlace-libro {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--color-primario-oscuro);
+      font-weight: 600;
+      border-bottom: 1px dotted var(--color-primario-oscuro);
+    }
+    .enlace-libro:hover { color: var(--color-primario); }
+
+    .navegacion-capitulo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 40px 0;
+    }
+    .boton-navegacion {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 25px;
+      background-color: transparent;
+      color: var(--color-primario);
+      border: 2px solid var(--color-primario);
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95em;
+      transition: var(--transicion-rapida);
+    }
+    .boton-navegacion:hover {
+      background-color: var(--color-primario);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background-color: var(--color-secundario);
+      color: #f5deb3;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+    .footer-contenido p { margin-bottom: 15px; }
+    .enlace-footer { color: #f5deb3; font-weight: 600; border-bottom: 1px dotted #f5deb3; }
+    .enlace-footer:hover { opacity: 0.8; }
+    .copyright { margin-top: 25px; font-size: 0.9em; opacity: 0.8; }
+
+    @media (max-width: 768px) {
+      .logo h1 { font-size: 2em; }
+      .navegacion-principal { flex-direction: column; align-items: center; }
+      .navegacion-principal a { width: 200px; }
+      .cabecera-capitulo h1 { font-size: 1.7em; }
+      .texto-capitulo { font-size: 1em; }
+      .botones-compra { flex-direction: column; }
+      .boton-compra { width: 100%; }
+      .navegacion-capitulo { flex-direction: column; }
+      .boton-navegacion { width: 100%; justify-content: center; }
+    }
+  </style>
 </head>
+
 <body>
-    <header class="encabezado">
-        <h1>Amor Prohibido en Pueblo Tradicional</h1>
-        <div class="cita-destacada">
-            "Perdonar es tejer un nuevo amanecer con los hilos rotos del ayer."
+  <header>
+    <div class="contenedor">
+      <div class="logo">
+        <h1>J. LÓPEZ M.</h1>
+        <p>Autor | Novelista | Contador de Historias</p>
+      </div>
+      <nav>
+        <div class="navegacion-principal">
+          <a href="index.html#inicio">Inicio</a>
+          <a href="index.html#libros">Mis Libros</a>
+          <a href="index.html#autor">Sobre Mí</a>
+          <a href="index.html#contacto">Contacto</a>
         </div>
-        <p style="color: #666; font-style: italic;">por J. LÓPEZ M.</p>
-    </header>
-    
-    <section class="ficha-tecnica">
-        <h2>📋 Detalles del libro</h2>
-        <div class="datos-libro">
-            <div class="dato-item"><strong>ASIN:</strong> B0FZ322M46</div>
-            <div class="dato-item"><strong>Editorial:</strong> Independently published</div>
-            <div class="dato-item"><strong>Fecha de publicación:</strong> 1 Noviembre 2025</div>
-            <div class="dato-item"><strong>Idioma:</strong> Español</div>
-            <div class="dato-item"><strong>Páginas:</strong> 595</div>
-            <div class="dato-item"><strong>ISBN-13:</strong> 979-8272467409</div>
-            <div class="dato-item"><strong>Edad de lectura:</strong> De 0 a 18 años</div>
-            <div class="dato-item"><strong>Dimensiones:</strong> 6 x 1.49 x 9 pulgadas</div>
-        </div>
-    </section>
-    
-    <section class="capitulo">
-        <h2>Capítulo 1 – El murmullo del pueblo</h2>
-        <div class="texto-capitulo">
-            <p>El pueblo despertaba cada día con el mismo sonido: las campanas de la iglesia marcaban la rutina de una comunidad anclada en costumbres que parecían inquebrantables. Las calles empedradas, estrechas y polvorientas guardaban secretos que nadie se atrevía a pronunciar en voz alta, pero que todos conocían como si fueran parte del aire.</p>
-            
-            <p>Entre las casas de adobe con tejas rojas y balcones de madera se respiraba un ambiente de solemnidad y juicio. El pueblo entero era un espejo que no reflejaba lo que eras, sino lo que aparentabas ser. Nadie escapaba de las miradas inquisidoras ni de los murmullos detrás de las ventanas entreabiertas.</p>
-            
-            <p>En medio de ese mundo pequeño y vigilante, comenzaba a tomar forma la vida de Ángel: un joven de mirada inquieta, soñador en un lugar donde soñar parecía prohibido. Sus pasos, aunque firmes, llevaban consigo un eco de rebeldía, como si caminaran en dirección contraria al destino que el pueblo había trazado para él desde antes de nacer.</p>
-            
-            <p>Y en otro rincón, envuelta en un aura de misterio y silencio, estaba Clara. Una mujer madura con un pasado que nadie lograba descifrar del todo. Su vida había estado marcada por la pérdida, y caminaba con dignidad, aunque por dentro llevara cicatrices profundas. Sus ojos oscuros eran pozos que guardaban memorias imposibles de contar en voz alta.</p>
-            
-            <p>Aún no se habían encontrado, pero el destino ya tejía en secreto los hilos de una historia destinada a sacudir los cimientos del pueblo.</p>
-            
-            <p>Las campanas volvieron a sonar, largas y graves, como si anunciaran no solo el inicio del día, sino también el comienzo de algo más. Algo que, aunque nadie podía sospecharlo todavía, estaba destinado a romper la calma artificial de la comunidad.</p>
-            
-            <p>El viento sopló entre los balcones y arrastró consigo un murmullo antiguo:</p>
-            
-            <p style="text-align: center; font-style: italic; padding: 15px; background-color: rgba(139, 69, 19, 0.05); border-radius: 5px; margin: 25px 0;">
-                «En este pueblo, el amor tiene precio. Y quienes desafíen sus leyes pagarán con lágrimas»
-            </p>
-        </div>
-    </section>
-    
-    <div class="acciones">
-        <a href="https://www.amazon.com/dp/B0FZ322M46" target="_blank" class="btn btn-comprar">
-            🛒 Comprar en Amazon
-        </a>
-        <a href="index.html" class="btn btn-volver">
-            ← Volver a la biblioteca
-        </a>
+      </nav>
     </div>
-    
-    <footer class="footer">
-        <p>© 2025 J. LÓPEZ M. | <a href="index.html" style="color: var(--color-primario); text-decoration: none;">Volver al inicio</a></p>
-        <p style="margin-top: 10px; font-size: 0.85rem; color: #888;">
-            ASIN: B0FZ322M46 • Disponible en Amazon Kindle y tapa blanda
-        </p>
-    </footer>
+  </header>
+
+  <main class="contenedor">
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> <span>›</span>
+      <a href="index.html#libros">Mis Libros</a> <span>›</span>
+      <a href="amor-prohibido.html">Amor Prohibido en Pueblo Tradicional</a> <span>›</span>
+      Capítulo 1
+    </div>
+
+    <section class="cabecera-capitulo">
+      <span class="etiqueta-capitulo">📖 Muestra gratuita</span>
+      <h1>Capítulo 1: El murmullo del pueblo</h1>
+      <p class="subtitulo-libro">Amor Prohibido en Pueblo Tradicional — J. LÓPEZ M.</p>
+      <div class="cita-apertura">
+        "Perdonar es tejer un nuevo amanecer con los hilos rotos del ayer."
+      </div>
+    </section>
+
+    <article class="texto-capitulo">
+      <p>El pueblo despertaba cada día con el mismo sonido: las campanas de la iglesia marcaban la rutina de una comunidad anclada en costumbres que parecían inquebrantables. Las calles empedradas, estrechas y polvorientas guardaban secretos que nadie se atrevía a pronunciar en voz alta, pero que todos conocían como si fueran parte del aire.</p>
+
+      <p>Entre las casas de adobe con tejas rojas y balcones de madera se respiraba un ambiente de solemnidad y juicio. El pueblo entero era un espejo que no reflejaba lo que eras, sino lo que aparentabas ser. Nadie escapaba de las miradas inquisidoras ni de los murmullos detrás de las ventanas entreabiertas.</p>
+
+      <p>En medio de ese mundo pequeño y vigilante, comenzaba a tomar forma la vida de Ángel: un joven de mirada inquieta, soñador en un lugar donde soñar parecía prohibido. Sus pasos, aunque firmes, llevaban consigo un eco de rebeldía, como si caminaran en dirección contraria al destino que el pueblo había trazado para él desde antes de nacer.</p>
+
+      <p>Y en otro rincón, envuelta en un aura de misterio y silencio, estaba Clara. Una mujer madura con un pasado que nadie lograba descifrar del todo. Su vida había estado marcada por la pérdida, y caminaba con dignidad, aunque por dentro llevara cicatrices profundas. Sus ojos oscuros eran pozos que guardaban memorias imposibles de contar en voz alta.</p>
+
+      <p>Aún no se habían encontrado, pero el destino ya tejía en secreto los hilos de una historia destinada a sacudir los cimientos del pueblo.</p>
+
+      <p>Las campanas volvieron a sonar, largas y graves, como si anunciaran no solo el inicio del día, sino también el comienzo de algo más. Algo que, aunque nadie podía sospecharlo todavía, estaba destinado a romper la calma artificial de la comunidad.</p>
+
+      <p>El viento sopló entre los balcones y arrastró consigo un murmullo antiguo:</p>
+
+      <p class="cierre-capitulo">«En este pueblo, el amor tiene precio. Y quienes desafíen sus leyes pagarán con lágrimas.»</p>
+    </article>
+
+    <div class="fin-capitulo">
+      <p>— Fin del capítulo 1 —</p>
+    </div>
+
+    <div class="bloque-compra">
+      <h3>¿Te gustó la historia?</h3>
+      <p class="subtitulo-compra">Si quieres saber qué pasa con Ángel y Clara, el libro completo te está esperando.</p>
+      <div class="botones-compra">
+        <a href="https://www.amazon.com/dp/B0FY9K8JLZ" class="boton-compra boton-kindle" target="_blank" rel="noopener noreferrer">
+          📱 eBook Kindle — $3.99
+        </a>
+        <a href="https://www.amazon.com/dp/B0FZ322M46" class="boton-compra boton-papel" target="_blank" rel="noopener noreferrer">
+          📖 Tapa Blanda — $15.99
+        </a>
+      </div>
+      <a href="amor-prohibido.html" class="enlace-libro">Ver todos los detalles del libro →</a>
+    </div>
+
+    <div class="navegacion-capitulo">
+      <a href="amor-prohibido.html" class="boton-navegacion">← Volver a la página del libro</a>
+      <a href="index.html#libros" class="boton-navegacion">Ver todos mis libros →</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="contenedor">
+      <div class="footer-contenido">
+        <p>© 2026 J. LÓPEZ M. | Todos los derechos reservados</p>
+        <p><a href="index.html#inicio" class="enlace-footer">Volver al inicio</a> | <a href="index.html#libros" class="enlace-footer">Ver todos los libros</a> | <a href="index.html#contacto" class="enlace-footer">Contacto</a></p>
+        <div class="copyright">
+          <p>Las portadas e imágenes son propiedad del autor.</p>
+          <p>Disponible en Amazon Kindle y formato físico.</p>
+          <p>Obra de ficción. Cualquier semejanza con personas reales es mera coincidencia.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
