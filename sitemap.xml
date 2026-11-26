@@ -1,15 +1,192 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://sitemaps.org">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ============ HOME ============ -->
   <url>
-    <loc>https://github.io</loc>
-    <lastmod>2026-11-18</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://javierlm71.github.io/mi-pagina-web/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- ============ LIBROS EN ESPAÑOL ============ -->
   <url>
-    <loc>https://github.ioindex.html</loc>
-    <lastmod>2026-11-18</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://javierlm71.github.io/mi-pagina-web/donde-el-reloj-se-detiene.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://javierlm71.github.io/mi-pagina-web/el-dolor-que-no-pedi.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://javierlm71.github.io/mi-pagina-web/rosa-perdida-del-rosal.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://javierlm71.github.io/mi-pagina-web/bajo-el-peso-de-las-palabras-mudas.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://javierlm71.github.io/mi-pagina-web/bajo-el-peso-de-las-palabras-mudas.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://javierlm71.github.io/mi-pagina-web/sous-le-poids-des-mots-muets.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://javierlm71.github.io/mi-pagina-web/bajo-el-peso-de-las-palabras-mudas.html"/>
+  </url>
+
+  <url>
+    <loc>https://javierlm71.github.io/mi-pagina-web/amor-prohibido.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://javierlm71.github.io/mi-pagina-web/amor-prohibido.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://javierlm71.github.io/mi-pagina-web/amore-proibito-borgo-tradizionale.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://javierlm71.github.io/mi-pagina-web/amor-prohibido.html"/>
+  </url>
+
+  <url>
+    <loc>https://javierlm71.github.io/mi-pagina-web/nacen-hermanos.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://javierlm71.github.io/mi-pagina-web/nacen-hermanos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://javierlm71.github.io/mi-pagina-web/the-birth-of-brothers.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://javierlm71.github.io/mi-pagina-web/nacen-hermanos.html"/>
+  </url>
+
+  <url>
+    <loc>https://javierlm71.github.io/mi-pagina-web/donde-el-amor-nos-enseno-a-volver.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://javierlm71.github.io/mi-pagina-web/donde-el-amor-nos-enseno-a-volver.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://javierlm71.github.io/mi-pagina-web/onde-o-amor-nos-ensinou-a-voltar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://javierlm71.github.io/mi-pagina-web/donde-el-amor-nos-enseno-a-volver.html"/>
+  </url>
+
+  <!-- ============ TRADUCCIONES ============ -->
+  <url>
+    <loc>https://javierlm71.github.io/mi-pagina-web/the-birth-of-brothers.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://javierlm71.github.io/mi-pagina-web/nacen-hermanos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://javierlm71.github.io/mi-pagina-web/the-birth-of-brothers.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://javierlm71.github.io/mi-pagina-web/nacen-hermanos.html"/>
+  </url>
+
+  <url>
+    <loc>https://javierlm71.github.io/mi-pagina-web/amore-proibito-borgo-tradizionale.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://javierlm71.github.io/mi-pagina-web/amor-prohibido.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://javierlm71.github.io/mi-pagina-web/amore-proibito-borgo-tradizionale.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://javierlm71.github.io/mi-pagina-web/amor-prohibido.html"/>
+  </url>
+
+  <url>
+    <loc>https://javierlm71.github.io/mi-pagina-web/onde-o-amor-nos-ensinou-a-voltar.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://javierlm71.github.io/mi-pagina-web/donde-el-amor-nos-enseno-a-volver.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://javierlm71.github.io/mi-pagina-web/onde-o-amor-nos-ensinou-a-voltar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://javierlm71.github.io/mi-pagina-web/donde-el-amor-nos-enseno-a-volver.html"/>
+  </url>
+
+  <url>
+    <loc>https://javierlm71.github.io/mi-pagina-web/sous-le-poids-des-mots-muets.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://javierlm71.github.io/mi-pagina-web/bajo-el-peso-de-las-palabras-mudas.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://javierlm71.github.io/mi-pagina-web/sous-le-poids-des-mots-muets.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://javierlm71.github.io/mi-pagina-web/bajo-el-peso-de-las-palabras-mudas.html"/>
+  </url>
+
+  <!-- ============ CAPÍTULOS DE MUESTRA ============ -->
+  <url>
+    <loc>https://javierlm71.github.io/mi-pagina-web/primer-capitulo-donde-el-reloj-se-detiene.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://javierlm71.github.io/mi-pagina-web/primer-capitulo-el-dolor-que-no-pedi.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://javierlm71.github.io/mi-pagina-web/primer-capitulo-rosa-perdida.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://javierlm71.github.io/mi-pagina-web/primer-capitulo-bajo-el-peso.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://javierlm71.github.io/mi-pagina-web/primer-capitulo-bajo-el-peso.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://javierlm71.github.io/mi-pagina-web/premier-chapitre-sous-le-poids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://javierlm71.github.io/mi-pagina-web/primer-capitulo-bajo-el-peso.html"/>
+  </url>
+
+  <url>
+    <loc>https://javierlm71.github.io/mi-pagina-web/primer-capitulo-amor-prohibido.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://javierlm71.github.io/mi-pagina-web/primer-capitulo-nacen-hermanos.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://javierlm71.github.io/mi-pagina-web/primer-capitulo-donde-el-amor.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://javierlm71.github.io/mi-pagina-web/primer-capitulo-donde-el-amor.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://javierlm71.github.io/mi-pagina-web/primeiro-capitulo-onde-o-amor.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://javierlm71.github.io/mi-pagina-web/primer-capitulo-donde-el-amor.html"/>
+  </url>
+
+  <url>
+    <loc>https://javierlm71.github.io/mi-pagina-web/premier-chapitre-sous-le-poids.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://javierlm71.github.io/mi-pagina-web/primer-capitulo-bajo-el-peso.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://javierlm71.github.io/mi-pagina-web/premier-chapitre-sous-le-poids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://javierlm71.github.io/mi-pagina-web/primer-capitulo-bajo-el-peso.html"/>
+  </url>
+
+  <url>
+    <loc>https://javierlm71.github.io/mi-pagina-web/primeiro-capitulo-onde-o-amor.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://javierlm71.github.io/mi-pagina-web/primer-capitulo-donde-el-amor.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://javierlm71.github.io/mi-pagina-web/primeiro-capitulo-onde-o-amor.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://javierlm71.github.io/mi-pagina-web/primer-capitulo-donde-el-amor.html"/>
+  </url>
+
 </urlset>
